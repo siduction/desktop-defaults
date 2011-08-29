@@ -1,0 +1,181 @@
+#!/bin/sh
+
+###
+# F.U.L.L.S.T.O.R.Y init script
+#
+# Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
+# Copyright: (C) 2007 Niall Walsh <niallwalsh@users.berlios.de>
+# Copyright: (C) 2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# License:   GPLv2
+#
+# F.U.L.L.S.T.O.R.Y Project Homepage:
+# http://developer.berlios.de/projects/fullstory
+###
+
+PATH=/sbin:/usr/sbin:$PATH
+
+# set default umask
+umask 0022
+
+# this is only invoked from fll-common-desktop, inherit its environment
+NAME="fll-common-desktop"
+
+###
+# source distro-defaults, no-op unless in live mode
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -s /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" != "live" ]; then
+	exit 0
+fi
+
+###
+# su-to-root -> sudo
+###
+if which su-to-root >/dev/null; then
+	touch "${HOME}/.su-to-rootrc"
+	if grep -q '^SU_TO_ROOT_SU=' "${HOME}/.su-to-rootrc"; then
+		sed -i 's|^SU_TO_ROOT_SU=.*|SU_TO_ROOT_SU=sudo|' \
+			"${HOME}/.su-to-rootrc"
+	else
+		echo 'SU_TO_ROOT_SU=sudo' >> "${HOME}/.su-to-rootrc"
+	fi
+fi
+
+###
+# gksu -> sudo
+###
+if which gconftool-2 >/dev/null; then
+	gconftool-2 -s -t bool /apps/gksu/sudo-mode true
+	gconftool-2 -s -t bool /apps/gksu/display-no-pass-info false
+fi
+
+###
+# kdesu -> sudo
+###
+if [ -x /usr/bin/kdesu ] || [ -x /usr/lib/kde4/libexec/kdesu ] >/dev/null; then
+	if [ ! -d "${HOME}/.kde/share/config" ]; then
+		mkdir -p "${HOME}/.kde/share/config"
+	fi
+
+	if grep -s -q '^super-user-command=' "${HOME}/.kde/share/config/kdesurc"; then
+		sed -i 's|^super-user-command=.*|super-user-command=sudo|' \
+			"${HOME}/.kde/share/config/kdesurc"
+	else
+		cat > "${HOME}/.kde/share/config/kdesurc" \
+<<EOF
+[super-user-command]
+super-user-command=sudo
+EOF
+	fi
+fi
+
+###
+# let mc use its own editor
+###
+if which mc >/dev/null; then
+	if [ ! -f "${HOME}/.mc/ini" ]; then
+		mkdir -p "${HOME}/.mc/"
+		cat >"${HOME}/.mc/ini" <<EOF
+
+[Midnight-Commander]
+use_internal_edit=1
+EOF
+	fi
+fi
+
+###
+# configure GnuPG if installed
+###
+GNUPG_CONF="${HOME}/.gnupg/gpg.conf"
+KEY_SERVER='hkp://keyserver.noreply.org:80'
+if [ ! -f "${GNUPG_CONF}" ]; then
+	if which gpg >/dev/null; then
+		gpg -k >/dev/null 2>&1
+		if [ -f "${GNUPG_CONF}" ]; then
+            		sed -ri -e 's/^#.*keyserver-options auto-key-retrieve/keyserver-options auto-key-retrieve/' \
+		    		-e 's/^#.*charset utf-8/charset utf-8/' \
+		    		-e 's/^keyserver /#keyserver/' "${GNUPG_CONF}"
+			echo "keyserver ${KEY_SERVER}" >> "${GNUPG_CONF}"
+			if which gpg-agent >/dev/null; then
+				sed -ri 's/^#.*use-agent/use-agent/' "${GNUPG_CONF}"
+			fi
+		fi
+	fi
+fi
+
+###
+## create ~/Desktop if not present
+####
+if [ ! -d "${HOME}/Desktop" ]; then
+	mkdir -p "${HOME}/Desktop"
+fi
+
+###
+## put a manual icon on the desktop
+####
+#if [ ! -f "${HOME}/Desktop/aptosid-manual.desktop" ] && \
+#	[ -f /usr/share/applications/aptosid/aptosid-manual.desktop ]; then
+#	ln -s /usr/share/applications/aptosid/aptosid-manual.desktop "${HOME}/Desktop/aptosid-manual.desktop"
+#fi
+
+###
+## put an eduversum (seminarix appstarter) icon on the desktop
+####
+if [ -f /usr/share/applications/eduversum.desktop ]; then
+	[ ! -f "${HOME}/Desktop/eduversum.desktop" ] && \
+		ln -s /usr/share/applications/eduversum.desktop \
+			"${HOME}/Desktop/eduversum.desktop"
+fi
+
+###
+## put a aptosid-png-video icon on the desktop
+###
+if [ -f /usr/share/seminarix-samples/video/aptosid-png-video.desktop ]; then
+	[ ! -f "${HOME}/Desktop/aptosid-png-video.desktop" ] && \
+		ln -s /usr/share/seminarix-samples/video/aptosid-png-video.desktop \
+			"${HOME}/Desktop/aptosid-png-video.desktop"
+fi
+
+###
+## put a aptosid-irc icon on the desktop
+####
+if [ ! -f "${HOME}/Desktop/siduction-irc.desktop" ] && \
+	[ -f /usr/share/applications/aptosid/siduction-irc.desktop ]; then
+	ln -s /usr/share/applications/aptosid/siduction-irc.desktop "${HOME}/Desktop/siduction-irc.desktop"
+fi
+
+###
+## put a installer-gui-irc icon on the desktop
+####
+if [ ! -f "${HOME}/Desktop/install-gui.desktop" ] && \
+	[ -f /usr/share/applications/aptosid/install-gui.desktop ]; then
+	ln -s /usr/share/applications/aptosid/install-gui.desktop "${HOME}/Desktop/install-gui.desktop"
+fi
+
+###
+# create .fluxbox, emulate a small amount of startflubox(1)
+###
+mkdir -p ${HOME}/.fluxbox
+for dir in backgrounds styles pixmaps; do
+	mkdir -p ${HOME}/.fluxbox/${dir}
+done
+
+for menu in /usr/share/desktop-defaults-common/fll-flux-*; do
+	[ ! -f "${HOME}/.fluxbox/${menu##*/}" ] && \
+		cp ${menu} ${HOME}/.fluxbox/
+done
+
+if [ ! -f "${HOME}/.fluxbox/menu" ]; then
+	cat >"${HOME}/.fluxbox/menu" <<EOF
+[begin] (${FLL_DISTRO_NAME} )
+[include] (~/.fluxbox/fll-flux-hi)
+[include] (/etc/X11/fluxbox/fluxbox-menu)
+[include] (~/.fluxbox/fll-flux-lo)
+[end]
+EOF
+fi

@@ -1,0 +1,225 @@
+#!/bin/sh
+
+###
+# F.U.L.L.S.T.O.R.Y init script
+#
+# Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
+# Copyright: (C) 2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# License:   GPLv2
+#
+# F.U.L.L.S.T.O.R.Y Project Homepage:
+# http://developer.berlios.de/projects/fullstory
+###
+
+PATH=/sbin:/usr/sbin:$PATH
+
+# set default umask
+umask 0022
+
+# this is only invoked from fll-kde-desktop, inherit its environment
+NAME="fll-kde-desktop"
+
+###
+# source distro-defaults, no-op unless in live mode
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -s /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" != "live" ]; then
+	exit 0
+fi
+
+###
+# read in variables from our default conffile
+###
+if [ -s "/etc/default/${NAME}" ]; then
+	. "/etc/default/${NAME}"
+fi
+
+###
+# read in variables from /etc/default/fll-locales
+###
+if [ -s /etc/default/fll-locales ]; then
+	. /etc/default/fll-locales
+fi
+
+###
+# cheatcode handling
+###
+for param in $(cat /proc/cmdline); do
+	case "${param}" in
+		flldebug=*)
+			[ "${param#flldebug=}" = "${NAME}" ] && set -x
+			;;
+		nointro)
+			NOINTRO="yes"
+			;;
+	esac
+done
+
+###
+# setup live user
+###
+mkdir -p	"${HOME}/.config/akonadi" \
+		"${HOME}/.kde/share/config" \
+		"${HOME}/.local"
+
+
+##
+# use sqlite3 backend for akonadi
+##
+if [ -r /usr/lib/qt4/plugins/sqldrivers/libqsqlite3.so ] && [ ! -f "${HOME}/.config/akonadi/akonadiserverrc" ]; then
+	cat > "${HOME}/.config/akonadi/akonadiserverrc" \
+<< EOF
+[%General]
+Driver=QSQLITE3
+EOF
+fi
+
+###
+# set wallpaper, plasma-adesktop-appletsrc is provided by our system-settings-kde package
+###
+if [ "${FLL_WALLPAPER}" ] &&  [ ! -f "${HOME}/.kde/share/config/plasma-desktop-appletsrc" ]; then
+	sed -e "s#wallpaper=.*#wallpaper=${FLL_WALLPAPER}#" \
+		 /usr/share/aptosid-settings-kde/kde4/default/share/config/plasma-desktop-appletsrc \
+			> "${HOME}/.kde/share/config/plasma-desktop-appletsrc"
+fi
+
+###
+# hack in kdeglobals, kde4 seems to ignore it in our system-settings-kde package
+# - currently sets desktop colors, icon sizes
+###
+if [ ! -f "${HOME}/.kde/share/config/kdeglobals" ]; then
+	cat /usr/share/aptosid-settings-kde/kde4/default/share/config/kdeglobals \
+			> "${HOME}/.kde/share/config/kdeglobals"
+fi
+
+###
+# set Ksplash theme
+###
+if [ "${KDE_KSPLASH_THEME}" ]; then
+	if [ ! -f "${HOME}/.kde/share/config/ksplashrc" ]; then
+		cat > "${HOME}/.kde/share/config/ksplashrc" \
+<< EOF
+[KSplash]
+Theme=${KDE_KSPLASH_THEME}
+EOF
+	fi
+fi
+
+###
+# setup keyboard chooser
+###
+if [ "${XKBLAYOUT}" ]; then
+	if grep -s -q '^LayoutList=' "${HOME}/.kde/share/config/kxkbrc"; then
+		sed -i 's|^LayoutList=.*|LayoutList='"${XKBLAYOUT}"'|' \
+			"${HOME}/.kde/share/config/kxkbrc"
+	else
+		cat > "${HOME}/.kde/share/config/kxkbrc" \
+<<EOF
+[Layout]
+LayoutList=${XKBLAYOUT}
+ShowFlag=true
+SwitchMode=Global
+Use=true
+EOF
+	fi
+fi
+
+###
+# disable first time login wizard
+###
+if grep -s -q '^FirstLogin=' "${HOME}/.kde/share/config/kpersonalizerrc"; then
+	sed -i 's|^FirstLogin=.*|FirstLogin=false|' \
+		"${HOME}/.kde/share/config/kpersonalizerrc"
+else
+	cat > "${HOME}/.kde/share/config/kpersonalizerrc" \
+<<EOF
+[General]
+FirstLogin=false
+EOF
+fi
+
+###
+# root konsole's
+###
+if [ ! -d "${HOME}/.kde/share/apps/konsole" ]; then
+	mkdir -p "${HOME}/.kde/share/apps/konsole"
+fi
+
+if [ -f /usr/share/apps/konsole/sumc.desktop ]; then
+	sed -e 's|^Exec=su.*$|Exec=sudo mc -c|' /usr/share/apps/konsole/sumc.desktop > \
+		"${HOME}/.kde/share/apps/konsole/sumc.desktop"
+fi
+
+if [ -f /usr/share/apps/konsole/su.desktop ]; then
+	sed -e 's|^Exec=su.*$|Exec=sudo -i|' /usr/share/apps/konsole/su.desktop > \
+		"${HOME}/.kde/share/apps/konsole/su.desktop"
+fi
+
+###
+# create ~/Desktop if not present
+###
+if [ ! -d "${HOME}/Desktop" ]; then
+	mkdir -p "${HOME}/Desktop"
+fi
+
+###
+# kio shortcuts: media:/ , trash:/
+###
+for icon in media.desktop trash.desktop; do
+	if [ ! -f "${HOME}/Desktop/${icon}" ] && [ -f "/usr/share/apps/systemview/${icon}" ]; then
+		cp "/usr/share/apps/systemview/${icon}" "${HOME}/Desktop/${icon}"
+	fi
+done
+
+###
+# scan for index.html in fll specific live mountpoint directories
+###
+for mntpnt in /fll/*; do
+	if [ -d "${mntpnt}" ] && [ -f "${mntpnt}/index.html" ]; then
+		INDEXFILE="${mntpnt}/index.html"
+		for ext in svg png gif ico; do
+			if [ -f "${mntpnt}/${FLL_CDROM_INDEX_ICON}.${ext}" ]; then
+				INDEXICON="${mntpnt}/${FLL_CDROM_INDEX_ICON}.${ext}"
+				break
+			fi
+		done
+		break
+	fi
+done
+
+###
+# create desktop shortcut to index.html
+###
+if [ -f "${INDEXFILE}" ] && [ ! -f "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" ]; then
+	cat > "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
+<<EOF
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Exec=konqueror --geometry 950x700+35+20 file:${INDEXFILE}
+Icon=${INDEXICON}
+Terminal=0
+
+Name=${FLL_CDROM_INDEX}
+GenericName=${FLL_CDROM_INDEX}
+EOF
+chmod u+x "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop"
+
+	if [ "${NOINTRO}" != "yes" ]; then
+		if [ ! -d "${HOME}/.kde/Autostart" ]; then
+			mkdir -p "${HOME}/.kde/Autostart"
+		fi
+
+		ln -sf "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
+			"${HOME}/.kde/Autostart/"
+	fi
+elif [ -e "${HOME}/.kde/Autostart/${FLL_DISTRO_NAME}.desktop" ]; then
+	# toram + persistency
+	rm -f "${HOME}/.kde/Autostart/${FLL_DISTRO_NAME}.desktop"
+fi

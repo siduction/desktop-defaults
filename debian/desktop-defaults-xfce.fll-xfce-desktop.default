@@ -1,0 +1,16 @@
+# Defaults for xfce desktop
+# sourced by /usr/bin/desktop-defaults-xfce and /etc/init.d/fll-xfce-desktop
+# installed at /etc/default/fll-xfce-desktop by the maintainer scripts
+
+# change to "false" to disable the automatic start of the XFCE-Services
+#XFCE_SERVICES_ENABLED="true"
+
+# specify GDM theme to be used
+XFCE_GDM_THEME="aptosid-ponos"
+
+# specify GDM theme color to be used
+XFCE_GDM_THEME_COLOR="#000000"
+
+# specify xfce splash theme and engine
+XFCE_SPLASH_THEME="aptosid-ponos"
+XFCE_SPLASH_ENGINE="balou"

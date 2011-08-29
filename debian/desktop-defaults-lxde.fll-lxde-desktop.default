@@ -1,0 +1,7 @@
+# Defaults for lxde desktop
+# sourced by /usr/bin/desktop-defaults-lxde and /etc/init.d/fll-lxde-desktop
+# installed at /etc/default/fll-lxde-desktop by the maintainer scripts
+
+# specify SLIM theme to be used
+LXDE_SLIM_THEME="aptosid-ponos"
+LXDE_GDM_THEME_COLOR="#000000"

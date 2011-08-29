@@ -1,0 +1,1665 @@
+desktop-defaults (1.3.19) unstable; urgency=low
+
+  * initial version for siduction
+
+ -- Torsten Wohlfarth <t.wohlfarth@gmx.de>  Mon, 29 Aug 2011 12:30:32 +0200
+
+desktop-defaults (1.3.18) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 07 Aug 2011 03:16:56 +0200
+
+desktop-defaults (1.3.17) unstable; urgency=low
+
+  * switch from deprecated --before --after --until and --remaining options
+    to override targets.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 07 Aug 2011 03:14:35 +0200
+
+desktop-defaults (1.3.16) unstable; urgency=low
+
+  * switch to Πόνος.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 15 Jul 2011 21:18:04 +0200
+
+desktop-defaults (1.3.15) unstable; urgency=low
+
+  [ Chris Hildebrandt ]
+  * let slim use aptosid theme.
+  * fix code glitch, thanks to x-un-i's review.
+
+  [ Niall Walsh ]
+  * set xfce wallpaper style to Stretched.
+
+ -- Niall Walsh <niallwalsh@users.berlios.de>  Sun, 10 Jul 2011 15:12:26 +0100
+
+desktop-defaults (1.3.14) unstable; urgency=low
+
+  * simplify QSQLITE3 template, StartServer isn't honoured by this backend
+    anyways.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 18 Jun 2011 23:03:43 +0200
+
+desktop-defaults (1.3.13) unstable; urgency=low
+
+  * no need to touch kaboom anymore.
+  * configure akonadi to use QSQLITE3, if available.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 18 Jun 2011 22:30:20 +0200
+
+desktop-defaults (1.3.12) unstable; urgency=low
+
+  [ Niall Walsh ]
+  * Don't set a kb model for kde
+
+  [ Joaquim Boura ]
+  * Don't set a kb model for xfce
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Sun, 05 Jun 2011 17:11:21 +0200
+
+desktop-defaults (1.3.11) unstable; urgency=low
+
+  * changes due to kde 4.6.
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Sat, 28 May 2011 00:13:48 +0200
+
+desktop-defaults (1.3.10) unstable; urgency=low
+
+  * fixed typo.
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Sun, 01 May 2011 13:06:26 +0200
+
+desktop-defaults (1.3.9) unstable; urgency=low
+
+  * use settings fron aptosid-settings-xfce.
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Sat, 30 Apr 2011 18:41:35 +0200
+
+desktop-defaults (1.3.8) unstable; urgency=low
+
+  * bump standards version to 3.9.2, no changes necessary.
+  * update eMail addresses.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 29 Apr 2011 04:12:42 +0200
+
+desktop-defaults (1.3.7) unstable; urgency=low
+
+  * drop support for gdm (#613491), needs further rework.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 20 Feb 2011 02:40:49 +0100
+
+desktop-defaults (1.3.6) unstable; urgency=low
+
+  * update for Ἡμέρα.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 10 Feb 2011 17:52:13 +0100
+
+desktop-defaults (1.3.5) unstable; urgency=low
+
+  * update for Γῆρας.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 05 Jan 2011 19:16:06 +0100
+
+desktop-defaults (1.3.4) unstable; urgency=low
+
+  * typo in desktop-default package description fixed.
+
+ -- Chris Hildebrandt <slam@aptosid.com>  Sun, 19 Dec 2010 14:35:48 +0100
+
+desktop-defaults (1.3.3) unstable; urgency=low
+
+  * fix hjt's mail address.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 06 Oct 2010 15:35:58 +0200
+
+desktop-defaults (1.3.2) unstable; urgency=low
+
+  * fix x-un-i's mail address.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 06 Oct 2010 14:41:02 +0200
+
+desktop-defaults (1.3.1) unstable; urgency=low
+
+  * update for Ἀπάτη.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 24 Sep 2010 01:45:03 +0200
+
+desktop-defaults (1.3.0) unstable; urgency=low
+
+  * switch to aptosid.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 29 Aug 2010 18:07:42 +0200
+
+desktop-defaults (1.2.34) unstable; urgency=low
+
+  * switch to compat level 8.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Aug 2010 03:34:34 +0200
+
+desktop-defaults (1.2.33) unstable; urgency=low
+
+  * debian/control: emphasize that these packages are live-only.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Aug 2010 17:33:49 +0200
+
+desktop-defaults (1.2.32) unstable; urgency=low
+
+  * update for Κῆρες.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 05 Aug 2010 04:37:42 +0200
+
+desktop-defaults (1.2.31) unstable; urgency=low
+
+  * bump standards version to 3.9.1, no changes necessary.
+  * drop no longer required conflict with kde-services-sidux.
+  * elaborate long description a bit further, to make lintian happy.
+  * wrap list of uploaders.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Aug 2010 17:25:55 +0200
+
+desktop-defaults (1.2.30) unstable; urgency=low
+
+  * fix lintian warnings:
+    - init.d-script-sourcing-without-test, by replacing unrecognized -s checks
+      with -r.
+    - init.d-script-missing-dependency-on-remote_fs, while (guaranteed) not an
+      issue in our environment, this is correct.
+  * switch to dpkg-source 3.0 (native) format.
+  * update copyrights.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 04 Mar 2010 01:33:43 +0100
+
+desktop-defaults (1.2.29) unstable; urgency=low
+
+  * gdm theme setup - remove multiple theme and randomised theme options.
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 02 Mar 2010 22:11:18 +1100
+
+desktop-defaults (1.2.28) unstable; urgency=low
+
+  [ Bernard Gray ]
+  * use xfce colour theme provided by sidux-art-$RELEASE if it exists
+
+  [ Stefan Lippers-Hollmann ]
+  * bump standards version to 3.8.4, no changes necessary.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 11 Feb 2010 13:45:59 +0100
+
+desktop-defaults (1.2.27) unstable; urgency=low
+
+  [ Dinko Sabo ]
+  * add myself to uploaders
+  * prepare settings for keyboard-switcher
+
+  [ Stefan Lippers-Hollmann ]
+  * switch to Ύπνος.
+  * update copyrights.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 09 Jan 2010 19:35:53 +0100
+
+desktop-defaults (1.2.26) unstable; urgency=low
+
+  * actually use XKBVARIANT instead of hardcoding it.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 29 Dec 2009 16:03:42 +0100
+
+desktop-defaults (1.2.25) unstable; urgency=low
+
+  * preseed the keyboard layout
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Tue, 29 Dec 2009 10:44:24 +0100
+
+desktop-defaults (1.2.24) unstable; urgency=low
+
+  * migrate *.default to moros release
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Mon, 21 Dec 2009 22:42:58 +0100
+
+desktop-defaults (1.2.23) unstable; urgency=low
+
+  * use xfce-smooth theme for win deco, suits better than cadmium.
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 23 Oct 2009 08:46:09 +1100
+
+desktop-defaults (1.2.22) unstable; urgency=low
+
+  * fix lintian issues:
+    - invalid mail address in changelog.
+    - specify GPL-2+ to be the license and refer to it accordingly.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 25 Sep 2009 00:20:07 +0200
+
+desktop-defaults (1.2.21) unstable; urgency=low
+
+  * migrate *.default to momos release
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 22 Sep 2009 22:23:58 +1000
+
+desktop-defaults (1.2.20) unstable; urgency=low
+
+  * shut up the nagscreen less brutally.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 23 Aug 2009 03:11:15 +0200
+
+desktop-defaults (1.2.19) unstable; urgency=low
+
+  * really prevent nasty nagscreen for release notes.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 23 Aug 2009 03:06:27 +0200
+
+desktop-defaults (1.2.18) unstable; urgency=low
+
+  * use xdg-open for desktop files.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 23 Aug 2009 00:30:44 +0200
+
+desktop-defaults (1.2.17) unstable; urgency=low
+
+  * gdm now resides in /usr/sbin/gdm, change it accordingly, thanks to
+    fabschub.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 18 Jul 2009 16:05:43 +0200
+
+desktop-defaults (1.2.16) unstable; urgency=low
+
+  * use SUSv3 compliant if clauses, thanks to fabschub for noticing.
+  * make set_default_gdm_theme() more robust.
+  * not having lxterminal installed on lxde isn't fatal, ignore its absence
+    instead of throwing an error, thanks to fabschub.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 18 Jul 2009 01:32:26 +0200
+
+desktop-defaults (1.2.15) unstable; urgency=low
+
+  * fix kdesu preseeding, the binary is now stored at /usr/lib/kde4/libexec/.
+  * bump standards version to 3.8.2, no changes necessary.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 23 Jun 2009 01:26:52 +0200
+
+desktop-defaults (1.2.14) unstable; urgency=low
+
+  * comment out panel preseeding - it doesn't work, don't really have time to
+    find out why
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 03 Jun 2009 13:52:29 +1000
+
+desktop-defaults (1.2.13) unstable; urgency=low
+
+  * sidux-browser must be copied into home dir explicitly to appear on panel
+  * create xfce xsettings.xml to set desktop theme to "cadmium"
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Sat, 30 May 2009 13:20:58 +1000
+
+desktop-defaults (1.2.12) unstable; urgency=low
+
+  * fix broken path to source panels.xml for xfce
+  * fix xfce wallpaper settings going into the wrong conf
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 29 May 2009 08:21:46 +1000
+
+desktop-defaults (1.2.11) unstable; urgency=low
+
+  [ Bernard Gray ]
+  * force kdeglobals usage which is (currently) ignored by kde4 preseeding
+
+  [ Stefan Lippers-Hollmann ]
+  * fix syntax, thanks to kelmo for noticing.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 28 May 2009 18:48:03 +0200
+
+desktop-defaults (1.2.10) unstable; urgency=low
+
+  * modify xfce splash preseeding for xfce 4.6
+  * modify preseeding for wallpaper, splash, panel, remove others
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 27 May 2009 21:21:06 +1000
+
+desktop-defaults (1.2.9) unstable; urgency=low
+
+  * fixed bashism.
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Sun, 17 May 2009 15:21:20 +0200
+
+desktop-defaults (1.2.8) unstable; urgency=low
+
+  [ Bernard Gray ]
+  * add kde4 style FLL_WALLPAPER handling in xfce desktop preseeding.
+
+  [ Stefan Lippers-Hollmann ]
+  * bump standards version to 3.8.1, no changes necessary.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 17 May 2009 12:30:43 +0200
+
+desktop-defaults (1.2.7) unstable; urgency=low
+
+  * making usage of flldebug uniform.
+    on debug redirect output to a log file in /tmp/${NAME}.log.
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Fri, 15 May 2009 21:51:54 +0200
+
+desktop-defaults (1.2.6) unstable; urgency=low
+
+  * remove kdesktop_lock diverts - this program no longer exists
+  * remove kdestop_lock entry in .install
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 06 May 2009 13:34:23 +1000
+
+desktop-defaults (1.2.5) unstable; urgency=low
+
+  * reinstate /etc/default/kdm.d/kdmtheme for new kde4 theme
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Sat, 25 Apr 2009 17:19:41 +1000
+
+desktop-defaults (1.2.4) unstable; urgency=low
+
+  * fix path to kdm theme in kde defaults
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 24 Apr 2009 12:10:28 +1000
+
+desktop-defaults (1.2.3) unstable; urgency=low
+
+  * syntax fixes.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 23 Apr 2009 02:13:25 +0200
+
+desktop-defaults (1.2.2) unstable; urgency=low
+
+  * modify kde preseeding to handle wallpaper
+  * migrate *.default to use aether release theme
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 21 Apr 2009 16:38:08 +1000
+
+desktop-defaults (1.2.1) unstable; urgency=low
+
+  * add kaboom stamp.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 18 Apr 2009 18:09:08 +0200
+
+desktop-defaults (1.2.0) unstable; urgency=low
+
+  * s/kwin/kde-window-manager/.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 18 Apr 2009 17:05:19 +0200
+
+desktop-defaults (1.0.15) unstable; urgency=low
+
+  * drop /etc/default/kdm.d/kdmtheme for the time being, our current ones
+    aren't kde4 compatible.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 06 Apr 2009 20:53:51 +0200
+
+desktop-defaults (1.0.14) unstable; urgency=low
+
+  * s/sidux-edu/eduversum/g, thanks to cobra.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 14 Feb 2009 18:59:48 +0100
+
+desktop-defaults (1.0.13) unstable; urgency=low
+
+  * fll-kde-desktop:
+    - Fix bug checking for existing KDM themes. We test for a directory, not a
+      file.
+
+ -- Michael Deelwater <michael.deelwater@googlemail.com>  Tue, 10 Feb 2009 00:09:51 +0100
+
+desktop-defaults (1.0.12) unstable; urgency=low
+
+  * s/pontos/ouranos/g.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 04 Feb 2009 23:47:35 +0100
+
+desktop-defaults (1.0.11) unstable; urgency=low
+
+  * fll-kde-desktop:
+    - Make the kdm override code snippets check if the given theme or
+      wallpaper still exists before confusing kdm.
+
+ -- Michael Deelwater <michael.deelwater@googlemail.com>  Fri, 30 Jan 2009 23:58:29 +0100
+
+desktop-defaults (1.0.10) unstable; urgency=low
+
+  * make lintian happy and depend on ${misc:Depends}.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 08 Dec 2008 21:23:33 +0100
+
+desktop-defaults (1.0.9) unstable; urgency=low
+
+  * add capability to disable kdm (incl ksplash) background
+  * disable kdm bg for pontos (ksplash looks better with black bg)
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 19 Nov 2008 13:04:14 +1100
+
+desktop-defaults (1.0.8) unstable; urgency=low
+
+  * migrate debian *defaults to pontos release
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Sun, 16 Nov 2008 23:12:40 +1100
+
+desktop-defaults (1.0.7) unstable; urgency=low
+
+  * debian/control:
+    - Lower desktop-defaults-lxde dependency from lxde to lxde-core.
+  * fll-lxde-desktop:
+    - Check for GDM before configuring it.
+    - Fix some space indenting to tabstops.
+  * fll-lxde-desktop.defaults:
+    - Add missing LXDE_GDM_THEME_COLOR.
+
+ -- Michael Deelwater <michael.deelwater@googlemail.com>  Thu, 06 Nov 2008 13:15:51 +0100
+
+desktop-defaults (1.0.6) unstable; urgency=low
+
+  * preseed-user-home-common:
+    - Preseed gpg.conf.
+    - Enable gpg-agent if installed. If gpg-agent is installed on the ISO, gpg
+      and pinentry work out of the box.
+
+ -- Michael Deelwater <michael.deelwater@googlemail.com>  Thu, 23 Oct 2008 20:02:01 +0200
+
+desktop-defaults (1.0.5) unstable; urgency=low
+
+  * preseed-user-home-common: fix syntax error
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 10 Oct 2008 15:47:39 +1000
+
+desktop-defaults (1.0.4) unstable; urgency=low
+
+  * preseed-user-home-common:
+    - preseed mc so that it used it's builtin editor
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 09 Oct 2008 06:10:25 +1000
+
+desktop-defaults (1.0.3) unstable; urgency=low
+
+  * add lxde desktop-defaults patches provided by ModestUser
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 07 Oct 2008 13:29:06 +1100
+
+desktop-defaults (1.0.2) unstable; urgency=low
+
+  * desktop-defaults-common:
+    - preseed fluxbox profile
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 19 Sep 2008 06:32:13 +1000
+
+desktop-defaults (1.0.1) unstable; urgency=low
+
+  * Revert a bit of r19964, manually disable kpersonalizer.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 08 Sep 2008 20:54:03 +1000
+
+desktop-defaults (1.0.0) unstable; urgency=low
+
+  * No longer need to create ~/.kde/share/config/kpersonalizerrc,
+    sidux-settings-kde disables the first time login wizard.
+  * Do not clobber existing ksplash or wallpaper settings, only set
+    them once.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 07 Sep 2008 05:51:05 +1000
+
+desktop-defaults (0.10.44) unstable; urgency=low
+
+  * Make use of grep in kde/preseed-user-home-kde quiet again.
+  * Tweak xfce/preseed-user-home-xfce.
+  * Readd dependency on laptop-detect.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 04 Sep 2008 10:07:13 +1000
+
+desktop-defaults (0.10.43) unstable; urgency=low
+
+  * Remove xfce/dot.xfce and depend on sidux-settings-xfce to provide sensible
+    defaults.
+  * Cleanup of fll-desktop-xfce.init.
+  * No longer install /usr/share/desktop-defaults-common/fll-desktop-func.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 04 Sep 2008 07:39:13 +1000
+
+desktop-defaults (0.10.42) unstable; urgency=low
+
+  * No longer hack in iceweasel preferences for the live user, sidux-
+    browser will provide global defaults.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 02 Sep 2008 00:06:15 +1000
+
+desktop-defaults (0.10.41) unstable; urgency=low
+
+  * No longer handle gtkrc-2.0 configuration preseeding, this will be
+    handled by sidux-settings-kde.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 01 Sep 2008 02:46:58 +1000
+
+desktop-defaults (0.10.40) unstable; urgency=low
+
+  * Divert /usr/bin/kdesktop_lock and provide non-locking wrapper to protect
+    live session.
+  * Do not use cp_desktop_defaults_from() in desktop-defaults-common or
+    desktop-defaults-kde, rework them.
+  * Add /sbin:/usr/sbin to PATH so that user can call some programs without
+    full path in preseed scripts.
+  * Remove a whole lot of manual kde setting configuration in favour of new
+    sidux-settings-kde.
+  * Remove desktop-defaults-kde script and autostart hook, hopefully
+    sidux-settings-kde provides this functionality now.
+
+ -- Kel Modderman <kel@otaku42.de>  Mon, 01 Sep 2008 01:20:43 +1000
+
+desktop-defaults (0.10.39) unstable; urgency=low
+
+  * add laptop-detect to depends for desktop-defaults-xfce
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 29 Aug 2008 17:11:52 +1000
+
+desktop-defaults (0.10.38) unstable; urgency=low
+
+  * add battmon applet to xfce panel use laptop-detect instead of batt checking
+  * (first attempt to) modify xfce decoration theme to better suit ourea
+    - use standard installed theme - Xfce-winter
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Thu, 28 Aug 2008 06:55:49 +1000
+
+desktop-defaults (0.10.37) unstable; urgency=low
+
+  * adjust defaults to use ourea art theme
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 22 Aug 2008 23:12:02 +1000
+
+desktop-defaults (0.10.36) unstable; urgency=low
+
+  [ Joaquim Boura ]
+  * Added myself to the uploaders
+  * When booting fromiso installs with the persist cheatcode do not overwrite
+    the dotdir user settings.
+
+  [ Stefan Lippers-Hollmann ]
+  * fix bashism.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 27 Jul 2008 03:34:00 +0200
+
+desktop-defaults (0.10.35) unstable; urgency=low
+
+  * remove gnome, it's the profiles are seriously outdated and broken.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 25 Jun 2008 19:00:49 +0200
+
+desktop-defaults (0.10.34) unstable; urgency=low
+
+  [ Kel Modderman ]
+  * The "I don't care if its broken if you don't care it is broken" release.
+  * Use #!/bin/sh shebang lines, not dash specific. Drop package dependency
+    on dash.
+  * fll-gnome-desktop.init, fll-xfce-desktop.init:
+    - do not source /usr/share/desktop-defaults-common/fll-desktop-func, no
+      functions are used in initscript anymore
+  * Set FocusStealingPreventionLevel=2 property in
+    dot.kde/share/config/kwinrc to control focus stealing behaviours of
+    multiple applications on KDE desktop.
+
+  [ Bernard Gray ]
+  * revert 18630 - domino -> qtcurve theme
+  * also delete kde/dot.kde/env for revert ^
+  * revert 18605 - domino -> qtcurve theme
+  * revert 18606 - ""
+  * revert 18604 - ""
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 18 Jun 2008 22:33:19 +1000
+
+desktop-defaults (0.10.33) unstable; urgency=low
+
+  * Set "darkFrame" property to true in kwindominorc.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 15 Jun 2008 11:54:54 +1000
+
+desktop-defaults (0.10.32) unstable; urgency=low
+
+  * change the colour scheme in use to match that in sidux-art-erebos
+  * convert gtk-kde theme matching tool to generic gtk-qt-engine
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 11 Jun 2008 14:48:00 +1000
+
+desktop-defaults (0.10.31) unstable; urgency=low
+
+  * fix glaring typo breaking xfce splash config :/
+  * begin configuring domino based kde theme - kdeglobals setup
+  * replace qtcurve with domino kde-style
+  * remove qtcurve rc conf, add domino equivalent
+  * add extra domino config settings in ~/.qt/*
+  * remove custom qt conf configs - see how it goes
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Mon, 09 Jun 2008 22:03:56 +1000
+
+desktop-defaults (0.10.30) unstable; urgency=low
+
+  * move section from the obsoleted "base" to "x11", to really follow
+    standards version 3.8.0.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Jun 2008 22:09:05 +0200
+
+desktop-defaults (0.10.29) unstable; urgency=low
+
+  [ Bernard Gray ]
+  * add XFCE_SPLASH_ENGINE var to xfce default - req'd for conf files
+  * add xfce splash conf file creation to preseed script
+  * xfce splash config failing due to non-existent dir - make sure dir exists
+
+  [ Stefan Lippers-Hollmann ]
+  * bump standards version to 3.8.0, no changes necessary.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Jun 2008 15:38:24 +0200
+
+desktop-defaults (0.10.28) unstable; urgency=low
+
+  * decrease gnome's panel opacity for darker backgrounds.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 29 May 2008 13:37:45 +0200
+
+desktop-defaults (0.10.27) unstable; urgency=low
+
+  * configure defaults for erebos release
+  * modify xfce defaults for new xfce art package
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Mon, 26 May 2008 18:04:33 +1000
+
+desktop-defaults (0.10.26) unstable; urgency=low
+
+  * switch to the new dh implementation of debhelper 7.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 21 May 2008 19:17:43 +0200
+
+desktop-defaults (0.10.25) unstable; urgency=low
+
+  * remove reference to non-existent xkblayout plugin for xfce
+  * remove non-existent launcher id=8 from xfce panel
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 14 May 2008 14:24:19 +1000
+
+desktop-defaults (0.10.24) unstable; urgency=low
+
+  * fixed homepage for epihany.
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Wed, 16 Apr 2008 17:34:28 +0200
+
+desktop-defaults (0.10.23) unstable; urgency=low
+
+  * added sidux-png to seminarix desktop.
+
+ -- Ferdinand Thommes <devilz@users.berlios.de>  Sat, 05 Apr 2008 09:24:44 +0200
+
+desktop-defaults (0.10.22) unstable; urgency=low
+
+  * Fix stray quote in fll-xfce-desktop.default
+
+ -- Niall Walsh <niallwalsh@users.berlios.de>  Wed, 02 Apr 2008 06:37:52 +0100
+
+desktop-defaults (0.10.21) unstable; urgency=low
+
+  [ Joaquim Boura ]
+  * use a color for the base similar to the wallpaper
+  * the same for the xfce version
+
+  [ Bernard Gray ]
+  * add sidux-browser to the panel
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 01 Apr 2008 19:22:38 +1100
+
+desktop-defaults (0.10.20) unstable; urgency=low
+
+  * preseed-user-home-xfce:
+    - fix syntax error introduced in r16971
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 30 Mar 2008 13:14:50 +1000
+
+desktop-defaults (0.10.19) unstable; urgency=low
+
+  * XFCE has no default web browser, don't hardcode iceweasel for starting the
+    release notes.
+  * don't overwrite existing release not desktop files for KDE.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 30 Mar 2008 01:18:06 +0100
+
+desktop-defaults (0.10.18) unstable; urgency=low
+
+  * fll-desktop-func:
+    - do not ignore an entire dot.* just because $HOME/.* already exists.
+      gnome and xfce both share files under $HOME/.config so without this
+      only one would get to copy files to $HOME/.config
+    - limit to only copying files not already present in $HOME/.*
+
+ -- Niall Walsh <niallwalsh@users.berlios.de>  Sat, 29 Mar 2008 21:34:38 +0000
+
+desktop-defaults (0.10.17) unstable; urgency=low
+
+  * desktop-defaults-kde:
+    - always start kpowersave, it enables our power buttons quite nicely in
+      its most useless form, and does better things for hardware that allow
+      that. Why I reverted this change in 0.10.13 I do not know...
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 28 Mar 2008 14:57:13 +1000
+
+desktop-defaults (0.10.16) unstable; urgency=low
+
+  * adapt terminal to be readable with nyx' theme (white background, no
+    transparency).
+  * reorder and reformat gconftool-2 calls consistently.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 27 Mar 2008 03:07:23 +0100
+
+desktop-defaults (0.10.15) unstable; urgency=low
+
+  [ Joaquim Boura ]
+  * changed default theme for gdm into sidux-nyx
+  * thanks to qq et muchan
+
+  [ Stefan Lippers-Hollmann ]
+  * remove calls to no longer existing fll-init-cols.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 27 Mar 2008 00:41:30 +0100
+
+desktop-defaults (0.10.14) unstable; urgency=low
+
+  * increase panel opacity by a factor of 10 to increase contrast and
+    readability for the darker Νυξ background.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 23 Mar 2008 22:48:58 +0100
+
+desktop-defaults (0.10.13) unstable; urgency=low
+
+  * desktop-defaults-kde:
+    - start kpowersave when laptop-detect returns 0 only
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 23 Mar 2008 23:50:44 +1000
+
+desktop-defaults (0.10.12) unstable; urgency=low
+
+  [ Kel Modderman ]
+  * desktop-defaults-kde:
+    - inverse condition for starting krandrtray, broken in last upload
+    - pipe knemod stdout to /dev/null
+
+  [ Bernard Gray ]
+  * modify xfce default gdm theme for nyx
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 19 Mar 2008 22:56:08 +1100
+
+desktop-defaults (0.10.11) unstable; urgency=low
+
+  * desktop-defaults-kde:
+    - always start kpowersave, it enables our power buttons quite nicely in
+      its most useless form, and does better things for hardware that allow
+      that
+    - do not do an xrandr check before starting krandrtray, its a tad
+      expensive in time, and we probably could just use it anyway
+    - do not enable the broken Encryption field of knemo tooltips
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 18 Mar 2008 19:25:06 +1000
+
+desktop-defaults (0.10.10) unstable; urgency=low
+
+  * desktop-defaults-kde:
+    - don't test powersaved has started for criteria of starting kpowersave,
+      use laptop-detect instead
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 14 Mar 2008 21:58:10 +1000
+
+desktop-defaults (0.10.9) unstable; urgency=low
+
+  * Trim whitespace from line endings of ./debian/*.
+  * Adjust LSB headers of initscripts for initial LSB compliance.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 02 Mar 2008 00:51:49 +1000
+
+desktop-defaults (0.10.8) unstable; urgency=low
+
+  * dark backgrounds interfere with "konsole --type su".
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 23 Feb 2008 22:38:23 +0100
+
+desktop-defaults (0.10.7) unstable; urgency=low
+
+  [ Bernard Gray ]
+  * set kdm and ksplash default to sidux-nyx theme
+
+  [ Stefan Lippers-Hollmann ]
+  * only depend on the art metapackages, not on a specific version.
+  * fix Xfce spelling in debian/control.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 23 Feb 2008 21:44:20 +0100
+
+desktop-defaults (0.10.6) unstable; urgency=low
+
+  * change desktop icon text to white for nyx
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Sat, 23 Feb 2008 21:43:07 +1100
+
+desktop-defaults (0.10.5) unstable; urgency=low
+
+  * appease lintian and write (C) as © in debian/copyright.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 20 Feb 2008 22:04:03 +0100
+
+desktop-defaults (0.10.4) unstable; urgency=low
+
+  * fix symlink for sidux-edu.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 20 Feb 2008 12:59:37 +0100
+
+desktop-defaults (0.10.3) unstable; urgency=low
+
+  * enhance iceweasel preconfig.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 27 Jan 2008 15:08:13 +0100
+
+desktop-defaults (0.10.2) unstable; urgency=low
+
+  * fixed set minimal settings for epiphany
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Sun, 27 Jan 2008 14:29:33 +0100
+
+desktop-defaults (0.10.1) unstable; urgency=low
+
+  * configure epiphany so it shows the right page on start
+  * code for creation of desktop icons for installer, sidux-irc and
+    manual put together in the common part
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Sat, 26 Jan 2008 16:10:03 +0100
+
+desktop-defaults (0.10.0) unstable; urgency=low
+
+  * take care not to break the su -c () subshell in fll-gnome.init.
+  * desktop-defaults-kde
+    - clean up XDG desktop file.
+    - do the big code movement to factor out do_start() from
+      fll-kde-desktop.init to preseed-user-home-kde, functionally incomplete.
+    - remove chown calls, we're running as the specified user now and do no
+      longer have access to super user capabilities.
+    - switch install calls to mkdir/ cp.
+    - we're now running as user, ${FLL_LIVE_USER_HOME} --> ${HOME}.
+    - install and start preseed-user-home-kde.
+    - source desktop-defaults.
+    - set default umask.
+    - set -e, actually show display the exit state.
+    - move fll-desktop-func to /usr/share/desktop-defaults-common/.
+    - rework fll-desktop-func/ cp_desktop_defaults_from() to work as user.
+    - re-add environment configuration.
+    - depend on kwin, no need to check it.
+  * move fll-desktop-func into common subdirectory.
+  * add preseed-user-home-foo stubs for other desktop environments.
+  * desktop-defaults-common
+    - do the big code movement to factor out do_start() from
+      fll-common-desktop.init to preseed-user-home-common, functionally
+      incomplete.
+    - we're now running as user, ${FLL_LIVE_USER_HOME} --> ${HOME}.
+    - switch install calls to mkdir/ cp.
+    - remove chown calls, we're running as the specified user now and do no
+      longer have access to super user capabilities.
+    - remove sudo calls, we're running as the specified user now and do no
+      longer have access to super user capabilities.
+    - we need to inherit the cheatcode handling as well.
+    - sudo is mandatory, depend on it.
+    - really remove obsolete do_start() call.
+    - actually install preseed-user-home-common.
+    - don't ship empty directories in oour skeleton, create 'em on boot.
+    - start update-alternatives as root.
+  * desktop-defaults-gnome:
+    - remove empty desktop-defaults-gnome.install.
+    - re-add environment configuration.
+    - do the big code movement to factor out do_start() from
+      fll-gnome-desktop.init to preseed-user-home-gnome, functionally
+      incomplete.
+    - install and start preseed-user-home-kde.
+    - remove chown calls, we're running as the specified user now and do no
+      longer have access to super user capabilities.
+    - switch install calls to mkdir/ cp.
+    - stop messing with profiles for root.
+    - we're running as user now, su is no longer needed (nor actually
+      possible) to call gconftool-2.
+    - we need to inherit the cheatcode handling as well.
+    - drep-dctrl is no longer needed.
+    - fix call to preseed-user-home-gnome.
+    - we're now running as user, ${FLL_LIVE_USER_HOME} --> ${HOME}.
+  * desktop-defaults-xfce
+    - re-add environment configuration.
+    - we need to inherit the cheatcode handling as well.
+    - depend on xfwm4, no need to check it.
+    - do the big code movement to factor out do_start() from
+      fll-xfce-desktop.init to preseed-user-home-xfce, functionally incomplete.
+    - install and start preseed-user-home-kde.
+    - we're now running as user, ${FLL_LIVE_USER_HOME} --> ${HOME}.
+    - remove chown calls, we're running as the specified user now and do no
+      longer have access to super user capabilities.
+    - switch install calls to mkdir/ cp.
+    - fix preseed-user-home-xfce invocation.
+    - invoke /usr/share/desktop-defaults-xfce/preseed-user-home-xfce.
+  * remove "set -e" introduced for debugging, on the release the preseeding
+    needs to work on a best efforts basis, errors are still printed to stdout.
+  * re-introduce do_start() functions to allow additions in a central place
+    easily.
+  * match copyrights with reality.
+  * hand further maintenance over to the maintainers of each desktop
+    environment.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 24 Jan 2008 21:50:31 +0100
+
+desktop-defaults (0.9.47) unstable; urgency=low
+
+  * prefer svg icons over png, gif or ico for the release notes.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 22 Jan 2008 17:04:00 +0100
+
+desktop-defaults (0.9.46) unstable; urgency=low
+
+  * update to debhelper compat 6.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 18 Jan 2008 23:15:07 +0100
+
+desktop-defaults (0.9.45) unstable; urgency=low
+
+  * fll-common-desktop:
+    - only muck around with mozilla/firefox/iceweasel profile when
+      profiles.ini is in default configuration.
+
+ -- Kel Modderman <kel@otaku42.de>  Mon, 14 Jan 2008 11:18:02 +1000
+
+desktop-defaults (0.9.44) unstable; urgency=low
+
+  * fix lintian complaints.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 12 Jan 2008 23:59:12 +0100
+
+desktop-defaults (0.9.43) unstable; urgency=low
+
+  * Theme Switcher changed
+
+ -- Andreas Weber <andreas@it-weber.com>  Sat, 12 Jan 2008 18:33:35 +0100
+
+desktop-defaults (0.9.42) unstable; urgency=low
+
+  * fix syntax errors introduced in r13776.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 08 Jan 2008 00:38:27 +0100
+
+desktop-defaults (0.9.41) unstable; urgency=low
+
+  * use numerical user/ group IDs for cpio, thanks to x-un-i.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 05 Jan 2008 19:48:32 +0100
+
+desktop-defaults (0.9.40) unstable; urgency=low
+
+  * Skel Function added
+  * dot.gconf removed.
+  * install File fixed for desktop-defaults-gnome
+
+ -- Andreas Weber <andreas@it-weber.com>  Fri, 04 Jan 2008 13:07:22 +0100
+
+desktop-defaults (0.9.39) unstable; urgency=low
+
+  * Icon size fixed
+
+ -- Andreas Weber <andreas@it-weber.com>  Fri, 04 Jan 2008 06:46:04 +0100
+
+desktop-defaults (0.9.38) unstable; urgency=low
+
+  [ Horst Tritremmel ]
+  * changed hardcoded wallpaper path to FLL_WALLPAPER variable for gnome
+  * default_gdm_theme subprogram added for gnome which use
+    desktop-defaults-gnome.fll-gnome-desktop.default now
+
+  [ Andreas Weber ]
+  * Wallpaper changed to eros for Gnome Desktop.
+  * Gnome Settings changed to use gconftool-2.
+  * Old .gnome files removed.
+  * Panel background changed for gnome.
+  * Qoutes fixed for the gconftool-2 commands and Parameter fixed.
+  * Method for gconftool-2 changed when running for $FLL_LIVE_USER.
+  * gnome-terminal Profile configured.
+  * root Terminal Default Profile fixed.
+
+  [ Stefan Lippers-Hollmann ]
+  * remove desktop preconfig for root, it ought to be unconfigured and maybe
+    even look different.
+  * remove predictable file creation below /tmp/ and replace it by an
+    appropriate subshell.
+  * add dash to desktop-defaults-gnome dependencies.
+  * hide grep call.
+  * switch to more reliable grep-dctrl to determine if gnome-themes is
+    installed.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 01 Jan 2008 16:53:55 +0100
+
+desktop-defaults (0.9.37) unstable; urgency=low
+
+  * Translation thanks to RoEn
+
+ -- Joaquim Boura <x-un-i@berlios.de>  Tue, 18 Dec 2007 13:22:56 +0100
+
+desktop-defaults (0.9.36) unstable; urgency=low
+
+  [ Stefan Lippers-Hollmann ]
+  * update to Standards-Version 3.7.3, no changes necessary.
+
+  [ Kel Modderman ]
+  * Add real person to copyright headers.
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 04 Dec 2007 17:01:59 +1000
+
+desktop-defaults (0.9.35) unstable; urgency=low
+
+  * put a seminarix-handbook icon on the desktop removed
+
+ -- Horst Tritremmel <hjt@users.berlios.de>  Tue, 27 Nov 2007 11:28:27 +0100
+
+desktop-defaults (0.9.34) unstable; urgency=low
+
+  * put a seminarix-handbook icon on the desktop if installed
+  * put a sidux-edu icon on the desktop if installed
+
+ -- Horst Tritremmel <hjt@users.berlios.de>  Thu, 22 Nov 2007 12:08:31 +0100
+
+desktop-defaults (0.9.33) unstable; urgency=low
+
+  * Fix spelling error in preinst script when doing an invalid installation.
+    Thanks to mzilikazi for being the lame mule to spot it ;-)
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 22 Nov 2007 09:54:35 +1000
+
+desktop-defaults (0.9.32) unstable; urgency=low
+
+  * Add a preinst for each binary package preventing installation in
+    non-chroot environments.
+
+ -- Kel Modderman <kel@otaku42.de>  Mon, 12 Nov 2007 11:22:26 +1000
+
+desktop-defaults (0.9.31) unstable; urgency=low
+
+  * reinstate desktop-defaults-xfce desktop startup script to manage
+    xfce4-battmon applet
+  * deinstate desktop-defaults-xfce in favour off simpler battmon test
+  * test for battery info file, not just bat dir
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Sun, 21 Oct 2007 18:29:06 +1000
+
+desktop-defaults (0.9.30) unstable; urgency=low
+
+  * use ${HOME} in desktop-defaults-xfce
+   - distro-defaults are not sourced here
+  * nuke xfce/desktop-defaults-xfce, changes to panels.xml must be made
+    before gdm login
+  * move volume control and battmon creation to xfce init script
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 19 Oct 2007 12:56:49 +1000
+
+desktop-defaults (0.9.29) unstable; urgency=low
+
+  * fix kpowersave instead of battmon typo
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Thu, 18 Oct 2007 22:31:17 +1000
+
+desktop-defaults (0.9.28) unstable; urgency=low
+
+  * add xfce4-mixer panel plugin to xfce-desktop-defaults
+  * add xfce4-battmon panel plugin to xfce-desktop-defaults
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Thu, 18 Oct 2007 17:36:12 +1000
+
+desktop-defaults (0.9.27) unstable; urgency=low
+
+  * update xfce.install script to account for new desktop autostart scripts
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Thu, 18 Oct 2007 08:40:23 +1000
+
+desktop-defaults (0.9.26) unstable; urgency=low
+
+  * add skeleton for xfce desktop services start
+   - ala kde desktop services
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 17 Oct 2007 16:59:19 +1000
+
+desktop-defaults (0.9.25) unstable; urgency=low
+
+  * add xfce thunar defaults (from mzilikazi)
+  * add xfce terminal defaults (disable F10 key - from mz)
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 16 Oct 2007 10:58:32 +1000
+
+desktop-defaults (0.9.24) unstable; urgency=low
+
+  * desktop-defaults-kde:
+    - drop all font sizes by 1 point, 11 -> 10, 12 -> 11
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 12 Oct 2007 16:38:16 +1000
+
+desktop-defaults (0.9.23) unstable; urgency=low
+
+  * fll-kde-desktop:
+    - if the index file for release notes/errata does not exist, but the
+      autostart link does, remove the autostart link (persistency + toram)
+  * fll-gnome-desktop:
+    - check existance if INDEXFILE before creating autostart item for it
+  * fll-xfce-desktop:
+    - do the same as for fll-kde-desktop
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 11 Oct 2007 15:41:37 +1000
+
+desktop-defaults (0.9.22) unstable; urgency=low
+
+  * darken kde desktop icon text
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Wed, 10 Oct 2007 17:13:39 +1000
+
+desktop-defaults (0.9.21) unstable; urgency=low
+
+  [ Stefan Lippers-Hollmann ]
+  * update syntax for Vcs headers in debian/control
+  * replace perl with simple sed.
+
+  [ Bernard Gray ]
+  * configure xfce4-xkb-plugin in xfce fll-init
+
+  [ Kel Modderman ]
+  * setup keyboard chooser when > 1 xkblayout variant is defined
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 09 Oct 2007 14:02:58 +0200
+
+desktop-defaults (0.9.20) unstable; urgency=low
+
+  * comment empty if statement in xfce init
+  * remove defunct KDEKEYBOARDS from xfce init, replace with XKBLAYOUT
+  * add skeleton xfce panel config for panel plugin support
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Sun, 07 Oct 2007 14:57:03 +1000
+
+desktop-defaults (0.9.19) unstable; urgency=low
+
+  [ Bernard Gray ]
+  * add stub for xfce xkb config in fll-xfce init
+  * add setxkbmap command to set multiple kb maps for xfce-xkb-plugin to use
+  * add scroll lock led indicator for when non-primary lang is selected
+  * xkb maps can be toggled using alt+shift
+  * revert setxkbmap commmand (won't run outside x)
+  * increment debian/*.default to use eros themes
+  * depend on eros themes '
+
+  [ Kel Modderman ]
+  * fll-kde-desktop:
+    - use XKBLAYOUT from fll-locales.default, KDEKEYBOARDS was made redundant
+      (pending it actually working ;-))
+  * Add debian/preinst, installation will fail if not in a build chroot.
+  * Shebang line missing from fll-desktop-xfce.init !
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 05 Oct 2007 17:06:12 +1000
+
+desktop-defaults (0.9.18) unstable; urgency=low
+
+  * adjust iceweasel fonts
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 02 Oct 2007 15:07:49 +1000
+
+desktop-defaults (0.9.17) unstable; urgency=low
+
+  [ Bernard Gray ]
+  * xfce init script tweak
+    - desktop manual icon
+    - attempt to start manual in iceweasel on login
+    - add todo for xfce login splash
+
+  [ Horst Tritremmel ]
+  * switch back to sidux-gaia gdm-theme
+
+ -- Horst Tritremmel <hjt@users.berlios.de>  Wed, 19 Sep 2007 16:03:16 +0200
+
+desktop-defaults (0.9.16) unstable; urgency=low
+
+  [ Stefan Lippers-Hollmann ]
+  * add VCS control headers.
+
+  [ Horst Tritremmel ]
+  * XFCE_GDM_THEME_COLOR added to desktop-defaults-xfce.fll-xfce-
+    desktop.default
+  * changed XFCE_GDM_THEME from sidux-gaia to sidux-dawn in desktop-
+    defaults-xfce.fll-xfce-desktop.default, so long as sidux-gaia gdm-
+    theme is broken
+
+ -- Horst Tritremmel <hjt@users.berlios.de>  Wed, 19 Sep 2007 10:04:32 +0200
+
+desktop-defaults (0.9.15) unstable; urgency=low
+
+  * add fll-xfce-desktop.default
+  * modify fll-xfce-desktop.default to suit gdm.conf requirements
+  * add gdm theme setting in fll-xfce-desktop.init
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Tue, 28 Aug 2007 14:14:17 +1000
+
+desktop-defaults (0.9.14) unstable; urgency=low
+
+  * desktop-defaults-xfce depends on dash.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 25 Aug 2007 14:26:47 +0200
+
+desktop-defaults (0.9.13) unstable; urgency=low
+
+  * test for xfwm4 instead of kwin in fll-desktop-xfce.init
+  * mv touch on tips supp. to after the dir gets created
+  * use install for dir creation and ownership permissions
+  * fix typo on tips suppression file
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Sat, 25 Aug 2007 15:00:37 +1000
+
+desktop-defaults (0.9.12) unstable; urgency=low
+
+  * uncomment desktop-defaults-xfce in debian/control
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Thu, 23 Aug 2007 21:14:29 +1000
+
+desktop-defaults (0.9.11) unstable; urgency=low
+
+  [ Kel Modderman ]
+  * Add fll-gnome-desktop.defaults boilerplate.
+
+  [ Bernard Gray ]
+  * begin populating xfce desktop defaults (hide tips on startup)
+  * add desktop config desktop.xml
+  * add wallpaper setting to xfce desktop init
+  * move tips suppression to xfce4 init
+  * create .config/autostart dir for tips conf file
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Thu, 23 Aug 2007 17:39:31 +1000
+
+desktop-defaults (0.9.10) unstable; urgency=low
+
+  [ Kel Modderman ]
+  * Add boilerplate for desktop-defaults-xfce.
+
+  [ webera ]
+  * Wallpaper fixed for gnome.
+
+  [ Bernard Gray ]
+  * remove desktop icon text shadow, and change text colour
+
+  [ Stefan Lippers-Hollmann ]
+  * disable empty xfce package.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 14 Aug 2007 10:54:22 +0200
+
+desktop-defaults (0.9.9) unstable; urgency=low
+
+  * fll-desktop-kde: put a manual icon on the desktop.
+
+ -- Kel Modderman <kel@otaku42.de>  Wed, 25 Jul 2007 01:25:33 +1000
+
+desktop-defaults (0.9.8) unstable; urgency=low
+
+  * fll-kde-desktop: simplify loop that creates desktop shortcuts.
+  * fll-kde-desktop: dash in shebang line, depend on dash.
+  * fll-common-desktop: dash in shebang line, depend on dash.
+  * kickerrc: purge the system menu applet.
+  * knemorc: use sysfs backend.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 12 Jul 2007 22:25:43 +1000
+
+desktop-defaults (0.9.7) unstable; urgency=low
+
+  * desktop-defaults-common: have stab in dark at defeating occaisional
+    kdesktop error that plauges the KDE live desktop. SOmething (kio related)
+    inhibits proper desktop display of icons. Try to make trash:/ happier by
+    providing a dummy .local/share/Trash.
+  * fll-desktop-func: redirect stderr, we may have no files to alter
+    permissions of.
+  * kdeglobals: add Paths subsection with Trash:/ path for live user.
+  * fll-kde-desktop: create trash and media icons from templates in
+    /usr/share/apps/systemview/.
+  * fll-kde-desktop: remove previous media:/ related code.
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 06 Jul 2007 17:18:16 +1000
+
+desktop-defaults (0.9.6) unstable; urgency=low
+
+  * qtcurvestylerc: toolbarAppearance gradient -> flat.
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 03 Jul 2007 23:16:37 +1000
+
+desktop-defaults (0.9.5) unstable; urgency=low
+
+  * fll-kde-desktop: use consistent style when creating new files.
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 03 Jul 2007 12:33:58 +1000
+
+desktop-defaults (0.9.4) unstable; urgency=low
+
+  * fll-kde-desktop: allow KDE_KDM_WALLPAPER to override or generic wallpaper
+    selction done by fll-xdm, and use something that more matches our theme.
+  * fll-kde-desktop, fll-gnome-desktop: depend on fll-xdm to have run.
+  * Bump sequnce level by one, to ensure start after fll-xdm.
+
+ -- Kel Modderman <kel@otaku42.de>  Mon, 02 Jul 2007 16:06:15 +1000
+
+desktop-defaults (0.9.3) unstable; urgency=low
+
+  * qtcurvestylerc: only round buttons slightly.
+
+ -- Kel Modderman <kel@otaku42.de>  Mon, 02 Jul 2007 08:31:30 +1000
+
+desktop-defaults (0.9.2) unstable; urgency=low
+
+  * dekstop-defaults-kde: add dot.config dir for finetuning qtcurve style.
+  * Use "flat" menu bar appearance for qtcurvestylerc.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 01 Jul 2007 17:50:46 +1000
+
+desktop-defaults (0.9.1) unstable; urgency=low
+
+  * Update kdeglobals to reflect filename change of colour scheme.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 01 Jul 2007 09:14:55 +1000
+
+desktop-defaults (0.9.0) unstable; urgency=low
+
+  * Update kde.default for new art theme.
+  * Depend on sidux-art-kde-gaia.
+  * Add bogus depends on sidux-art-wallpaper-gaia by desktop-defaults-common.
+  * Activate default KDE color scheme.
+  * Add kcmdisplayrc.
+  * Hack kdeglobals in attempt to display InvisibleGold color scheme.
+  * Tiny borders, no title text shadows, no colored window border.
+  * Make InvisibleSilver default color scheme.
+  * fll-common-desktop:
+      - add all sudo hacks/workarounds here
+      - add new gconf sudo mode
+      - syntax cleanup of awk used for iceweasel random profile generator
+      - add comment about deliberate use of mawk for rand()
+      - use which to check for executable existance
+  * fll-kde-desktop: remove kdesurc sudo workaround, move to -common.
+  * debian/rules: bump sequence of fll-common-desktop from 95 to 96, make it
+    depend on fll-*-desktop to have started.
+
+ -- Kel Modderman <kel@otaku42.de>  Sat, 30 Jun 2007 19:21:38 +1000
+
+desktop-defaults (0.8.26) unstable; urgency=low
+
+  * fll-kde-desktop: kaffeine workaround didn't pay off, reverting.
+  * fll-kde-desktop: replaced previous silent removal of umask when creating
+    kdmtheme override.
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 26 Jun 2007 23:08:50 +1000
+
+desktop-defaults (0.8.25) unstable; urgency=low
+
+  * desktop-defaults-kde: depend on kde-style-qtcurve, blend in our gtk and qt
+    themes nicely.
+  * desktop-defaults-kde: active plastik ui.
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 26 Jun 2007 21:16:49 +1000
+
+desktop-defaults (0.8.24) unstable; urgency=low
+
+  * fll-kde-desktop: allow kaffeine to start without annoyance.
+  * fll-kde-desktop: fix some misplaced indentation.
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 26 Jun 2007 17:58:45 +1000
+
+desktop-defaults (0.8.23) unstable; urgency=low
+
+  * fll-kde-desktop: create shortcut to media:/ kioslave instead of having
+    numerous media icons on desktop.
+  * fll-kde-desktop: minor cleanup of index icon desktop file.
+  * Unlimited konsole history.
+  * Disable Icon Zooming on kicker.
+  * Add klaunchrc to modify blinking cursor settings and taskbar alerts.
+  * Move desktop-defaults-kde.* to kde/ and update all install files.
+  * fll-gnome-desktop: fix index.html autostart.
+  * fll-gnome-desktop: remove duplicate ${BASEDIR}/preferences dir creation.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 17 Jun 2007 16:32:09 +1000
+
+desktop-defaults (0.8.22) unstable; urgency=low
+
+  * fll-desktop-func: bugfix crap findutils syntax.
+
+ -- Kel Modderman <kel@otaku42.de>  Sat, 16 Jun 2007 23:06:46 +1000
+
+desktop-defaults (0.8.21) unstable; urgency=low
+
+  * fll-desktop-func: enforce umask of cpio'd files.
+
+ -- Kel Modderman <kel@otaku42.de>  Sat, 16 Jun 2007 22:17:37 +1000
+
+desktop-defaults (0.8.20) unstable; urgency=low
+
+  * fll-desktop-func: set umask of 0077 (u=rwx,g=,o=) when playing around with
+    users private files.
+  * fll-kde-desktop: seperate kdm theme setup, it is disticly different to
+    other code that is only concerned with user profile.
+  * fll-desktop-func: do not reset access time, don't prompt for overwrite.
+
+ -- Kel Modderman <kel@otaku42.de>  Sat, 16 Jun 2007 20:11:41 +1000
+
+desktop-defaults (0.8.19) unstable; urgency=low
+
+  * enable applet handles for moving stuff on the kicker panel
+  * enable background theme for kicker so it's not flat white
+
+ -- Bernard Gray <bernard.gray@gmail.com>  Fri, 15 Jun 2007 13:34:03 +1000
+
+desktop-defaults (0.8.18) unstable; urgency=low
+
+  * Try removing trash thingky from kdesktop.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 14 Jun 2007 23:36:04 +1000
+
+desktop-defaults (0.8.17) unstable; urgency=low
+
+  * Put the konsole menu applet on kicker in place of konsole only icon. It
+    provides shortcut to root console. Fix python bug while there, until they
+    apply patch sent to them.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 14 Jun 2007 21:21:36 +1000
+
+desktop-defaults (0.8.16) unstable; urgency=low
+
+  * fll-kde-desktop: fix the bugfix that should have fixed the attempted
+    bugfix from last night. Now it should really be preseeding the gtk2 engine
+    properly.
+  * Add sidux.com to bookmarks toolbar of iceweasel.
+  * Set standard mozilla font size to 14. It defaulted to 16 which is
+    just a tiny bit too large.
+  * Add su-to-root/sudo hack for live mode and debian menu system.
+  * fll-kde-desktop: setup konsole for passwd'less root login.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 14 Jun 2007 18:55:12 +1000
+
+desktop-defaults (0.8.15) unstable; urgency=low
+
+  * fll-kde-desktop: fix handling of GTK2_ENGINE that was broken last
+    night.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 14 Jun 2007 08:29:33 +1000
+
+desktop-defaults (0.8.14) unstable; urgency=low
+
+  * fll-common-desktop: purge legacy function.
+  * fll-kde-desktop: cleanup gtk2 engine handling.
+  * fll-common-desktop: make /usr/bin/iceweasel default x-www-browser if
+    installed.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 14 Jun 2007 01:38:15 +1000
+
+desktop-defaults (0.8.13) unstable; urgency=low
+
+  * kpowersave hack in desktop-defaults-kde was not correct, simplify it.
+  * fll-common-desktop: fixups, do not announce script. Remove hardcoded /home
+    path.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 14 Jun 2007 00:54:33 +1000
+
+desktop-defaults (0.8.12) unstable; urgency=low
+
+  * Initial preset configuration files for desktop-defaults-common.
+  * Change Recommends fields in debian/control to Suggests.
+  * Remove chown -R from example init script.
+  * Add initial fll-common-desktop skeleton init script.
+  * Add /lib/fll/fll-desktop-func to allow shared cp_desktop_defaults_from()
+    function between our desktop-defaults init scripts.
+
+ -- Kel Modderman <kel@otaku42.de>  Wed, 13 Jun 2007 23:57:29 +1000
+
+desktop-defaults (0.8.11) unstable; urgency=low
+
+  * Browser View changed for Nautilus
+
+ -- Andreas Weber <andreas@it-weber.com>  Sun, 10 Jun 2007 15:56:10 +0200
+
+desktop-defaults (0.8.10) unstable; urgency=low
+
+  * Disable screen locking via kscreensaver and kpowersave.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 10 Jun 2007 06:45:52 +1000
+
+desktop-defaults (0.8.9) unstable; urgency=low
+
+  * Use KDEKEYBOARDS to preseed kxkbrc for kde.
+  * Add konversationrc.
+  * Move ./gnome and ./kde to ./dot.gconf and ./dot.kde respectively.
+  * Reinstate local configs as templates for KDE's look and feel.
+  * fll-kde-desktop.init: remove a few hacks.
+  * fll-kde-desktop.default: reduce options intended to have support.
+  * Set desktop icon size to 32 (from default of 48).
+  * Disable OSD in konversation.
+  * Remove superfluous font variables from config.
+  * Add konsolerc.
+  * Drop global fonts to size 11 (from 12).
+  * Cleanup desktop-defaults-kde startup script.
+
+ -- Kel Modderman <kel@otaku42.de>  Sat, 09 Jun 2007 15:58:48 +1000
+
+desktop-defaults (0.8.8) unstable; urgency=low
+
+  * Disable arts from starting for now.
+
+ -- Kel Modderman <kel@otaku42.de>  Fri, 08 Jun 2007 11:10:00 +1000
+
+desktop-defaults (0.8.7) unstable; urgency=low
+
+  * Set default kde font to Bistream Vera Sans 12pt.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 07 Jun 2007 19:18:49 +1000
+
+desktop-defaults (0.8.6) unstable; urgency=low
+
+  * Fix loop where .kde/.gconf are populated with templates.
+  * Add some code to assist with "blending" in gtk2 apps with KDE style via
+    dedicated engines. Also useful for forcing font type and size.
+
+ -- Kel Modderman <kel@otaku42.de>  Thu, 07 Jun 2007 16:48:41 +1000
+
+desktop-defaults (0.8.5) unstable; urgency=low
+
+  * fll-kde-desktop.init: fix typo, s/korgacrc/korganizerrc/. Stop korganizer
+    from starting up on live boot.
+  * fll-kde-desktop.init: use more generic loop to populate
+    ~/.kde/share/config.
+  * Add desktop-defaults-gnome.install to keep live .gconf templates here
+    instead of etcskel.
+  * fll-gnome-desktop.init: use templates from desktop-defaults-gonme instead
+    of relying on etcskel to have what we want.
+  * fll-gnome-desktop.init: ensure we are preserving user ownership of
+    dirs/files touched and created.
+  * Really fix for korganizer. The file *is* named korgacrc but it defies the
+    AutoStart standard in same way as kpowersave, it looks for Autostart
+    (lower case "s"...).
+  * Cleanup up ./kde.
+  * Make sure we honor templates before creating new folders/files in user's
+    home.
+
+ -- Kel Modderman <kel@otaku42.de>  Wed, 06 Jun 2007 17:20:27 +1000
+
+desktop-defaults (0.8.4) unstable; urgency=low
+
+  * Set AutoLineUpIcons=true in kdesktoprc.
+
+ -- Kel Modderman <kel@otaku42.de>  Tue, 05 Jun 2007 11:52:59 +1000
+
+desktop-defaults (0.8.3) unstable; urgency=low
+
+  [ Andreas Weber ]
+  * Desktop Icon fixed
+  * Desktop Icon code replaced with a better function
+
+  [ Kel Modderman ]
+  * Enable media:/ on desktop.
+
+ -- Andreas Weber <andreas@it-weber.com>  Mon, 04 Jun 2007 16:50:26 +0200
+
+desktop-defaults (0.8.2) unstable; urgency=low
+
+  * Initial Gnome init created
+
+ -- Andreas Weber <andreas@it-weber.com>  Mon, 04 Jun 2007 14:31:13 +0200
+
+desktop-defaults (0.8.1) unstable; urgency=low
+
+  * Take control of all kde defaults for live user.
+    - keep large template rc files in /usr/share/desktop-defaults-kde/
+    - disable select apps in fll-kde-desktop.init
+    - create and populate .kde/share/config of live user in fll-kde-desktop.init
+  * Fix for loop that populated live user with rc template files.
+  * Disable arts when no sound device is present/supported.
+  * Special handling of kpowersaverc. Disable kcmlaptop when kpowersave is
+    installed.
+  * Add konsolerc handling to fll-kde-desktop.init. Remove template konsolerc.
+  * Standardize fll-*-desktop.init output.
+  * Attempt to address the percieved font problem in a more intelligent and
+    flexible way than just throwing personalised files into /etc/skel.
+
+ -- Kel Modderman <kel@otaku42.de>  Mon, 04 Jun 2007 21:28:51 +1000
+
+desktop-defaults (0.8.0) unstable; urgency=low
+
+  * Enforce policy of chmod'ing every user own file that is modified and/or
+    created by these scripts.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 22:18:11 +1000
+
+desktop-defaults (0.7) unstable; urgency=low
+
+  * upload to sidux.com.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 13:45:52 +0200
+
+desktop-defaults (0.6) unstable; urgency=low
+
+  * fll-kde-desktop: fix sed usage.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 20:35:55 +1000
+
+desktop-defaults (0.5) unstable; urgency=low
+
+  * Really add desktop-defaults-gnome template . . .
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 20:13:51 +1000
+
+desktop-defaults (0.4) unstable; urgency=low
+
+  * fll-kde-desktop: fix sed syntax error.
+  * Add desktop-defaults-gnome boilerplate package.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 20:05:25 +1000
+
+desktop-defaults (0.3) unstable; urgency=low
+
+  * Remove boilerplates from debian/copyright.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 19:43:00 +1000
+
+desktop-defaults (0.2) unstable; urgency=low
+
+  * Import kde services scripts from kde-services-sidux. Conflict with that
+    package.
+  * Add initial fll-kde-desktop.init.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 19:33:05 +1000
+
+desktop-defaults (0.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Kel Modderman <kel@otaku42.de>  Sun, 03 Jun 2007 10:59:52 +1000

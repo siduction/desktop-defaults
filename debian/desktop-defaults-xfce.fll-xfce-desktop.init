@@ -1,0 +1,131 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          fll-xfce-desktop
+# Required-Start:    $local_fs $remote_fs fll-adduser
+# Required-Stop:
+# X-Start-Before:    fll-common-desktop
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: prepare live user for xfce desktop
+# Description:       The purpose of this script is to preseed the live users
+#                    settings for the xfce desktop.
+### END INIT INFO
+
+###
+# F.U.L.L.S.T.O.R.Y init script
+#
+# Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
+# Copyright: (C) 2008-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# License:   GPLv2
+#
+# F.U.L.L.S.T.O.R.Y Project Homepage:
+# http://developer.berlios.de/projects/fullstory
+###
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+NAME="fll-xfce-desktop"
+
+###
+# source distro-defaults, no-op unless in live mode
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -r /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" != "live" ]; then
+	exit 0
+fi
+
+###
+# source lsb functions
+###
+. /lib/lsb/init-functions
+
+###
+# source fll functions
+###
+. /lib/init/fll
+
+###
+# read in variables from our default conffile
+###
+if [ -r "/etc/default/${NAME}" ]; then
+	. "/etc/default/${NAME}"
+fi
+
+###
+# read in variables from /etc/default/fll-locales
+###
+if [ -r /etc/default/fll-locales ]; then
+	. /etc/default/fll-locales
+fi
+
+###
+# cheatcode handling
+###
+for param in $(cat /proc/cmdline); do
+	case "${param}" in
+		flldebug=*)
+			if [ "${param#flldebug=}" = "${NAME#fll-}" ] || [ "${param#flldebug=}" = "all" ]; then
+                    		fll_redirect
+			fi
+			;;
+		nointro)
+			NOINTRO="yes"
+			;;
+	esac
+done
+
+set_default_gdm3_theme()
+{
+        umask 0022
+
+        ###
+        # setup GDM theme
+        ###
+        if [ "${XFCE_GDM_THEME}" ] && false; then
+		# XXX: port me to gdm3
+		if ! grep -q "^GraphicalTheme=" /etc/gdm/gdm.conf ; then
+	                sed -i "s/\[greeter\]/\[greeter\]\nGraphicalTheme=${XFCE_GDM_THEME}\nGraphicalThemedColor=${XFCE_GDM_THEME_COLOR}/g" /etc/gdm/gdm.conf
+		else
+			sed -i "s/GraphicalTheme=.*/GraphicalTheme=${XFCE_GDM_THEME}/g" /etc/gdm/gdm.conf
+	        fi
+		if grep -q "^GraphicalThemes=" /etc/gdm/gdm.conf ; then
+			sed -i "s/GraphicalThemes=/#GraphicalThemes=/g" /etc/gdm/gdm.conf
+	        fi
+		if grep -q "^GraphicalThemeRand=" /etc/gdm/gdm.conf ; then
+			sed -i "s/GraphicalThemeRand=/#GraphicalThemeRand=/g" /etc/gdm/gdm.conf
+	        fi
+	fi
+}
+
+do_start()
+{
+	set_default_gdm3_theme
+
+	su "${FLL_LIVE_USER}" -c /usr/share/desktop-defaults-xfce/preseed-user-home-xfce
+}
+
+case "${1}" in
+	start)
+		log_daemon_msg "${NAME}"
+		log_action_begin_msg " preparing ${FLL_LIVE_USER} for xfce"
+		do_start
+		log_end_msg 0
+		;;
+	stop)
+		;;
+	restart|force-reload)
+		echo "Error: argument '${1}' not supported" >&2
+		exit 3
+		;;
+	*)
+		echo "Usage: ${NAME} {start|stop}" >&2
+		exit 3
+		;;
+esac
+
+:

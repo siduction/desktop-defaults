@@ -1,0 +1,166 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          fll-kde-desktop
+# Required-Start:    $local_fs $remote_fs fll-adduser
+# Required-Stop:
+# X-Start-Before:    fll-common-desktop
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: prepare live user for kde desktop
+# Description:       The purpose of this script is to preseed the live users
+#                    settings for the kde desktop.
+### END INIT INFO
+
+###
+# F.U.L.L.S.T.O.R.Y init script
+#
+# Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
+# Copyright: (C) 2008-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# License:   GPLv2
+#
+# F.U.L.L.S.T.O.R.Y Project Homepage:
+# http://developer.berlios.de/projects/fullstory
+###
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+NAME="fll-kde-desktop"
+
+###
+# source distro-defaults, no-op unless in live mode
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -r /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" != "live" ]; then
+	exit 0
+fi
+
+###
+# source lsb functions
+###
+. /lib/lsb/init-functions
+
+###
+# source fll functions
+###
+. /lib/init/fll
+
+###
+# read in variables from our default conffile
+###
+if [ -r "/etc/default/${NAME}" ]; then
+	. "/etc/default/${NAME}"
+fi
+
+###
+# read in variables from /etc/default/fll-locales
+###
+if [ -r /etc/default/fll-locales ]; then
+	. /etc/default/fll-locales
+fi
+
+###
+# cheatcode handling
+###
+for param in $(cat /proc/cmdline); do
+	case "${param}" in
+		flldebug=*)
+			if [ "${param#flldebug=}" = "${NAME#fll-}" ] || [ "${param#flldebug=}" = "all" ]; then
+                    		fll_redirect
+			fi
+			;;
+		nointro)
+			NOINTRO="yes"
+			;;
+	esac
+done
+
+FLL_LIVE_USER_HOME=$(getent passwd ${FLL_LIVE_USER} | cut -d\: -f 6)
+
+if [ ! -d "${FLL_LIVE_USER_HOME}" ]; then
+	log_daemon_msg "${NAME}" "directory ${FLL_LIVE_USER_HOME} does not exist"
+	log_end_msg 1
+fi
+
+set_default_kdm_theme()
+{
+	umask 0022
+
+	###
+	# setup KDM theme
+	###
+	if [ "${KDE_KDM_THEME}" ]; then
+		if [ -s /etc/default/kdm.d/kdmtheme ]; then
+			sed -i 's|^THEME=.*|THEME='"${KDE_KDM_THEME}"'|' \
+				/etc/default/kdm.d/kdmtheme
+		else
+			cat > /etc/default/kdm.d/kdmtheme \
+<<EOF
+USETHEME=true
+THEME=${KDE_KDM_THEME}
+EOF
+		fi
+		# add code to later check if chosen theme still exists
+		if ! grep -Eq '\${THEME}' /etc/default/kdm.d/kdmtheme; then
+		        echo '[ -d "${THEME}" ] || USETHEME=false' \
+		            >> /etc/default/kdm.d/kdmtheme
+		fi
+	fi
+
+	###
+	# override fll-xdm if matching kdm wallpaper is wanted
+	###
+	if [ -n "${KDE_KDM_BG_DISABLE}" ]; then
+cat > /etc/default/kdm.d/wallpaper \
+<<EOF
+USEBACKGROUND=false
+EOF
+	elif [ "${KDE_KDM_WALLPAPER}" ]; then
+		if [ -s /etc/default/kdm.d/wallpaper ]; then
+			sed -i 's|^WALLPAPER=.*|WALLPAPER='"${KDE_KDM_WALLPAPER}"'|' \
+				/etc/default/kdm.d/wallpaper
+		else
+			cat > /etc/default/kdm.d/wallpaper \
+<<EOF
+USEBACKGROUND=true
+WALLPAPER=${KDE_KDM_WALLPAPER}
+EOF
+		fi
+		# add code to later check if chosen wallpaper still exists
+		if ! grep -Eq '\${WALLPAPER}' /etc/default/kdm.d/wallpaper; then
+			echo '[ -f "${WALLPAPER}" ] || USEBACKGROUND=false' \
+			    >> /etc/default/kdm.d/wallpaper
+		fi
+	fi
+}
+
+do_start()
+{
+	su "${FLL_LIVE_USER}" -c /usr/share/desktop-defaults-kde/preseed-user-home-kde
+
+	set_default_kdm_theme
+}
+
+case "${1}" in
+	start)
+		log_daemon_msg "${NAME}"; log_action_begin_msg " preparing ${FLL_LIVE_USER} for kde"
+		do_start
+		log_end_msg 0
+		;;
+	stop)
+		;;
+	restart|force-reload)
+		echo "Error: argument '${1}' not supported" >&2
+		exit 3
+		;;
+	*)
+		echo "Usage: ${NAME} {start|stop}" >&2
+		exit 3
+		;;
+esac
+
+:

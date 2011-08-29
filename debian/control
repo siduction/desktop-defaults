@@ -1,0 +1,92 @@
+Source: desktop-defaults
+Section: x11
+Priority: optional
+Maintainer: Kel Modderman <kel@otaku42.de>
+Uploaders: Stefan Lippers-Hollmann <s.l-h@gmx.de>,
+ Joaquim Boura <x-un-i@berlios.de>,
+ Dinko Sabo <cobrasbyte@gmx.de>
+Build-Depends: debhelper (>= 8)
+Standards-Version: 3.9.2
+Vcs-Svn: svn://svn.berlios.de/fullstory/desktop-defaults/trunk
+Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/desktop-defaults/trunk/
+
+Package: desktop-defaults-common
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ siduction-art-wallpaper,
+ sudo,
+ laptop-detect
+Suggests: iceweasel
+Description: common user presets for various popular desktop applications
+ This package provides required infrastructure to tweak various popular desktop
+ applications:
+  - fluxbox menu
+  - gksu/ kdesu/ su/ sudo/ su-to-rootrc
+  - use mcedit within mc
+  - GnuPG
+  - XDG desktop icons
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
+
+Package: desktop-defaults-kde
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ desktop-defaults-common,
+ siduction-settings-kde,
+ kde-window-manager
+Description: user presets specific to the K desktop environment
+ This package provides required infrastructure to tweak the KDE desktop
+ of the F.U.L.L.S.T.O.R.Y. live Linux media.
+  - set up artwork theme integration for KDE (kdm themes, ksplash, wallpaper)
+  - nuke kaboom
+  - keyboard layouts for kxkbrc
+  - disabling kpersonalizer wizard on first login
+  - populate live-only XDG desktop icons
+  - autostart release notes
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
+
+Package: desktop-defaults-lxde
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ desktop-defaults-common,
+ lxde-core
+Description: user presets specific to the LXDE desktop environment
+ This package provides required infrastructure to tweak the LXDE desktop
+ of the F.U.L.L.S.T.O.R.Y. live Linux media.
+  - set up artwork theme integration for LXDE (gdm3, splash, desktop, wallpaper)
+  - keyboard layouts
+  - disable tips on startup
+  - setup trash can
+  - autostart release notes
+  - populate live-only XDG desktop icons
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
+
+Package: desktop-defaults-xfce
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ desktop-defaults-common,
+ siduction-settings-xfce,
+ xfwm4
+Description: user presets specific to the Xfce desktop environment
+ This package provides required infrastructure to tweak the Xfce desktop
+ of the F.U.L.L.S.T.O.R.Y. live Linux media.
+  - set up artwork theme integration for Xfce (gdm3, wallpaper)
+  - prefer lxterminal as x-terminal-emulator
+  - configure Python keyboard switcher
+  - populate live-only XDG desktop icons
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
