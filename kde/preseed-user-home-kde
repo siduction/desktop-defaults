@@ -84,7 +84,7 @@ fi
 ###
 if [ "${FLL_WALLPAPER}" ] &&  [ ! -f "${HOME}/.kde/share/config/plasma-desktop-appletsrc" ]; then
 	sed -e "s#wallpaper=.*#wallpaper=${FLL_WALLPAPER}#" \
-		 /usr/share/aptosid-settings-kde/kde4/default/share/config/plasma-desktop-appletsrc \
+		 /usr/share/siduction-settings-kde/kde4/default/share/config/plasma-desktop-appletsrc \
 			> "${HOME}/.kde/share/config/plasma-desktop-appletsrc"
 fi
 
@@ -93,7 +93,7 @@ fi
 # - currently sets desktop colors, icon sizes
 ###
 if [ ! -f "${HOME}/.kde/share/config/kdeglobals" ]; then
-	cat /usr/share/aptosid-settings-kde/kde4/default/share/config/kdeglobals \
+	cat /usr/share/siduction-settings-kde/kde4/default/share/config/kdeglobals \
 			> "${HOME}/.kde/share/config/kdeglobals"
 fi
 

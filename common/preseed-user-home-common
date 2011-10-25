@@ -118,9 +118,9 @@ fi
 ###
 ## put a manual icon on the desktop
 ####
-#if [ ! -f "${HOME}/Desktop/aptosid-manual.desktop" ] && \
-#	[ -f /usr/share/applications/aptosid/aptosid-manual.desktop ]; then
-#	ln -s /usr/share/applications/aptosid/aptosid-manual.desktop "${HOME}/Desktop/aptosid-manual.desktop"
+#if [ ! -f "${HOME}/Desktop/siduction-manual.desktop" ] && \
+#	[ -f /usr/share/applications/siduction/siduction-manual.desktop ]; then
+#	ln -s /usr/share/applications/siduction/siduction-manual.desktop "${HOME}/Desktop/siduction-manual.desktop"
 #fi
 
 ###
@@ -133,28 +133,28 @@ if [ -f /usr/share/applications/eduversum.desktop ]; then
 fi
 
 ###
-## put a aptosid-png-video icon on the desktop
+## put a siduction-png-video icon on the desktop
 ###
-if [ -f /usr/share/seminarix-samples/video/aptosid-png-video.desktop ]; then
-	[ ! -f "${HOME}/Desktop/aptosid-png-video.desktop" ] && \
-		ln -s /usr/share/seminarix-samples/video/aptosid-png-video.desktop \
-			"${HOME}/Desktop/aptosid-png-video.desktop"
+if [ -f /usr/share/seminarix-samples/video/siduction-png-video.desktop ]; then
+	[ ! -f "${HOME}/Desktop/siduction-png-video.desktop" ] && \
+		ln -s /usr/share/seminarix-samples/video/siduction-png-video.desktop \
+			"${HOME}/Desktop/siduction-png-video.desktop"
 fi
 
 ###
-## put a aptosid-irc icon on the desktop
+## put a siduction-irc icon on the desktop
 ####
 if [ ! -f "${HOME}/Desktop/siduction-irc.desktop" ] && \
-	[ -f /usr/share/applications/aptosid/siduction-irc.desktop ]; then
-	ln -s /usr/share/applications/aptosid/siduction-irc.desktop "${HOME}/Desktop/siduction-irc.desktop"
+	[ -f /usr/share/applications/siduction/siduction-irc.desktop ]; then
+	ln -s /usr/share/applications/siduction/siduction-irc.desktop "${HOME}/Desktop/siduction-irc.desktop"
 fi
 
 ###
 ## put a installer-gui-irc icon on the desktop
 ####
 if [ ! -f "${HOME}/Desktop/install-gui.desktop" ] && \
-	[ -f /usr/share/applications/aptosid/install-gui.desktop ]; then
-	ln -s /usr/share/applications/aptosid/install-gui.desktop "${HOME}/Desktop/install-gui.desktop"
+	[ -f /usr/share/applications/siduction/install-gui.desktop ]; then
+	ln -s /usr/share/applications/siduction/install-gui.desktop "${HOME}/Desktop/install-gui.desktop"
 fi
 
 ###
