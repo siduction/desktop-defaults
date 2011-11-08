@@ -6,11 +6,11 @@
 #XFCE_SERVICES_ENABLED="true"
 
 # specify GDM theme to be used
-XFCE_GDM_THEME="aptosid-ponos"
+XFCE_GDM_THEME="siduction-11.0.5"
 
 # specify GDM theme color to be used
 XFCE_GDM_THEME_COLOR="#000000"
 
 # specify xfce splash theme and engine
-XFCE_SPLASH_THEME="aptosid-ponos"
+XFCE_SPLASH_THEME="siduction-11.0.5"
 XFCE_SPLASH_ENGINE="balou"

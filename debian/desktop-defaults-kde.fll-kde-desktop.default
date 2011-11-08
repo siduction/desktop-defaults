@@ -3,7 +3,7 @@
 # installed at /etc/default/fll-kde-desktop by the maintainer scripts
 
 # specify KDM theme to be used
-KDE_KDM_THEME="/usr/share/kde4/apps/kdm/themes/aptosid-ponos"
+KDE_KDM_THEME="/usr/share/kde4/apps/kdm/themes/siduction-11.0.5"
 
 # set to disable kdm background, unset to reenable
 KDE_KDM_BG_DISABLE=1
@@ -12,4 +12,4 @@ KDE_KDM_BG_DISABLE=1
 #KDE_KDM_WALLPAPER="${KDE_KDM_THEME}/background.png"
 
 # specify ksplash theme
-KDE_KSPLASH_THEME="aptosid-ponos"
+KDE_KSPLASH_THEME="siduction-11.0.5"

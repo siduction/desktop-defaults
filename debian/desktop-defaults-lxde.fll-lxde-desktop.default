@@ -3,5 +3,5 @@
 # installed at /etc/default/fll-lxde-desktop by the maintainer scripts
 
 # specify SLIM theme to be used
-LXDE_SLIM_THEME="aptosid-ponos"
+LXDE_SLIM_THEME="siduction-11.0.5"
 LXDE_GDM_THEME_COLOR="#000000"
