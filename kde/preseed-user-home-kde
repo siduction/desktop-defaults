@@ -80,7 +80,7 @@ EOF
 fi
 
 ###
-# set wallpaper, plasma-adesktop-appletsrc is provided by our system-settings-kde package
+# set wallpaper, plasma-desktop-appletsrc is provided by our system-settings-kde package
 ###
 if [ "${FLL_WALLPAPER}" ] &&  [ ! -f "${HOME}/.kde/share/config/plasma-desktop-appletsrc" ]; then
 	sed -e "s#wallpaper=.*#wallpaper=${FLL_WALLPAPER}#" \

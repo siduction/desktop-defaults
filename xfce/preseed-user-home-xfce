@@ -67,7 +67,7 @@ mkdir -p "${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml"
 XFCE_DESKTOP_XML="${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml"
 
 # handle case where FLL_WALLPAPER is defined in kde4 directory syntax
-# aptosid-art-wallpaper-* provides a symlink in /usr/share/wallpapers/ to common res wallpaper
+# siduction-art-wallpaper-* provides a symlink in /usr/share/wallpapers/ to common res wallpaper
 if [ -d ${FLL_WALLPAPER} ]; then
 	FLL_WALLPAPER=$(find $(dirname ${FLL_WALLPAPER}) -maxdepth 1 -type l -iname $(basename ${FLL_WALLPAPER}).*)
 fi
@@ -91,12 +91,12 @@ EOF
 fi
 
 ###
-# set desktop theme defaults in xsettings.xml (aptosid-$RELEASE theme)
+# set desktop theme defaults in xsettings.xml (siduction-$RELEASE theme)
 ###
 mkdir -p "${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml"
 XFCE_SETTINGS_XML="${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml"
 # currently distro defaults does not provide the release codename var - use part of gfxboot name
-XFCE_COLOURS="aptosid-${FLL_GFXBOOT_THEME#*-*-}"
+XFCE_COLOURS="siduction-${FLL_GFXBOOT_THEME#*-*-}"
 if [ ! -f "${XFCE_SETTINGS_XML}" ] && [ ${XFCE_COLOURS} ]; then
 	cat > "${XFCE_SETTINGS_XML}" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -146,8 +146,8 @@ fi
 # set panel defaults
 ###
 mkdir -p "${HOME}/.config/xfce4/panel/"
-if [ -d /usr/share/aptosid-settings-xfce ]; then
-	cp -r /usr/share/aptosid-settings-xfce/xfce4 ${HOME}/.config
+if [ -d /usr/share/siduction-settings-xfce ]; then
+	cp -r /usr/share/siduction-settings-xfce/xfce4 ${HOME}/.config
 	sed -i -e s/FLL_LIVE_USER/${FLL_LIVE_USER}/ ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 fi
 
