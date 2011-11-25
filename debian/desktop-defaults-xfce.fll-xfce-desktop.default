@@ -6,7 +6,8 @@
 #XFCE_SERVICES_ENABLED="true"
 
 # specify GDM theme to be used
-XFCE_GDM_THEME="siduction-11.0.5"
+XFCE_GDM_THEME="siduction-onestepbeyond
+GDM_BACKGROUND_OPTION="zoom""
 
 # specify GDM theme color to be used
 XFCE_GDM_THEME_COLOR="#000000"
