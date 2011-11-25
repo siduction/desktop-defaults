@@ -82,24 +82,12 @@ done
 set_default_gdm3_theme()
 {
         umask 0022
-
-        ###
-        # setup GDM theme
-        ###
-        if [ "${XFCE_GDM_THEME}" ] && false; then
-		# XXX: port me to gdm3
-		if ! grep -q "^GraphicalTheme=" /etc/gdm/gdm.conf ; then
-	                sed -i "s/\[greeter\]/\[greeter\]\nGraphicalTheme=${XFCE_GDM_THEME}\nGraphicalThemedColor=${XFCE_GDM_THEME_COLOR}/g" /etc/gdm/gdm.conf
-		else
-			sed -i "s/GraphicalTheme=.*/GraphicalTheme=${XFCE_GDM_THEME}/g" /etc/gdm/gdm.conf
-	        fi
-		if grep -q "^GraphicalThemes=" /etc/gdm/gdm.conf ; then
-			sed -i "s/GraphicalThemes=/#GraphicalThemes=/g" /etc/gdm/gdm.conf
-	        fi
-		if grep -q "^GraphicalThemeRand=" /etc/gdm/gdm.conf ; then
-			sed -i "s/GraphicalThemeRand=/#GraphicalThemeRand=/g" /etc/gdm/gdm.conf
-	        fi
-	fi
+ cat >> "/etc/gdm3/greeter.gsettings" <<EOF
+   
+  [org.gnome.desktop.background]
+  picture-uri='file://${FLL_WALLPAPER}.png'
+  picture-options='${GDM_BACKGROUND_OPTION}'
+  EOF
 }
 
 do_start()

@@ -12,5 +12,5 @@ XFCE_GDM_THEME="siduction-11.0.5"
 XFCE_GDM_THEME_COLOR="#000000"
 
 # specify xfce splash theme and engine
-XFCE_SPLASH_THEME="siduction-11.0.5"
+XFCE_SPLASH_THEME="siduction-onestepbeyond"
 XFCE_SPLASH_ENGINE="balou"
