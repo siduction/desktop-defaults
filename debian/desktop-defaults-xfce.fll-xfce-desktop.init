@@ -82,12 +82,15 @@ done
 set_default_gdm3_theme()
 {
         umask 0022
- cat >> "/etc/gdm3/greeter.gsettings" <<EOF
-   
-  [org.gnome.desktop.background]
-  picture-uri='file://${FLL_WALLPAPER}.png'
-  picture-options='${GDM_BACKGROUND_OPTION}'
-  EOF
+
+cat >> "/etc/gdm3/greeter.gsettings" <<EOF
+
+ 
+[org.gnome.desktop.background]
+picture-uri='file://${FLL_WALLPAPER}.png'
+picture-options='${GDM_BACKGROUND_OPTION}'
+EOF
+
 }
 
 do_start()
