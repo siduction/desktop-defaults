@@ -85,7 +85,6 @@ set_default_gdm3_theme()
 
 cat >> "/etc/gdm3/greeter.gsettings" <<EOF
 
- 
 [org.gnome.desktop.background]
 picture-uri='file://${FLL_WALLPAPER}.png'
 picture-options='${GDM_BACKGROUND_OPTION}'

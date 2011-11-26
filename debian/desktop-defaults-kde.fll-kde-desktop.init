@@ -116,7 +116,7 @@ THEME=${KDE_KDM_THEME}
 	###
 	if [ -n "${KDE_KDM_BG_DISABLE}" ]; then
 cat > /etc/default/kdm.d/wallpaper \
-
+<<EOF
 USEBACKGROUND=false
 EOF
 	elif [ "${KDE_KDM_WALLPAPER}" ]; then
@@ -125,10 +125,10 @@ EOF
 				/etc/default/kdm.d/wallpaper
 		else
 			cat > /etc/default/kdm.d/wallpaper \
-
+<<EOF
 USEBACKGROUND=true
 WALLPAPER=${KDE_KDM_WALLPAPER}
-
+EOF
 		fi
 		# add code to later check if chosen wallpaper still exists
 		if ! grep -Eq '\${WALLPAPER}' /etc/default/kdm.d/wallpaper; then
