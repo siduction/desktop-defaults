@@ -127,27 +127,27 @@ fi
 ###
 ## put an eduversum (seminarix appstarter) icon on the desktop
 ####
-if [ -f /usr/share/applications/eduversum.desktop ]; then
-	[ ! -f "${HOME}/Desktop/eduversum.desktop" ] && \
-		ln -s /usr/share/applications/eduversum.desktop \
-			"${HOME}/Desktop/eduversum.desktop"
-fi
+#if [ -f /usr/share/applications/eduversum.desktop ]; then
+#	[ ! -f "${HOME}/Desktop/eduversum.desktop" ] && \
+#		ln -s /usr/share/applications/eduversum.desktop \
+#			"${HOME}/Desktop/eduversum.desktop"
+#fi
 
 ###
 ## put a siduction-png-video icon on the desktop
 ###
-if [ -f /usr/share/seminarix-samples/video/siduction-png-video.desktop ]; then
-	[ ! -f "${HOME}/Desktop/siduction-png-video.desktop" ] && \
-		ln -s /usr/share/seminarix-samples/video/siduction-png-video.desktop \
-			"${HOME}/Desktop/siduction-png-video.desktop"
-fi
+#if [ -f /usr/share/seminarix-samples/video/siduction-png-video.desktop ]; then
+#	[ ! -f "${HOME}/Desktop/siduction-png-video.desktop" ] && \
+#		ln -s /usr/share/seminarix-samples/video/siduction-png-video.desktop \
+#			"${HOME}/Desktop/siduction-png-video.desktop"
+#fi
 
 ###
 ## put a siduction-irc icon on the desktop
 ####
 if [ ! -f "${HOME}/Desktop/siduction-irc.desktop" ] && \
 
-	[ -f /usr/share/applications/siductions/siduction-irc.desktop ]; then
+	[ -f /usr/share/applications/siduction/siduction-irc.desktop ]; then
 	ln -s /usr/share/applications/siduction/siduction-irc.desktop "${HOME}/Desktop/siduction-irc.desktop"
 fi
 

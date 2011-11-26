@@ -2,8 +2,9 @@ desktop-defaults (1.3.21.2+nmu1) unstable; urgency=low
 
   * Non-maintainer upload.
   * fixed typo in preseed-user-home-common
+  * saving changes before commit helps a lot
 
- -- Ferdinand Thommes <devil@siduction.org>  Sat, 26 Nov 2011 17:29:37 +0100
+ -- Ferdinand Thommes <devil@siduction.org>  Sat, 26 Nov 2011 18:07:42 +0100
 
 desktop-defaults (1.3.21.2) unstable; urgency=low
 
