@@ -1,3 +1,28 @@
+desktop-defaults (1.3.21.2) unstable; urgency=low
+
+  * fixed some typos in the *.default files
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 25 Nov 2011 23:04:21 +0100
+
+desktop-defaults (1.3.21.1) unstable; urgency=low
+
+  * fixed the theme-name in debian/desktop-defaults-xfce.fll-xfce-desktop.default
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 25 Nov 2011 21:49:41 +0100
+
+desktop-defaults (1.3.21) unstable; urgency=low
+
+  * Added the patch from convbsd for gdm3 theming.
+  * fixed debian/desktop-defaults-xfce.fll-xfce-desktop.default
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Fri, 25 Nov 2011 21:26:31 +0100
+
+desktop-defaults (1.3.20) unstable; urgency=low
+
+  * fixed the conflicts
+
+ -- siduction builders <packaging@siduction.org>  Tue, 22 Nov 2011 17:53:04 +0100
+
 desktop-defaults (1.3.19+nmu1) unstable; urgency=low
 
   * Non-maintainer upload.

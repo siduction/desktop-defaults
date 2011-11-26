@@ -148,24 +148,17 @@ fi
 if [ ! -f "${HOME}/Desktop/siduction-irc.desktop" ] && \
 
 	[ -f /usr/share/applications/siductions/siduction-irc.desktop ]; then
-
-	[ -f /usr/share/applications/siduction/siduction-irc.desktop ]; then
-
 	ln -s /usr/share/applications/siduction/siduction-irc.desktop "${HOME}/Desktop/siduction-irc.desktop"
 fi
 
 ###
-## put a installer-gui-irc icon on the desktop
+## put a sidu-installer-irc icon on the desktop
 ####
+
 
 if [ ! -f "${HOME}/Desktop/sidu-installer.desktop" ] && \
 	[ -f /usr/share/applications/siduction/sidu-installer.desktop ]; then
 	ln -s /usr/share/applications/siduction/sidu-installer.desktop "${HOME}/Desktop/sidu-installer.desktop"
-
-if [ ! -f "${HOME}/Desktop/install-gui.desktop" ] && \
-	[ -f /usr/share/applications/siduction/install-gui.desktop ]; then
-	ln -s /usr/share/applications/siduction/install-gui.desktop "${HOME}/Desktop/install-gui.desktop"
-
 fi
 
 ###
