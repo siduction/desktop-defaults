@@ -6,8 +6,9 @@ desktop-defaults (1.3.19+nmu1) unstable; urgency=low
   * prepared for release candidates siduction-11.0.5
   * fixed merge conflict
   * deleted last occurances of aptosid in comments
+  * cleaned common/pressed-user-home-common
 
- -- Ferdinand Thommes <devil@siduction.org>  Sat, 19 Nov 2011 00:49:35 +0100
+ -- Ferdinand Thommes <devil@siduction.org>  Sat, 26 Nov 2011 12:20:50 +0100
 
 desktop-defaults (1.3.19) unstable; urgency=low
 
