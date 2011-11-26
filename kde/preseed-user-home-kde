@@ -73,7 +73,7 @@ mkdir -p	"${HOME}/.config/akonadi" \
 ##
 if [ -r /usr/lib/qt4/plugins/sqldrivers/libqsqlite3.so ] && [ ! -f "${HOME}/.config/akonadi/akonadiserverrc" ]; then
 	cat > "${HOME}/.config/akonadi/akonadiserverrc" \
-<< EOF
+
 [%General]
 Driver=QSQLITE3
 EOF
@@ -103,10 +103,10 @@ fi
 if [ "${KDE_KSPLASH_THEME}" ]; then
 	if [ ! -f "${HOME}/.kde/share/config/ksplashrc" ]; then
 		cat > "${HOME}/.kde/share/config/ksplashrc" \
-<< EOF
+
 [KSplash]
 Theme=${KDE_KSPLASH_THEME}
-EOF
+
 	fi
 fi
 
@@ -119,13 +119,13 @@ if [ "${XKBLAYOUT}" ]; then
 			"${HOME}/.kde/share/config/kxkbrc"
 	else
 		cat > "${HOME}/.kde/share/config/kxkbrc" \
-<<EOF
+
 [Layout]
 LayoutList=${XKBLAYOUT}
 ShowFlag=true
 SwitchMode=Global
 Use=true
-EOF
+
 	fi
 fi
 
@@ -137,10 +137,10 @@ if grep -s -q '^FirstLogin=' "${HOME}/.kde/share/config/kpersonalizerrc"; then
 		"${HOME}/.kde/share/config/kpersonalizerrc"
 else
 	cat > "${HOME}/.kde/share/config/kpersonalizerrc" \
-<<EOF
+
 [General]
 FirstLogin=false
-EOF
+
 fi
 
 ###
@@ -197,7 +197,7 @@ done
 ###
 if [ -f "${INDEXFILE}" ] && [ ! -f "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" ]; then
 	cat > "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
-<<EOF
+
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Encoding=UTF-8
