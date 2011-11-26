@@ -102,7 +102,7 @@ fi
 ###
 if [ "${KDE_KSPLASH_THEME}" ]; then
 	if [ ! -f "${HOME}/.kde/share/config/ksplashrc" ]; then
-		cat > "${HOME}/.kde/share/config/ksplashrc"\
+		cat > "${HOME}/.kde/share/config/ksplashrc" \
 <<EOF
 [KSplash]
 Theme=${KDE_KSPLASH_THEME}
@@ -118,8 +118,8 @@ if [ "${XKBLAYOUT}" ]; then
 		sed -i 's|^LayoutList=.*|LayoutList='"${XKBLAYOUT}"'|' \
 			"${HOME}/.kde/share/config/kxkbrc"
 	else
-		cat > "${HOME}/.kde/share/config/kxkbrc" << EOF\
-
+		cat > "${HOME}/.kde/share/config/kxkbrc" \
+<< EOF
 [Layout]
 LayoutList=${XKBLAYOUT}
 ShowFlag=true
