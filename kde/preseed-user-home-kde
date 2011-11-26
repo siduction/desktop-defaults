@@ -72,7 +72,8 @@ mkdir -p	"${HOME}/.config/akonadi" \
 # use sqlite3 backend for akonadi
 ##
 if [ -r /usr/lib/qt4/plugins/sqldrivers/libqsqlite3.so ] && [ ! -f "${HOME}/.config/akonadi/akonadiserverrc" ]; then
-	cat > "${HOME}/.config/akonadi/akonadiserverrc" << EOF \
+	cat > "${HOME}/.config/akonadi/akonadiserverrc" \
+<<EOF
 [%General]
 Driver=QSQLITE3
 EOF
@@ -101,8 +102,8 @@ fi
 ###
 if [ "${KDE_KSPLASH_THEME}" ]; then
 	if [ ! -f "${HOME}/.kde/share/config/ksplashrc" ]; then
-		cat > "${HOME}/.kde/share/config/ksplashrc" << EOF\
-
+		cat > "${HOME}/.kde/share/config/ksplashrc"\
+<<EOF
 [KSplash]
 Theme=${KDE_KSPLASH_THEME}
 EOF
@@ -135,8 +136,8 @@ if grep -s -q '^FirstLogin=' "${HOME}/.kde/share/config/kpersonalizerrc"; then
 	sed -i 's|^FirstLogin=.*|FirstLogin=false|' \
 		"${HOME}/.kde/share/config/kpersonalizerrc"
 else
-	cat > "${HOME}/.kde/share/config/kpersonalizerrc" << EOF\
-
+	cat > "${HOME}/.kde/share/config/kpersonalizerrc" \
+<<EOF
 [General]
 FirstLogin=false
 EOF
@@ -195,8 +196,8 @@ done
 # create desktop shortcut to index.html
 ###
 if [ -f "${INDEXFILE}" ] && [ ! -f "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" ]; then
-	cat > "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" <<EOF\
-
+	cat > "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
+<< EOF
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Encoding=UTF-8
