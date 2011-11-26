@@ -175,11 +175,11 @@ for menu in /usr/share/desktop-defaults-common/fll-flux-*; do
 done
 
 if [ ! -f "${HOME}/.fluxbox/menu" ]; then
-	cat >"${HOME}/.fluxbox/menu"
+	cat >"${HOME}/.fluxbox/menu" << EOF
 [begin] (${FLL_DISTRO_NAME} )
 [include] (~/.fluxbox/fll-flux-hi)
 [include] (/etc/X11/fluxbox/fluxbox-menu)
 [include] (~/.fluxbox/fll-flux-lo)
 [end]
-
+EOF
 fi
