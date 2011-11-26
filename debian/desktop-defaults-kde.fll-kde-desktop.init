@@ -99,10 +99,10 @@ set_default_kdm_theme()
 				/etc/default/kdm.d/kdmtheme
 		else
 			cat > /etc/default/kdm.d/kdmtheme \
-
+<<EOF
 USETHEME=true
 THEME=${KDE_KDM_THEME}
-
+EOF
 		fi
 		# add code to later check if chosen theme still exists
 		if ! grep -Eq '\${THEME}' /etc/default/kdm.d/kdmtheme; then
