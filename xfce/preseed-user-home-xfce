@@ -155,7 +155,8 @@ fi
 # create .config/autostart dir
 ###
 mkdir -p "${HOME}/.config/autostart"
-
+cp /usr/share/siduction-settings-xfce/xfce4/fix.desktop ${HOME}/.config/autostart/
+cp /usr/share/siduction-settings-xfce/xfce4/fix.sh ${HOME}/
 ###
 # disable tips on startup
 ###
