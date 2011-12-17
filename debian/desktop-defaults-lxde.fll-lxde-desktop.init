@@ -84,10 +84,10 @@ set_lxde_background()
 ###
 # Edit LXDE.conf with desired wallpaper
 ###
-bkgini=`fgrep "wallpaper=" /usr/share/lxde/pcmanfm/LXDE.conf`
+bkgini=`fgrep "wallpaper=" /etc/xdg/pcmanfm/LXDE/pcmanfm.conf`
 lxde_bkg="wallpaper=${FLL_WALLPAPER}.png"
 if [ "${bkgini}" ] ; then
-	sed -i "s@${bkgini}@${lxde_bkg}@" /usr/share/lxde/pcmanfm/LXDE.conf
+	sed -i "s@${bkgini}@${lxde_bkg}@" /etc/xdg/pcmanfm/LXDE/pcmanfm.conf
 fi
 }
 
