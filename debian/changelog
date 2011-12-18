@@ -1,3 +1,10 @@
+desktop-defaults (1.3.22.6) unstable; urgency=low
+
+  [ Markus Meyer ]
+  * edited debian/desktop-defaults-lxde.fll-lxde-desktop.init: set siduction wallpaper as background for lightdm
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 18 Dec 2011 18:30:22 +0100
+
 desktop-defaults (1.3.22.5) unstable; urgency=low
 
   * changed fll-xfce-desktop for probing the existence of gdm3
