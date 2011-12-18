@@ -82,12 +82,24 @@ done
 set_lxde_background()
 {
 ###
-# Edit LXDE.conf with desired wallpaper
+# Edit pcmanfm.conf with desired wallpaper
 ###
 bkgini=`fgrep "wallpaper=" /etc/xdg/pcmanfm/LXDE/pcmanfm.conf`
 lxde_bkg="wallpaper=${FLL_WALLPAPER}.png"
 if [ "${bkgini}" ] ; then
 	sed -i "s@${bkgini}@${lxde_bkg}@" /etc/xdg/pcmanfm/LXDE/pcmanfm.conf
+fi
+}
+
+set_lightdm_background()
+{
+###
+# Edit lightdm-gtk-greeter.conf with desired wallpaper
+###
+bkgini=`fgrep "background=" /etc/lightdm/lightdm-gtk-greeter.conf`
+lightdm_bkg="background=${FLL_WALLPAPER}.png"
+if [ "${bkgini}" ] ; then
+        sed -i "s@${bkgini}@${lightdm_bkg}@" /etc/lightdm/lightdm-gtk-greeter.conf
 fi
 }
 
