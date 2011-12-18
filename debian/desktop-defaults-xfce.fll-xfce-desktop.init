@@ -80,7 +80,7 @@ for param in $(cat /proc/cmdline); do
 done
 
 set_default_gdm3_theme()
-{
+{   if [ -e "/etc/gdm3" ]; then
         umask 0022
 
 cat >> "/etc/gdm3/greeter.gsettings" <<EOF
@@ -89,7 +89,9 @@ cat >> "/etc/gdm3/greeter.gsettings" <<EOF
 picture-uri='file://${FLL_WALLPAPER}.png'
 picture-options='${GDM_BACKGROUND_OPTION}'
 EOF
-
+    else
+       echo "No gdm installed."
+    fi
 }
 
 do_start()
