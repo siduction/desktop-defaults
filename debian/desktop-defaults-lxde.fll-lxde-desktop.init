@@ -148,6 +148,11 @@ do_start()
 {
 	set_lxde_background
 
+        if [ -x "/usr/sbin/lightdm" ]; then
+                set_lightdm_background
+        fi
+
+
 	if [ -x "/usr/sbin/gdm" ]; then
 		set_default_gdm_theme
 	fi
