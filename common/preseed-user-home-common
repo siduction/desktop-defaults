@@ -119,10 +119,13 @@ fi
 ###
 ## put a manual icon on the desktop
 ####
-#if [ ! -f "${HOME}/Desktop/siduction-manual.desktop" ] && \
-#	[ -f /usr/share/applications/siduction/siduction-manual.desktop ]; then
-#	ln -s /usr/share/applications/siduction/siduction-manual.desktop "${HOME}/Desktop/siduction-manual.desktop"
-#fi
+#
+if [ ! -f "${HOME}/Desktop/bluewater-manual.desktop" ] && \
+	[ -f /usr/share/applications/bluewater-manual/bluewater-manual.desktop ];
+then
+	ln -s /usr/share/applications/bluewater-manual/bluewater-manual.desktop
+"${HOME}/Desktop/bluewater-manual.desktop"
+fi
 
 ###
 ## put an eduversum (seminarix appstarter) icon on the desktop
