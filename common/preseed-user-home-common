@@ -121,10 +121,9 @@ fi
 ####
 #
 if [ ! -f "${HOME}/Desktop/bluewater-manual.desktop" ] && \
-	[ -f /usr/share/applications/bluewater-manual/bluewater-manual.desktop ];
-then
-	ln -s /usr/share/applications/bluewater-manual/bluewater-manual.desktop
-"${HOME}/Desktop/bluewater-manual.desktop"
+	[ -f /usr/share/applications/bluewater-manual/bluewater-manual.desktop ]; then
+		ln -s /usr/share/applications/bluewater-manual/bluewater-manual.desktop \
+			"${HOME}/Desktop/bluewater-manual.desktop"
 fi
 
 ###
