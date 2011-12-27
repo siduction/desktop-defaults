@@ -79,8 +79,28 @@ for param in $(cat /proc/cmdline); do
 	esac
 done
 
+set_lightdm_background()
+{
+###
+# Edit lightdm-gtk-greeter.conf with desired wallpaper
+###
+if [ -e "/etc/lightdm" ]; then		
+	bkgini=`fgrep "background=" /etc/lightdm/lightdm-gtk-greeter.conf`
+	lightdm_bkg="background=${FLL_WALLPAPER}.png"
+		if [ "${bkgini}" ] ; then
+        		sed -i "s@${bkgini}@${lightdm_bkg}@" /etc/lightdm/lightdm-gtk-greeter.conf
+		fi
+else
+	echo "No lightdm installed"
+fi
+}
+
 set_default_gdm3_theme()
-{   if [ -e "/etc/gdm3" ]; then
+{   
+###
+# Set desired wallpaper as background for gdm
+###
+if [ -e "/etc/gdm3" ]; then
         umask 0022
 
 cat >> "/etc/gdm3/greeter.gsettings" <<EOF
@@ -97,6 +117,7 @@ EOF
 do_start()
 {
 	set_default_gdm3_theme
+	set_lightdm_background
 
 	su "${FLL_LIVE_USER}" -c /usr/share/desktop-defaults-xfce/preseed-user-home-xfce
 }
