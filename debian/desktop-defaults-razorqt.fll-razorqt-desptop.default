@@ -1,0 +1,14 @@
+# Defaults for razorqt desktop
+# sourced by /usr/bin/desktop-defaults-razorqt and /etc/init.d/fll-razorqt-desktop
+# installed at /etc/default/fll-razorqt-desktop by the maintainer scripts
+
+	###
+	# make qupzilla default browser if installed
+	###
+	QUPZILLA=$(which qupzilla 2>/dev/null)
+	if [ -x "${Qupzilla}" ]; then
+		update-alternatives --set x-www-browser "${QUPZILLA}" >/dev/null
+	fi
+
+	su "${FLL_LIVE_USER}" -c
+/usr/share/desktop-defaults-common/preseed-user-home-common
