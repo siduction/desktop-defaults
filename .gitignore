@@ -3,3 +3,4 @@ debian/desktop-defaults-*/
 debian/*log
 debian/*substvars
 debian/*debhelper
+debian/t*/
