@@ -1,2 +1,5 @@
 debian/files
-debian/desktop-defaults*
+debian/desktop-defaults-*/
+debian/*log
+debian/*substvars
+debian/*debhelper
