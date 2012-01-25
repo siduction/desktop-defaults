@@ -1,3 +1,10 @@
+desktop-defaults (1.3.22.9+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * added needed files for raqzorqt, added myself to uploaders filed
+
+ -- Ferdinand Thommes <devil@siduction.org>  Wed, 25 Jan 2012 10:45:50 +0100
+
 desktop-defaults (1.3.22.9) unstable; urgency=low
 
   * add set lightdm theme to the xfce initscript

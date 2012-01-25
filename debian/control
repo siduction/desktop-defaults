@@ -2,7 +2,7 @@ Source: desktop-defaults
 Section: x11
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org> 
-Uploaders: Alf Gaida <agaida@siduction.org>
+Uploaders: Alf Gaida <agaida@siduction.org> Ferdinand Thommes <devil@siduction.org>
 XBSC-Original-Maintainer: Kel Modderman <kel@otaku42.de>
 Build-Depends: debhelper (>= 8)
 Standards-Version: 3.9.2
@@ -85,6 +85,26 @@ Description: user presets specific to the Xfce desktop environment
   - set up artwork theme integration for Xfce (gdm3, wallpaper)
   - prefer lxterminal as x-terminal-emulator
   - configure Python keyboard switcher
+  - populate live-only XDG desktop icons
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
+
+Package: desktop-defaults-razorqt
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ desktop-defaults-common,
+ siduction-settings-razorqt,
+Description: user presets specific to the Razor-qt desktop environment
+ This package provides required infrastructure to tweak the Razor-qt desktop
+ of the F.U.L.L.S.T.O.R.Y. live Linux media.
+  - set up artwork theme integration for Razor-qt (lightdm, splash, desktop,)
+  - keyboard layouts
+  - disable tips on startup
+  - setup trash can
+  - autostart release notes
   - populate live-only XDG desktop icons
  .
  This is a FULLSTORY live-only package and must not be installed to an
