@@ -6,12 +6,12 @@
 #XFCE_SERVICES_ENABLED="true"
 
 # specify GDM theme to be used
-XFCE_GDM_THEME="siduction-onestepbeyond"
+XFCE_GDM_THEME="siduction-onestepbeyond-lu-edition"
 GDM_BACKGROUND_OPTION="zoom"
 
 # specify GDM theme color to be used
 XFCE_GDM_THEME_COLOR="#808080"
 
 # specify xfce splash theme and engine
-XFCE_SPLASH_THEME="siduction-onestepbeyond"
+XFCE_SPLASH_THEME="siduction-onestepbeyond-lu-edition"
 XFCE_SPLASH_ENGINE="balou"
