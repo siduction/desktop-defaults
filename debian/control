@@ -5,8 +5,8 @@ Maintainer: Torsten Wohlfarth <towo@siduction.org>
 Uploaders: Alf Gaida <agaida@siduction.org>,
            Ferdinand Thommes <devil@siduction.org>
 XBSC-Original-Maintainer: Kel Modderman <kel@otaku42.de>
-Build-Depends: debhelper (>= 8)
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.3
 Vcs-Git: git://git.siduction.org:packages/siduction-repository/desktop-defaults.git
 Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/desktop-defaults.git;a=summary
 
