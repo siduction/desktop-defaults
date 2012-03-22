@@ -1,3 +1,12 @@
+desktop-defaults (1.3.23.2) unstable; urgency=low
+
+  * .gitignore modified
+  *  add soure overrides to prevent lintian complaining about
+     unknown-field-in-dsc original-maintainer 
+  *  fixes #640
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 22 Mar 2012 12:58:36 +0100
+
 desktop-defaults (1.3.23.1) unstable; urgency=low
 
   * bump standards to 3.9.3
