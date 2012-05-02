@@ -17,7 +17,7 @@ PATH=/sbin:/usr/sbin:$PATH
 # set default umask
 umask 0022
 
-# this is only invoked from fll-kde-desktop, inherit its environment
+# this is only invoked from fll-razorqt-desktop, inherit its environment
 NAME="fll-razorqt-desktop"
 
 ###
