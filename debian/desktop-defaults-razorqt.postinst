@@ -1,0 +1,22 @@
+#!/bin/sh -e
+
+say() {
+	echo "I: $@..."
+}
+
+do_postinst() {
+update-alternatives --install /usr/bin/x-session-manager x-session-manager
+/usr/bin/razor-session 50
+}
+
+case "${1}" in
+	postinst)
+		do_postinst
+		;;
+	*)
+		echo "Usage: ${0} postinst"
+		;;
+esac
+
+:
+
