@@ -7,9 +7,13 @@ desktop-defaults (1.3.23.7) unstable; urgency=low
 
 desktop-defaults (1.3.23.6) unstable; urgency=low
 
+  [ Ferdinand Thommes ]
   * edit_3 desktop-defaults-razorqt.postinst refs #674
 
- -- Ferdinand Thommes <devil@siduction.org>  Thu, 03 May 2012 21:07:54 +0200
+  [ Alf Gaida ]
+  * rebuild refs #674 
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 03 May 2012 21:12:18 +0200
 
 desktop-defaults (1.3.23.5) unstable; urgency=low
 
