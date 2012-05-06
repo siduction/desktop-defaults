@@ -67,20 +67,6 @@ done
 mkdir -p "${HOME}/.config/autostart"
 
 ###
-# create ~/.config/pcmanfm with wallpaper settings
-###
-#PCMANFM_DIR="${HOME}/.config/pcmanfm"
-#mkdir -p "${PCMANFM_DIR}"
-#if [ ! -f "${PCMANFM_DIR}/main.lxde" ]; then
-#    cat > "${PCMANFM_DIR}/main.lxde" << EOF
-#[Desktop]
-#show_wallpaper=1
-#wallpaper=${FLL_WALLPAPER}
-#EOF
-
-#fi
-
-###
 # create ~/.language file for python keyboard switcher, if not available
 ###
 if [ ! -f "${HOME}/.language" ]; then
@@ -89,8 +75,6 @@ en,de
 EOF
 
 fi
-
-## TODO: Trash, not available yet but schedules for 0.4
 
 
 ###
@@ -121,6 +105,7 @@ if [ -f "${INDEXFILE}"  ] && \
    [ ! -f "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" ]; then
 	cat > "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
 <<EOF
+
 [Desktop Entry]
 Encoding=UTF-8
 Type=Application
