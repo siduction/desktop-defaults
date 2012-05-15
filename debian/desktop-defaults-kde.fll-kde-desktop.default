@@ -12,4 +12,4 @@ KDE_KDM_BG_DISABLE=1
 #KDE_KDM_WALLPAPER="${KDE_KDM_THEME}/background.png"
 
 # specify ksplash theme
-KDE_KSPLASH_THEME="siduction-onestepbeyond"
+KDE_KSPLASH_THEME="siduction-desperado"
