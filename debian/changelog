@@ -1,9 +1,9 @@
-desktop-defaults (1.3.23.10) UNRELEASED; urgency=low
+desktop-defaults (1.3.23.10) unstable; urgency=low
 
   * some settings by coruja
   * closes #715
 
- -- Alf Gaida <agaida@siduction.org>  Sun, 20 May 2012 01:17:58 +0200
+ -- Alf Gaida <agaida@siduction.org>  Sun, 20 May 2012 01:41:52 +0200
 
 desktop-defaults (1.3.23.9) unstable; urgency=low
 
