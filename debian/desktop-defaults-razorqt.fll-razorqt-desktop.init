@@ -85,12 +85,12 @@ done
 set_lightdm_background()
 {
 ###
-# Edit lightdm-qt-greeter.conf with desired wallpaper
+# Edit lightdm-gtk-greeter.conf with desired wallpaper
 ###
-bkgini=`fgrep "background=" /etc/lightdm/lightdm-qt-greeter.conf`
+bkgini=`fgrep "background=" /etc/lightdm/lightdm-gtk-greeter.conf`
 lightdm_bkg="background=${FLL_WALLPAPER}.png"
 if [ "${bkgini}" ] ; then
-        sed -i "s@${bkgini}@${lightdm_bkg}@" /etc/lightdm/lightdm-qt-greeter.conf
+        sed -i "s@${bkgini}@${lightdm_bkg}@" /etc/lightdm/lightdm-gtk-greeter.conf
 fi
 }
 
@@ -149,7 +149,6 @@ do_start()
                 set_lightdm_background
         fi
 
-
 	if [ -x "/usr/sbin/gdm" ]; then
 		set_default_gdm_theme
 	fi
@@ -159,7 +158,7 @@ do_start()
 		update-alternatives --set x-terminal-emulator '/usr/bin/xterm'
 >/dev/null
 	fi
-	
+
 	su "${FLL_LIVE_USER}" -c
 /usr/share/desktop-defaults-razorqt/preseed-user-home-razorqt
 }
