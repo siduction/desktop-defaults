@@ -103,44 +103,39 @@ if [ "${bkgini}" ] ; then
 fi
 }
 
-set_default_gdm_theme()
-{
-	umask 0022
-
-	###
-	# setup GDM theme
-	###
-	if [ -n "${LXDE_GDM_THEME}" ] && [ -n "${LXDE_GDM_THEME_COLOR}" ]; then
-		if ! grep -q "^GraphicalTheme=" /etc/gdm/gdm.conf && ! grep -q "^GraphicalThemedColor=" /etc/gdm/gdm.conf ; then
-			sed -i	-e "s/\[greeter\]/\[greeter\]\nGraphicalTheme=${LXDE_GDM_THEME}\nGraphicalThemedColor=${LXDE_GDM_THEME_COLOR}/" \
-				/etc/gdm/gdm.conf
-		else
-			sed -i	-e "s/\(GraphicalTheme=\).*/\1${LXDE_GDM_THEME}/g" \
-				-e "s/\(GraphicalThemedColor=\).*/\1${LXDE_GDM_THEME_COLOR}/" \
-					/etc/gdm/gdm.conf
-		fi
-		if grep -q "^GraphicalThemes=" /etc/gdm/gdm.conf ; then
-			sed -i "s/GraphicalThemes=/#GraphicalThemes=/g" /etc/gdm/gdm.conf
-	        fi
-		if grep -q "^GraphicalThemeRand=" /etc/gdm/gdm.conf ; then
-			sed -i "s/GraphicalThemeRand=/#GraphicalThemeRand=/g" /etc/gdm/gdm.conf
-	        fi
-	fi
-}
-
 set_default_slim_theme()
 {
 	umask 0022
 
 	###
+	# create slim theme (as a workaround)
+	###
+	themedir="/usr/share/slim/themes/${LXDE_SLIM_THEME}"
+	if ! [ -d ${themedir} ]; then
+		mkdir ${themedir}
+	fi
+	cd ${themedir}
+	if [ -d "../debian-spacefun" ]; then
+		cp ../debian-spacefun/slim.theme .
+		cp ../debian-spacefun/panel.png .
+	fi
+	bkgpath="${FLL_WALLPAPER:0:22}"
+	bkgfile="${FLL_WALLPAPER:22}"
+	bkglogin="${bkgpath}login-${bkgfile}.png"
+	cp ${bkglogin} background.png
+	
+	###
 	# setup slim theme
 	###
 	if [ -n "${LXDE_SLIM_THEME}" ]; then
-			sed -i	-e "s/\(current_theme\).*/\1\t${LXDE_SLIM_THEME}/g" \
-					/etc/slim.conf
-		if grep -q "^current_theme" /etc/slim.conf ; then
-			sed -i "s/current_theme/#current_theme/g" /etc/slim.conf
-	        fi
+#		sed -i	-e "s/\(current_theme\).*/\1\t${LXDE_SLIM_THEME}/g" \
+#					/etc/slim.conf
+#		if grep -q "^current_theme" /etc/slim.conf ; then
+#			sed -i "s/current_theme/#current_theme/g" /etc/slim.conf
+#       fi
+		themeold="$(fgrep "current_theme" /etc/slim.conf)"
+		themenew="current_theme\t${LXDE_SLIM_THEME}"
+		sed -i "s@${themeold}@${themenew}@" /etc/slim.conf
 	fi
 }
 
@@ -148,13 +143,12 @@ do_start()
 {
 	set_lxde_background
 
-        if [ -x "/usr/sbin/lightdm" ]; then
-                set_lightdm_background
-        fi
+    if [ -x "/usr/sbin/lightdm" ]; then
+        set_lightdm_background
+    fi
 
-
-	if [ -x "/usr/sbin/gdm" ]; then
-		set_default_gdm_theme
+	if [ -x "/usr/bin/slim" ]; then
+		set_default_slim_theme
 	fi
 
 	# set x-terminal to lxterminal

@@ -4,4 +4,4 @@
 
 # specify SLIM theme to be used
 LXDE_SLIM_THEME="siduction-desperado"
-LXDE_GDM_THEME_COLOR="#808080"
+
