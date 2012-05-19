@@ -58,6 +58,7 @@ Depends: ${misc:Depends},
  distro-defaults,
  fll-live-initscripts,
  desktop-defaults-common,
+ siduction-settings-lxde,
  lxde-core
 Description: user presets specific to the LXDE desktop environment
  This package provides required infrastructure to tweak the LXDE desktop
