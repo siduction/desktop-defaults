@@ -91,6 +91,15 @@ if [ "${bkgini}" ] ; then
 fi
 }
 
+set_openbox_theme()
+{
+###
+# edit rc.xml with desired theme
+###
+obtheme="Onyx-Citrus"
+sed -i "s/Onyx/${obtheme}/" /etc/xdg/openbox/LXDE/rc.xml
+}
+
 set_lightdm_background()
 {
 ###
@@ -142,6 +151,8 @@ set_default_slim_theme()
 do_start()
 {
 	set_lxde_background
+	
+	set_openbox_theme
 
     if [ -x "/usr/sbin/lightdm" ]; then
         set_lightdm_background
