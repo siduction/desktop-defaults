@@ -1,13 +1,13 @@
  #!/bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          fll-razorqt-desktop
+# Provides:          fll-rqt-desktop
 # Required-Start:    $local_fs $remote_fs fll-adduser
 # Required-Stop:
 # X-Start-Before:    fll-common-desktop
 # Default-Start:     S
 # Default-Stop:
-# Short-Description: prepare live user for razorqt desktop
+# Short-Description: prepare live user for rqt desktop
 # Description:       The purpose of this script is to preseed the live users
 #                    settings for the razorqt desktop.
 ### END INIT INFO
@@ -18,6 +18,8 @@
 # Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
 # Copyright: (C) 2008-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 # Copyright: (C) 2012      Ferdinand Thommes <devil@siduction.org>
+# Copyright: (C) 2012      Alf Gaida <agaida@siduction.org>
+
 # License:   GPLv2
 #
 # siduction development::
@@ -25,7 +27,7 @@
 ###
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-NAME="fll-razorqt-desktop"
+NAME="fll-rqt-desktop"
 
 ###
 # source distro-defaults, no-op unless in live mode
@@ -160,7 +162,7 @@ do_start()
 	fi
 
 	su "${FLL_LIVE_USER}" -c
-/usr/share/desktop-defaults-razorqt/preseed-user-home-razorqt
+/usr/share/desktop-defaults-rqt/preseed-user-home-rqt
 }
 
 case "${1}" in
