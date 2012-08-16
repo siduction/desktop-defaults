@@ -111,3 +111,16 @@ Description: user presets specific to the Razor-qt desktop environment
  .
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
+
+Package: desktop-defaults-gnome
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ desktop-defaults-common
+Description: user presets specific to the GNOME desktop environment
+ This package provides required infrastructure to tweak the GNOME desktop
+ of the F.U.L.L.S.T.O.R.Y. live Linux media.
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.

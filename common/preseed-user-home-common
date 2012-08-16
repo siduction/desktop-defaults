@@ -186,3 +186,16 @@ if [ ! -f "${HOME}/.fluxbox/menu" ]; then
 [end]
 EOF
 fi
+
+###
+# If it is gnome flavour 
+# chown to ${FLL_LIVE_USER} and chmod u+x ${SIDUCTION_DESKTOP_LAUNCHERS}  because of gnome 
+# security style
+###
+if [ -f "/etc/default/fll-gnome-desktop" ]; then
+	 . /etc/default/fll-gnome-desktop
+	for d_launchers in ${SIDUCTION_DESKTOP_LAUNCHERS} ; do
+		sudo chown ${FLL_LIVE_USER} ${HOME}/Desktop/${d_launchers}.desktop
+		sudo chmod u+x ${HOME}/Desktop/${d_launchers}.desktop
+	done
+fi

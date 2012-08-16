@@ -1,3 +1,9 @@
+desktop-defaults (1.4.5) unstable; urgency=low
+
+  * added gnome support
+
+ -- Angelescu Ovidiu <mrhsaacdoh@gmail.com>  Thu, 16 Aug 2012 21:48:32 +0200
+
 desktop-defaults (1.4.4) unstable; urgency=low
 
   * fixed debian/desktop-defaults-xfce.fll-xfce-desktop.default XFCE_SPLASH_THEME
