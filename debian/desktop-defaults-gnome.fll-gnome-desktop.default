@@ -1,0 +1,12 @@
+# Defaults for gnome desktop
+# sourced by /usr/bin/desktop-defaults-gnome and /etc/init.d/fll-gnome-desktop
+# installed at /etc/default/fll-gnome-desktop by the maintainer scripts
+
+# Gnome GDM3 background rendering image option
+GDM_BACKGROUND_RENDERING_OPTION="zoom"
+
+# Windows buttons layout in gnome mode
+WINDOWS_BUTTONS_LAYOUT=":minimize,maximize,close"
+
+# Siduction desktop launchers
+SIDUCTION_DESKTOP_LAUNCHERS="bluewater-manual siduction-irc sidu-installer"

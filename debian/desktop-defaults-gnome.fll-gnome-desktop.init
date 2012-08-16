@@ -1,0 +1,122 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          fll-gnome-desktop
+# Required-Start:    $local_fs $remote_fs fll-adduser
+# Required-Stop:
+# X-Start-Before:    fll-common-desktop
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: prepare live user for gnome desktop
+# Description:       The purpose of this script is to preseed the live users
+#                    settings for the gnome desktop.
+### END INIT INFO
+
+###
+# F.U.L.L.S.T.O.R.Y init script
+#
+# Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
+# Copyright: (C) 2008-2010 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# License:   GPLv2
+#
+# F.U.L.L.S.T.O.R.Y Project Homepage:
+# http://developer.berlios.de/projects/fullstory
+###
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+NAME="fll-gnome-desktop"
+
+###
+# source distro-defaults, no-op unless in live mode
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -r /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" != "live" ]; then
+	exit 0
+fi
+
+###
+# source lsb functions
+###
+. /lib/lsb/init-functions
+
+###
+# source fll functions
+###
+. /lib/init/fll
+
+###
+# read in variables from our default conffile
+###
+if [ -r "/etc/default/${NAME}" ]; then
+	. "/etc/default/${NAME}"
+fi
+
+###
+# cheatcode handling
+###
+for param in $(cat /proc/cmdline); do
+	case "${param}" in
+		flldebug=*)
+			if [ "${param#flldebug=}" = "${NAME#fll-}" ] || [ "${param#flldebug=}" = "all" ]; then
+                    		fll_redirect
+			fi
+			;;
+		nointro)
+			NOINTRO="yes"
+			;;
+	esac
+done
+
+set_polkit_options()
+{
+	# enable polkit operations for users in sudo group
+	polkitdir="/etc/polkit-1/localauthority/10-vendor.d"
+	if [ ! -d "${polkitdir}" ] ; then
+		mkdir -p ${polkitdir}
+	fi
+	cat > ${polkitdir}/10-live-cd.pkla << EOF
+[Live CD user permissions]
+Identity=unix-group:sudo
+Action=*
+ResultAny=yes
+ResultInactive=no
+ResultActive=yes
+EOF
+}
+
+do_start()
+{
+	set_polkit_options
+	su "${FLL_LIVE_USER}" -c /usr/share/desktop-defaults-gnome/preseed-user-home-gnome
+}
+
+case "${1}" in
+	start)
+		log_daemon_msg "${NAME}"
+		log_action_begin_msg " preparing ${FLL_LIVE_USER} for gnome"
+		do_start
+		log_end_msg 0
+		;;
+	stop)
+		;;
+	restart|force-reload)
+		echo "Error: argument '${1}' not supported" >&2
+		exit 3
+		;;
+	status)
+		log_success_msg "${0} is no dæmon."
+		exit 0
+		;;
+	*)
+		echo "Usage: ${NAME} {start|stop}" >&2
+		exit 3
+		;;
+esac
+
+:
+

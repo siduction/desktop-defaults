@@ -1,0 +1,114 @@
+#!/bin/sh
+
+###
+# F.U.L.L.S.T.O.R.Y init script
+#
+# Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
+# Copyright: (C) 2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# License:   GPLv2
+#
+# F.U.L.L.S.T.O.R.Y Project Homepage:
+# http://developer.berlios.de/projects/fullstory
+###
+
+PATH=/sbin:/usr/sbin:$PATH
+
+# set default umask
+umask 0022
+
+# this is only invoked from fll-gnome-desktop, inherit its environment
+NAME="fll-gnome-desktop"
+
+###
+# source distro-defaults, no-op unless in live mode
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -s /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" != "live" ]; then
+	exit 0
+fi
+
+###
+# read in variables from our default conffile
+###
+if [ -s "/etc/default/${NAME}" ]; then
+	. "/etc/default/${NAME}"
+fi
+
+###
+# cheatcode handling
+###
+for param in $(cat /proc/cmdline); do
+	case "${param}" in
+		flldebug=*)
+			[ "${param#flldebug=}" = "${NAME}" ] && set -x
+			;;
+		nointro)
+			NOINTRO="yes"
+			;;
+	esac
+done
+
+# setup Gnome desktop background
+	if [ ! -d ${HOME}/.config/autostart ]; then 
+		mkdir -p ${HOME}/.config/autostart
+	fi
+
+	cat > "${HOME}/.config/autostart/background.desktop" << EOF
+[Desktop Entry]
+Type=Application
+Exec= /usr/share/desktop-defaults-gnome/gnome-background-settings
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Background set
+Name=Background set
+Comment[en_US]=
+Comment=
+EOF
+
+for mntpnt in /fll/*; do
+	if [ -d "${mntpnt}" ] && [ -f "${mntpnt}/index.html" ]; then
+		INDEXFILE="${mntpnt}/index.html"
+		for ext in svg png gif ico; do
+			if [ -f "${mntpnt}/${FLL_CDROM_INDEX_ICON}.${ext}" ]; then
+				INDEXICON="${mntpnt}/${FLL_CDROM_INDEX_ICON}.${ext}"
+				break
+			fi
+		done
+		break
+	fi
+done
+
+
+###
+# create desktop shortcut to index.html
+###
+if [ -f "${INDEXFILE}" ] && [ ! -f "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" ]; then
+	[ ! -d ${HOME}/Desktop ] && mkdir ${HOME}/Desktop
+	cat > "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" <<EOF
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Exec=x-www-browser file:${INDEXFILE}
+Icon=${INDEXICON}
+Terminal=0
+
+Name=${FLL_CDROM_INDEX}
+GenericName=${FLL_CDROM_INDEX}
+EOF
+	chmod u+x "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop"
+
+	if [ "${NOINTRO}" != "yes" ]; then
+		[ ! -d ${HOME}/.config/autostart ] && mkdir -p ${HOME}/.config/autostart
+		ln -sf "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
+			"${HOME}/.config/autostart/"
+	fi
+elif [ -e "${HOME}/.config/autostart/${FLL_DISTRO_NAME}.desktop" ]; then
+	# toram + persistency
+	rm -f "${HOME}/.config/autostart/${FLL_DISTRO_NAME}.desktop"
+fi
