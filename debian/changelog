@@ -1,3 +1,13 @@
+desktop-defaults (1.4.6) unstable; urgency=low
+
+  * added update-rc.d for fll-gnome-desktop boot sequence
+  * all gnome settings are now pulled from /etc/default/fll-gnome-desktop using postinstall script 
+  * moved code for gdm3 background from fll-xdm to desktop-defaults-gnome
+  * added code for BACKGROUND_RENDERING_OPTION and also change it from zoom to stretched
+  * removed autostart file for setting up gnome options and added gnome options to siduction-settings-gnome
+
+ -- Angelescu Ovidiu <mrhsaacdoh@gmail.com>  Mon, 20 Aug 2012 17:48:32 +0300
+
 desktop-defaults (1.4.5) unstable; urgency=low
 
   * added gnome support

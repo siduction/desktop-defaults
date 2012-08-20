@@ -1,2 +1,2 @@
 [org.gnome.settings-daemon.plugins.updates]
-active=false
+active=${ACTIVE}

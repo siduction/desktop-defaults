@@ -1,3 +1,3 @@
 [org.gnome.desktop.lockdown]
-disable-lock-screen=true
-disable-user-switching=true
+disable-lock-screen=${DISABLE_LOCK_SCREEN}
+disable-user-switching=${DISABLE_USER_SWITCHING}

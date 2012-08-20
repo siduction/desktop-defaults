@@ -53,22 +53,6 @@ for param in $(cat /proc/cmdline); do
 	esac
 done
 
-# setup Gnome desktop background
-	if [ ! -d ${HOME}/.config/autostart ]; then 
-		mkdir -p ${HOME}/.config/autostart
-	fi
-
-	cat > "${HOME}/.config/autostart/background.desktop" << EOF
-[Desktop Entry]
-Type=Application
-Exec= /usr/share/desktop-defaults-gnome/gnome-background-settings
-Hidden=false
-X-GNOME-Autostart-enabled=true
-Name[en_US]=Background set
-Name=Background set
-Comment[en_US]=
-Comment=
-EOF
 
 for mntpnt in /fll/*; do
 	if [ -d "${mntpnt}" ] && [ -f "${mntpnt}/index.html" ]; then

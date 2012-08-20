@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+if [ -f /etc/default/fll-gnome-desktop ]; then
+	. /etc/default/fll-gnome-desktop
+fi
+
+case "$1" in
+	configure)
+	if [ -f /etc/default/fll-gnome-desktop ]; then
+		sed -i "s@disable-lock-screen=.*@disable-lock-screen=${DISABLE_LOCK_SCREEN}@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.lockdown.gschema.override
+		sed -i "s@disable-user-switching=.*@disable-user-switching=${DISABLE_USER_SWITCHING}@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.lockdown.gschema.override
+		sed -i "s@lock-enabled=.*@lock-enabled=${LOCK_ENABLED}@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.screensaver.gschema.override
+		sed -i "s@active=.*@active=${ACTIVE}@" /usr/share/glib-2.0/schemas/live.org.gnome.settings-daemon.plugins.updates.gschema.override
+		update-rc.d -f fll-gnome-desktop defaults
+	fi
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+esac
+
+#DEBHELPER#

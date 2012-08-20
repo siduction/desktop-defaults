@@ -1,2 +1,2 @@
 [org.gnome.desktop.screensaver]
-lock-enabled=false
+lock-enabled=${LOCK_ENABLED}
