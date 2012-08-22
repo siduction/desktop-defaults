@@ -1,0 +1,6 @@
+[Live CD user permissions]
+Identity=unix-group:${USERS_GROUP}
+Action=*
+ResultAny=yes
+ResultInactive=no
+ResultActive=yes

@@ -1,4 +1,3 @@
 gnome/preseed-user-home-gnome	usr/share/desktop-defaults-gnome/
 gnome/*override		usr/share/glib-2.0/schemas/
-gnome/gnome-background-settings 	usr/share/desktop-defaults-gnome/
-
+gnome/10-live-cd.pkla	/etc/polkit-1/localauthority/10-vendor.d/

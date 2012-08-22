@@ -72,23 +72,6 @@ for param in $(cat /proc/cmdline); do
 	esac
 done
 
-set_polkit_options()
-{
-	# enable polkit operations for users in sudo group
-	polkitdir="/etc/polkit-1/localauthority/10-vendor.d"
-	if [ ! -d "${polkitdir}" ] ; then
-		mkdir -p ${polkitdir}
-	fi
-	cat > ${polkitdir}/10-live-cd.pkla << EOF
-[Live CD user permissions]
-Identity=unix-group:sudo
-Action=*
-ResultAny=yes
-ResultInactive=no
-ResultActive=yes
-EOF
-}
-
 setup_gdm3_background() {
 	# setup GDM3 background
 	if ! grep -q '^\[org.gnome.desktop.background\]' /etc/gdm3/greeter.gsettings ; then
@@ -113,7 +96,6 @@ setup_gdm3_background() {
 do_start()
 {
 	setup_gdm3_background
-	set_polkit_options
 	su "${FLL_LIVE_USER}" -c /usr/share/desktop-defaults-gnome/preseed-user-home-gnome
 }
 

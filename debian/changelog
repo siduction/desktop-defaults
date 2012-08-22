@@ -1,3 +1,10 @@
+desktop-defaults (1.4.7) unstable; urgency=low
+
+  * changed way how it's preseeded 10-live-cd.pkla polkit policy file
+  * also changed in 10-live-cd.pkla unix-group:sudo to unix-group:users  
+
+ -- Angelescu Ovidiu <mrhsaacdoh@gmail.com>  Wed, 22 Aug 2012 07:30:32 +0300
+
 desktop-defaults (1.4.6) unstable; urgency=low
 
   * added update-rc.d for fll-gnome-desktop boot sequence

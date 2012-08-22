@@ -13,6 +13,7 @@ case "$1" in
 		sed -i "s@disable-user-switching=.*@disable-user-switching=${DISABLE_USER_SWITCHING}@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.lockdown.gschema.override
 		sed -i "s@lock-enabled=.*@lock-enabled=${LOCK_ENABLED}@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.screensaver.gschema.override
 		sed -i "s@active=.*@active=${ACTIVE}@" /usr/share/glib-2.0/schemas/live.org.gnome.settings-daemon.plugins.updates.gschema.override
+		sed -i "s@Identity=unix-group:.*@Identity=unix-group:${USERS_GROUP}@" /etc/polkit-1/localauthority/10-vendor.d/10-live-cd.pkla
 		update-rc.d -f fll-gnome-desktop defaults
 	fi
 	;;
@@ -23,3 +24,5 @@ case "$1" in
 esac
 
 #DEBHELPER#
+
+
