@@ -1,4 +1,4 @@
-desktop-defaults (1.4.8) UNRELEASED; urgency=low
+desktop-defaults (1.4.8) unstable; urgency=low
 
   [ Angelescu Ovidiu ]
   * closes  #793 and #815
@@ -8,7 +8,7 @@ desktop-defaults (1.4.8) UNRELEASED; urgency=low
   [ Alf Gaida ]
   * rebuild closes #816 
 
- -- Angelescu Ovidiu <convbsd@siduction.net>  Sun, 26 Aug 2012 19:51:32 +0300
+ -- Alf Gaida <agaida@siduction.org>  Mon, 27 Aug 2012 13:31:09 +0200
 
 desktop-defaults (1.4.7) unstable; urgency=low
 
