@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+if [ -f /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+case "$1" in
+	configure)
+		sed -i "s@Identity=unix-user:.*@Identity=unix-user:${FLL_LIVE_USER}@" /etc/polkit-1/localauthority/10-vendor.d/10-live-cd.pkla
+	;;
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+esac
+
+#DEBHELPER#

@@ -1,3 +1,11 @@
+desktop-defaults (1.4.8) unstable; urgency=low
+
+  * closes  #793 and #815
+  * moved 10-live-cd.pkla polkit policy file from desktop-defaults-gnome to desktop-defaults-common
+  * changed in 10-live-cd.pkla unix-group:users to unix-user:${FLL_LIVE_USER}  
+
+ -- Angelescu Ovidiu <convbsd@siduction.net>  Sun, 26 Aug 2012 19:51:32 +0300
+
 desktop-defaults (1.4.7) unstable; urgency=low
 
   * changed way how it's preseeded 10-live-cd.pkla polkit policy file

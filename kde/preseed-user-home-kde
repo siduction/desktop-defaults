@@ -192,7 +192,18 @@ for mntpnt in /fll/*; do
 	fi
 done
 
+# create xauthority link
 ###
+	if [ ! -d "${HOME}/.kde/Autostart" ]; then
+		mkdir -p "${HOME}/.kde/Autostart"
+	fi
+
+	cat > "${HOME}/.kde/Autostart/xauthority" <<EOF
+#!/bin/sh
+sudo ln -sf /var/run/xauth/* /root/.Xauthority
+EOF
+	chmod u+x "${HOME}/.kde/Autostart/xauthority"
+
 # create desktop shortcut to index.html
 ###
 if [ -f "${INDEXFILE}" ] && [ ! -f "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" ]; then
@@ -212,9 +223,6 @@ EOF
 chmod u+x "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop"
 
 	if [ "${NOINTRO}" != "yes" ]; then
-		if [ ! -d "${HOME}/.kde/Autostart" ]; then
-			mkdir -p "${HOME}/.kde/Autostart"
-		fi
 
 		ln -sf "${HOME}/Desktop/${FLL_DISTRO_NAME}.desktop" \
 			"${HOME}/.kde/Autostart/"
