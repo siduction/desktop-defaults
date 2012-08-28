@@ -1,3 +1,10 @@
+desktop-defaults (1.4.9) UNRELEASED; urgency=low
+
+  * added GNOME_SESSION_TYPE and set it  to avoid startup warning
+    message
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Tue, 28 Aug 2012 09:33:09 +0300
+
 desktop-defaults (1.4.8) unstable; urgency=low
 
   [ Angelescu Ovidiu ]

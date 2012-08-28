@@ -28,8 +28,8 @@ DISABLE_USER_SWITCHING=true
 # Disable automatic updates since we use dist-upgrade
 ACTIVE=false
 
-# FLL_LIVE_USER group for local policy authorizations
-USERS_GROUP="users"
+# Gnome session type can be gnome or gnome-fallback
+GNOME_SESSION_TYPE="gnome-fallback"
 
 # Siduction desktop launchers
 SIDUCTION_DESKTOP_LAUNCHERS="bluewater-manual siduction-irc sidu-installer"
