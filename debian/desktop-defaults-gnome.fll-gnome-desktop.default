@@ -33,6 +33,11 @@ GNOME_SESSION_TYPE="gnome-fallback"
 
 # Gnome touchpad settings
 TAP_TO_CLICK=true
+DISABLE_WHILE_TYPING=true
+
+# Gnome xsettings options
+ANTIALIASING="rgba"
+HINTING="medium"
 
 # Siduction desktop launchers
 SIDUCTION_DESKTOP_LAUNCHERS="bluewater-manual siduction-irc sidu-installer"

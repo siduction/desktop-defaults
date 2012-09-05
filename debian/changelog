@@ -1,3 +1,10 @@
+desktop-defaults (1.4.11) UNRELEASED; urgency=low
+
+  * added touchpad DISABLE_WHILE_TYPING and set it to true
+  * added ANTIALIASING and HINTING for font rendering
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Wed, 05 Sep 2012 15:51:09 +0300
+
 desktop-defaults (1.4.10) UNRELEASED; urgency=low
 
   * added TAP_TO_CLICK and set it to true to enable touchpad tabbing 
