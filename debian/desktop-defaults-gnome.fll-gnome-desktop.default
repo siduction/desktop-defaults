@@ -31,5 +31,8 @@ ACTIVE=false
 # Gnome session type can be gnome or gnome-fallback
 GNOME_SESSION_TYPE="gnome-fallback"
 
+# Gnome touchpad settings
+TAP_TO_CLICK=true
+
 # Siduction desktop launchers
 SIDUCTION_DESKTOP_LAUNCHERS="bluewater-manual siduction-irc sidu-installer"
