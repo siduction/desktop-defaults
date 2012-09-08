@@ -23,3 +23,12 @@ debian/desktop-defaults-xfce.postrm.debhelper
 debian/desktop-defaults-xfce.substvars
 debian/desktop-defaults-xfce/
 
+debian/desktop-defaults-gnome.debhelper.log
+debian/desktop-defaults-gnome.postinst.debhelper
+debian/desktop-defaults-gnome.postrm.debhelper
+debian/desktop-defaults-gnome.substvars
+debian/desktop-defaults-gnome/
+debian/desktop-defaults-rqt.debhelper.log
+debian/desktop-defaults-rqt.substvars
+debian/desktop-defaults-rqt/
+
