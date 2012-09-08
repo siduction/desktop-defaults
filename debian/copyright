@@ -1,36 +1,51 @@
-!dep 5
-Forked by Torsten Wohlfarth <towo@siduction.org> for siduction.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: desktop-defaults
+Source: http://chili.siduction.org/projects/siduction/wiki/Desktop-defaults
 
-Copyright:
-    2006-2008, Kel Modderman <kel@otaku42.de>
-    2006-2011, Stefan Lippers-Hollmann <s.l-h@gmx.de>
-    2006-2008, Andreas Weber <andreas@it-weber.com>
-    2006-2011, Joaquim Boura <x-un-i@berlios.de>
-    2006-2008, Horst Tritremmel <hjt@users.berlios.de>
-    2011-2012, Torsten Wohlfarth <towo@siduction.org>
-    2012, Ferdinand Thommes <devil@siduction.org>
 
-./desktop-defaults-kde originally conceived by:
-   Fabian Franz <knx-kde@fabian-franz.de>
-License: GPL2+
+Files: *
+Copyright: 2012      Ovidiu Angelescu <convbsd@siduction.net>
+           2012      Ferdinand Thommes <devil@siduction.org>
+	   2011-2012 Alf Gaida <agaida@siduction.org>
+           2011-2012 Torsten Wohlfarth <towo@siduction.org> 
+           2006-2008 Kel Modderman <kel@otaku42.de>
+           2006-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+           2006-2008 Andreas Weber <andreas@it-weber.com>
+           2006-2011 Joaquim Boura <x-un-i@berlios.de>
+           2006-2008 Horst Tritremmel <hjt@users.berlios.de>
+License: GPL-2.0+
 
-License:
-    This package is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+Files: debian/*
+Copyright: 2012      Ovidiu Angelescu <convbsd@siduction.net>
+           2012      Ferdinand Thommes <devil@siduction.org>
+           2011-2012 Alf Gaida <agaida@siduction.org>
+           2011-2012 Torsten Wohlfarth <towo@siduction.org>
+           2006-2008 Kel Modderman <kel@otaku42.de>
+           2006-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+           2006-2008 Andreas Weber <andreas@it-weber.com>
+           2006-2011 Joaquim Boura <x-un-i@berlios.de>
+           2006-2008 Horst Tritremmel <hjt@users.berlios.de>
+License: GPL-2.0+
 
-    This package is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this package; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+Files: desktop-defaults-kde 
+Copyright: 2005 Fabian Franz <knx-kde@fabian-franz.de>
+License: GPL-2.0+
 
-On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL-2'.
+License: GPL-2.0+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-The Debian packaging is © 2007, Kel Modderman <kel@otaku42.de> and
-is licensed under the GPL2+, see above.

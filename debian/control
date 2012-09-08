@@ -3,7 +3,8 @@ Section: x11
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org> 
 Uploaders: Alf Gaida <agaida@siduction.org>,
-           Ferdinand Thommes <devil@siduction.org>
+           Ferdinand Thommes <devil@siduction.org>,
+           Ovidiu Angelescu <convbsd@siduction.net> 
 XBSC-Original-Maintainer: Kel Modderman <kel@otaku42.de>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.3

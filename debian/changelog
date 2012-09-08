@@ -1,9 +1,15 @@
-desktop-defaults (1.4.11) UNRELEASED; urgency=low
+desktop-defaults (1.4.11) unstable; urgency=low
 
+  [ Ovidiu Angelescu ]
   * added touchpad DISABLE_WHILE_TYPING and set it to true
   * added ANTIALIASING and HINTING for font rendering
 
- -- Ovidiu Angelescu <convbsd@siduction.net>  Wed, 05 Sep 2012 15:51:09 +0300
+  [ Alf Gaida ]
+  * rebuild refs #828 
+  * debian/copyright fixed
+  * added convbsd to uploaders 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 08 Sep 2012 19:26:45 +0200
 
 desktop-defaults (1.4.10) UNRELEASED; urgency=low
 
