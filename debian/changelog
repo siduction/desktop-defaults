@@ -1,3 +1,10 @@
+desktop-defaults (1.4.12) UNRELEASED; urgency=low
+
+  * changed mc config file location from .mc/ini to .config/mc/ini 
+  * closes  #834
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Sun, 09 Sep 2012 12:32:09 +0300
+
 desktop-defaults (1.4.11) unstable; urgency=low
 
   [ Ovidiu Angelescu ]

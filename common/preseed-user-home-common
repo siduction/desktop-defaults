@@ -79,9 +79,9 @@ fi
 # let mc use its own editor
 ###
 if which mc >/dev/null; then
-	if [ ! -f "${HOME}/.mc/ini" ]; then
-		mkdir -p "${HOME}/.mc/"
-		cat >"${HOME}/.mc/ini" \
+	if [ ! -f "${HOME}/.config/mc/ini" ]; then
+		mkdir -p "${HOME}/.config/mc/"
+		cat >"${HOME}/.config/mc/ini" \
 <<EOF
 [Midnight-Commander]
 use_internal_edit=1
