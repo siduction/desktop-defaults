@@ -1,3 +1,4 @@
-common/preseed-user-home-common usr/share/desktop-defaults-common/
-common/fll*                     usr/share/desktop-defaults-common/
-common/10-live-cd.pkla          /etc/polkit-1/localauthority/10-vendor.d/
+common/preseed-user-home-common             usr/share/desktop-defaults-common/
+common/fll*                                 usr/share/desktop-defaults-common/
+common/10-live-cd.pkla                      /etc/polkit-1/localauthority/10-vendor.d/
+common/com.ubuntu.pkexec.qtparted.policy    usr/share/polkit-1/actions/
