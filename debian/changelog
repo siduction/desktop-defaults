@@ -1,3 +1,9 @@
+desktop-defaults (1.4.14) UNRELEASED; urgency=low
+
+  * moved qtparted pkexec policy file to qtparted package  
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Wed, 12 Sep 2012 16:54:09 +0300
+
 desktop-defaults (1.4.13) UNRELEASED; urgency=low
 
   * added qtparted pkexec policy to launch qtparted as root for QT flavours 
