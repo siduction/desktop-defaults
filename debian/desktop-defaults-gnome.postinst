@@ -14,6 +14,17 @@ case "$1" in
 		sed -i "s@lock-enabled=.*@lock-enabled=${LOCK_ENABLED}@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.screensaver.gschema.override
 		sed -i "s@active=.*@active=${ACTIVE}@" /usr/share/glib-2.0/schemas/live.org.gnome.settings-daemon.plugins.updates.gschema.override
 		sed -i "s@session-name=.*@session-name='${GNOME_SESSION_TYPE}'@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.session.gschema.override
+		if [ -n "$(dpkg -l | grep siduction-settings-gnome)" ]; then
+			sed -i "s@picture-options=.*@picture-options='${BACKGROUND_RENDERING_OPTION}'@" /usr/share/glib-2.0/schemas/inst.org.gnome.desktop.background.gschema.override
+			sed -i "s@picture-uri=.*@picture-uri='file://${FLL_WALLPAPER}.png'@" /usr/share/glib-2.0/schemas/inst.org.gnome.desktop.background.gschema.override
+			sed -i "s@show-desktop-icons=.*@show-desktop-icons=${SHOW_DESKTOP_ICONS}@" /usr/share/glib-2.0/schemas/inst.org.gnome.desktop.background.gschema.override
+			sed -i "s@menus-have-icons=.*@menus-have-icons=${MENUS_HAVE_ICONS}@" /usr/share/glib-2.0/schemas/inst.org.gnome.desktop.interface.gschema.override
+			sed -i "s@button-layout.*@button-layout='${WINDOWS_BUTTONS_LAYOUT}'@" /usr/share/glib-2.0/schemas/inst.org.gnome.shell.overrides.gschema.override
+			sed -i "s@tap-to-click.*@tap-to-click=${TAP_TO_CLICK}@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.peripherals.touchpad.gschema.override
+			sed -i "s@disable-while-typing.*@disable-while-typing=${DISABLE_WHILE_TYPING}@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.peripherals.touchpad.gschema.override
+			sed -i "s@antialiasing.*@antialiasing='${ANTIALIASING}'@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.plugins.xsettings.gschema.override
+			sed -i "s@hinting.*@hinting='${HINTING}'@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.plugins.xsettings.gschema.override
+		fi
 # we rebuild schema
 		glib-compile-schemas /usr/share/glib-2.0/schemas
 	fi
@@ -25,6 +36,4 @@ case "$1" in
 esac
 
 #DEBHELPER#
-
-
 
