@@ -1,8 +1,12 @@
-desktop-defaults (1.4.17) UNRELEASED; urgency=low
+desktop-defaults (1.4.17) unstable; urgency=low
 
+  [ Ovidiu Angelescu ]
   * changed gnome postinst file for push in schema ${FLL_WALLPAPER}
 
- -- Ovidiu Angelescu <convbsd@siduction.net>  Wed, 22 Sep 2012 18:26:09 +0300
+  [ Alf Gaida ]
+  * rebuild closes #858 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 22 Sep 2012 17:49:37 +0200
 
 desktop-defaults (1.4.16) UNRELEASED; urgency=low
 
