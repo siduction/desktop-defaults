@@ -14,6 +14,8 @@ case "$1" in
 		sed -i "s@lock-enabled=.*@lock-enabled=${LOCK_ENABLED}@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.screensaver.gschema.override
 		sed -i "s@active=.*@active=${ACTIVE}@" /usr/share/glib-2.0/schemas/live.org.gnome.settings-daemon.plugins.updates.gschema.override
 		sed -i "s@session-name=.*@session-name='${GNOME_SESSION_TYPE}'@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.session.gschema.override
+# we rebuild schema
+		glib-compile-schemas /usr/share/glib-2.0/schemas
 	fi
 	;;
 	*)

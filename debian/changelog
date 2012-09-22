@@ -1,3 +1,9 @@
+desktop-defaults (1.4.15) UNRELEASED; urgency=low
+
+  * changed gnome postinst file to force rebuild schema for gnome settings  
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Sat, 22 Sep 2012 10:45:09 +0300
+
 desktop-defaults (1.4.14) UNRELEASED; urgency=low
 
   * moved qtparted pkexec policy file to qtparted package  
