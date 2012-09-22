@@ -2,6 +2,11 @@
 
 set -e
 
+
+if [ -f /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
 if [ -f /etc/default/fll-gnome-desktop ]; then
 	. /etc/default/fll-gnome-desktop
 fi
