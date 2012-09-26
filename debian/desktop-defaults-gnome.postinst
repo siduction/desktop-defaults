@@ -29,6 +29,7 @@ case "$1" in
 			sed -i "s@disable-while-typing.*@disable-while-typing=${DISABLE_WHILE_TYPING}@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.peripherals.touchpad.gschema.override
 			sed -i "s@antialiasing.*@antialiasing='${ANTIALIASING}'@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.plugins.xsettings.gschema.override
 			sed -i "s@hinting.*@hinting='${HINTING}'@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.plugins.xsettings.gschema.override
+			sed -i "s@active=.*@active=${ACTIVE}@" /usr/share/glib-2.0/schemas/inst.org.gnome.settings-daemon.plugins.updates.gschema.override
 		fi
 # we rebuild schema
 		glib-compile-schemas /usr/share/glib-2.0/schemas

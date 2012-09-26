@@ -1,3 +1,9 @@
+desktop-defaults (1.4.18) UNRELEASED; urgency=low
+
+  * moved to siduction-settings-gnome file for disabling automatic updates
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Sat, 26 Sep 2012 19:38:09 +0300
+
 desktop-defaults (1.4.17) unstable; urgency=low
 
   [ Ovidiu Angelescu ]
