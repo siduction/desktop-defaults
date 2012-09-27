@@ -2,19 +2,6 @@
 # sourced by /usr/bin/desktop-defaults-gnome and /etc/init.d/fll-gnome-desktop
 # installed at /etc/default/fll-gnome-desktop by the maintainer scripts
 
-### Common settings for live and  installed mode
-# Gnome and GDM3 background rendering image option
-BACKGROUND_RENDERING_OPTION="stretched"
-
-# Windows buttons layout in gnome mode
-WINDOWS_BUTTONS_LAYOUT=":minimize,maximize,close"
-
-# Icons for gnome menus
-MENUS_HAVE_ICONS=true
-
-# Show Desktop icons
-SHOW_DESKTOP_ICONS=true
-
 ### Settings in live mode
 # Disable lock screen in live mode since siducer is passwordless
 DISABLE_LOCK_SCREEN=true
@@ -25,19 +12,8 @@ LOCK_ENABLED=false
 # Disable user switching
 DISABLE_USER_SWITCHING=true
 
-# Disable automatic updates since we use dist-upgrade
-ACTIVE=false
-
 # Gnome session type can be gnome or gnome-fallback
 GNOME_SESSION_TYPE="gnome-fallback"
-
-# Gnome touchpad settings
-TAP_TO_CLICK=true
-DISABLE_WHILE_TYPING=true
-
-# Gnome xsettings options
-ANTIALIASING="rgba"
-HINTING="medium"
 
 # Siduction desktop launchers
 SIDUCTION_DESKTOP_LAUNCHERS="bluewater-manual siduction-irc sidu-installer"
