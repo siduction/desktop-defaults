@@ -1,9 +1,13 @@
-desktop-defaults (1.4.19) UNRELEASED; urgency=low
+desktop-defaults (1.4.19) unstable; urgency=low
 
+  [ Ovidiu Angelescu ]
   * moved some settings from /etc/default/fll-gnome-desktop to 
     /usr/share/siduction-settings-gnome/siduction-gnome-settings 
 
- -- Ovidiu Angelescu <convbsd@siduction.net>  Thu, 27 Sep 2012 23:25:09 +0300
+  [ Alf Gaida ]
+  * rebuild refs #861 
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 29 Sep 2012 23:25:59 +0200
 
 desktop-defaults (1.4.18) UNRELEASED; urgency=low
 
