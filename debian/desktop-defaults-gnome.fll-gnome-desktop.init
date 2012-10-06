@@ -145,7 +145,3 @@ case "${1}" in
 esac
 
 :
-
-sed -i "s@session-name=.*@session-name='${GNOME_SESSION_TYPE}'@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.session.gschema.override
-# we rebuild schema
-		glib-compile-schemas /usr/share/glib-2.0/schemas

@@ -1,3 +1,9 @@
+desktop-defaults (1.4.21) UNRELEASED; urgency=low
+
+  * removed some useless lines
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Thu, 06 Oct 2012 20:45:09 +0300
+
 desktop-defaults (1.4.20) UNRELEASED; urgency=low
 
   * code to setup gnome session type using a cheatcode
