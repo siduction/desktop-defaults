@@ -1,8 +1,12 @@
-desktop-defaults (1.4.21) UNRELEASED; urgency=low
+desktop-defaults (1.4.22) unstable; urgency=low
 
+  [ Ovidiu Angelescu ]
   * removed some useless lines
 
- -- Ovidiu Angelescu <convbsd@siduction.net>  Thu, 06 Oct 2012 20:45:09 +0300
+  [ Alf Gaida ]
+  * rebuild solve #898 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 07 Oct 2012 15:02:56 +0200
 
 desktop-defaults (1.4.20) UNRELEASED; urgency=low
 
