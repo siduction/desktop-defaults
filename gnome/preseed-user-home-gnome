@@ -53,6 +53,10 @@ for param in $(cat /proc/cmdline); do
 	esac
 done
 
+# setup Gnome autostart dir
+	if [ ! -d ${HOME}/.config/autostart ]; then
+		mkdir -p ${HOME}/.config/autostart
+	fi
 
 for mntpnt in /fll/*; do
 	if [ -d "${mntpnt}" ] && [ -f "${mntpnt}/index.html" ]; then
