@@ -155,6 +155,8 @@ fi
 # create .config/autostart dir
 ###
 mkdir -p "${HOME}/.config/autostart"
+cp /usr/share/siduction-settings-xfce/autostart/Wbar.desktop ${HOME}/.config/autostart/
+
 ###
 # disable tips on startup
 ###
