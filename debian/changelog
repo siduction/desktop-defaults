@@ -1,6 +1,10 @@
 desktop-defaults (1.4.24) UNRELEASED; urgency=low
 
+  [ Ovidiu Angelescu ]
   * added gnome autostart dir for reenable automount-open in installed mode
+
+  [ Alf Gaida ]
+  * rebuild closes #917
 
  -- Ovidiu Angelescu <convbsd@siduction.net>  Sat, 20 Oct 2012 21:29:03 +0300
 
