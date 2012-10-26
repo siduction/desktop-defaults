@@ -32,3 +32,6 @@ debian/desktop-defaults-rqt.debhelper.log
 debian/desktop-defaults-rqt.substvars
 debian/desktop-defaults-rqt/
 
+debian/desktop-defaults-nox.debhelper.log
+debian/desktop-defaults-nox.substvars
+debian/desktop-defaults-nox/
