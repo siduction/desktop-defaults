@@ -1,7 +1,14 @@
+desktop-defaults (1.4.25) unstable; urgency=low
+
+  * added nox package 
+  * typo reenable -> re-enable, lintian is whining
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 26 Oct 2012 23:20:49 +0200
+
 desktop-defaults (1.4.24) unstable; urgency=low
 
   [ Ovidiu Angelescu ]
-  * added gnome autostart dir for reenable automount-open in installed mode
+  * added gnome autostart dir for re-enable automount-open in installed mode
 
   [ Alf Gaida ]
   * rebuild closes #917
