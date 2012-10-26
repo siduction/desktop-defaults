@@ -1,0 +1,67 @@
+#!/bin/sh
+
+###
+# F.U.L.L.S.T.O.R.Y init script
+#
+# Copyright: (C) 2007-2008 Kel Modderman <kel@otaku42.de>
+# Copyright: (C) 2008 Stefan Lippers-Hollmann <s.l-h@gmx.de>
+# License:   GPLv2
+#
+# F.U.L.L.S.T.O.R.Y Project Homepage:
+# http://developer.berlios.de/projects/fullstory
+###
+
+PATH=/sbin:/usr/sbin:$PATH
+
+# set default umask
+umask 0022
+
+# this is only invoked from fll-kde-desktop, inherit its environment
+#NAME="fll-nox"
+
+###
+# source distro-defaults, no-op unless in live mode
+###
+FLL_DISTRO_MODE="installed"
+
+if [ -s /etc/default/distro ]; then
+	. /etc/default/distro
+fi
+
+if [ "${FLL_DISTRO_MODE}" != "live" ]; then
+	exit 0
+fi
+
+###
+# read in variables from our default conffile
+###
+if [ -s "/etc/default/${NAME}" ]; then
+	. "/etc/default/${NAME}"
+fi
+
+###
+# read in variables from /etc/default/fll-locales
+###
+if [ -s /etc/default/fll-locales ]; then
+	. /etc/default/fll-locales
+fi
+
+###
+# cheatcode handling
+###
+for param in $(cat /proc/cmdline); do
+	case "${param}" in
+#		flldebug=*)
+#			[ "${param#flldebug=}" = "${NAME}" ] && set -x
+#			;;
+		nointro)
+			NOINTRO="yes"
+			;;
+	esac
+done
+
+###
+# create .config/autostart dir
+###
+mkdir -p "${HOME}/.config/autostart"
+

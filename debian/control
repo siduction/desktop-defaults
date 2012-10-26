@@ -125,3 +125,17 @@ Description: user presets specific to the GNOME desktop environment
  .
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
+
+Package: desktop-defaults-nox
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ desktop-defaults-common
+Description: user presets specific to the noX environment
+ This package provides required infrastructure to tweak noX
+ of the F.U.L.L.S.T.O.R.Y. live Linux media.
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
+
