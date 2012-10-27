@@ -1,8 +1,12 @@
 desktop-defaults (1.4.26) UNRELEASED; urgency=low
 
+  [ Ovidiu Angelescu ]
   * removed siduction-settings-gnome from desktop-defaults-gnome control file
     siduction-settings-gnome is a common package for live and installed mode 
-    and should not be removed when fll-installer purge desktop-defaults-gnome  
+
+  [ Alf Gaida ]
+  * not agreed, siduction-settings-gnome must be in desktop-defaults
+  * closes #937  
 
  -- Ovidiu Angelescu <convbsd@siduction.net>  Sat, 27 Oct 2012 08:50:09 +0300
 
