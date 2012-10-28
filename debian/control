@@ -16,7 +16,6 @@ Architecture: all
 Depends: ${misc:Depends},
  distro-defaults,
  fll-live-initscripts,
- siduction-art-wallpaper,
  sudo,
  laptop-detect
 Suggests: iceweasel
@@ -28,6 +27,20 @@ Description: common user presets for various popular desktop applications
   - use mcedit within mc
   - GnuPG
   - XDG desktop icons
+ .
+ This is a FULLSTORY live-only package and must not be installed to an
+ ordinary system.
+
+Package: desktop-defaults-gnome
+Architecture: all
+Depends: ${misc:Depends},
+ distro-defaults,
+ fll-live-initscripts,
+ desktop-defaults-common,
+ siduction-settings-gnome
+Description: user presets specific to the GNOME desktop environment
+ This package provides required infrastructure to tweak the GNOME desktop
+ of the F.U.L.L.S.T.O.R.Y. live Linux media.
  .
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
@@ -74,21 +87,16 @@ Description: user presets specific to the LXDE desktop environment
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
 
-Package: desktop-defaults-xfce
+Package: desktop-defaults-nox
 Architecture: all
 Depends: ${misc:Depends},
  distro-defaults,
  fll-live-initscripts,
  desktop-defaults-common,
- siduction-settings-xfce,
- xfwm4
-Description: user presets specific to the Xfce desktop environment
- This package provides required infrastructure to tweak the Xfce desktop
+ siduction-settings-nox,
+Description: user presets specific to the noX environment
+ This package provides required infrastructure to tweak noX
  of the F.U.L.L.S.T.O.R.Y. live Linux media.
-  - set up artwork theme integration for Xfce (gdm3, wallpaper)
-  - prefer lxterminal as x-terminal-emulator
-  - configure Python keyboard switcher
-  - populate live-only XDG desktop icons
  .
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
@@ -113,30 +121,21 @@ Description: user presets specific to the Razor-qt desktop environment
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
 
-Package: desktop-defaults-gnome
+Package: desktop-defaults-xfce
 Architecture: all
 Depends: ${misc:Depends},
  distro-defaults,
  fll-live-initscripts,
  desktop-defaults-common,
- siduction-settings-gnome
-Description: user presets specific to the GNOME desktop environment
- This package provides required infrastructure to tweak the GNOME desktop
+ siduction-settings-xfce,
+ xfwm4
+Description: user presets specific to the Xfce desktop environment
+ This package provides required infrastructure to tweak the Xfce desktop
  of the F.U.L.L.S.T.O.R.Y. live Linux media.
- .
- This is a FULLSTORY live-only package and must not be installed to an
- ordinary system.
-
-Package: desktop-defaults-nox
-Architecture: all
-Depends: ${misc:Depends},
- distro-defaults,
- fll-live-initscripts,
- desktop-defaults-common,
- siduction-settings-nox,
-Description: user presets specific to the noX environment
- This package provides required infrastructure to tweak noX
- of the F.U.L.L.S.T.O.R.Y. live Linux media.
+  - set up artwork theme integration for Xfce (gdm3, wallpaper)
+  - prefer lxterminal as x-terminal-emulator
+  - configure Python keyboard switcher
+  - populate live-only XDG desktop icons
  .
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
