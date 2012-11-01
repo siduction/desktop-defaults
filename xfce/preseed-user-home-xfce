@@ -63,32 +63,7 @@ done
 ###
 # set wallpaper defaults in desktop.xml
 ###
-mkdir -p "${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml"
-XFCE_DESKTOP_XML="/usr/share/siduction-settings-xfce/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml"
 
-# handle case where FLL_WALLPAPER is defined in kde4 directory syntax
-# siduction-art-wallpaper-* provides a symlink in /usr/share/wallpapers/ to common res wallpaper
-if [ -d ${FLL_WALLPAPER} ]; then
-	FLL_WALLPAPER=$(find $(dirname ${FLL_WALLPAPER}) -maxdepth 1 -type l -iname $(basename ${FLL_WALLPAPER}).*)
-fi
-
-if [ "${FLL_WALLPAPER}" ]; then
-
-	cat > "${XFCE_DESKTOP_XML}" << EOF
-<?xml version="1.0" encoding="UTF-8"?>
-
-<channel name="xfce4-desktop" version="1.0">
-  <property name="backdrop" type="empty">
-    <property name="screen0" type="empty">
-      <property name="monitor0" type="empty">
-        <property name="image-path" type="string" value="${FLL_WALLPAPER}"/>
-        <property name="image-style" type="int" value="3"/>
-      </property>
-    </property>
-  </property>
-</channel>
-EOF
-fi
 
 ###
 # set desktop theme defaults in xsettings.xml (siduction-$RELEASE theme)
@@ -150,6 +125,32 @@ if [ -d /usr/share/siduction-settings-xfce ]; then
 	cp -r /usr/share/siduction-settings-xfce/xfce4 ${HOME}/.config
 	sed -i -e s/FLL_LIVE_USER/${FLL_LIVE_USER}/ ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 fi
+
+mkdir -p "${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml"
+XFCE_DESKTOP_XML="${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml"
+# handle case where FLL_WALLPAPER is defined in kde4 directory syntax
+# siduction-art-wallpaper-* provides a symlink in /usr/share/wallpapers/ to common res wallpaper
+if [ -d ${FLL_WALLPAPER} ]; then
+	FLL_WALLPAPER=$(find $(dirname ${FLL_WALLPAPER}) -maxdepth 1 -type l -iname $(basename ${FLL_WALLPAPER}).*)
+fi
+
+#if [ "${FLL_WALLPAPER}" ]; then
+
+	cat > "${XFCE_DESKTOP_XML}" << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-desktop" version="1.0">
+  <property name="backdrop" type="empty">
+    <property name="screen0" type="empty">
+      <property name="monitor0" type="empty">
+        <property name="image-path" type="string" value="${FLL_WALLPAPER}"/>
+        <property name="image-style" type="int" value="3"/>
+      </property>
+    </property>
+  </property>
+</channel>
+EOF
+#fi
 
 ###
 # create .config/autostart dir

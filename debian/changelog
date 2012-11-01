@@ -1,3 +1,10 @@
+desktop-defaults (1.4.29) unstable; urgency=low
+
+  * fixed wallpaper handling for xfce-
+  * set the right xfce-defaults for the next release.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 01 Nov 2012 11:02:08 +0100
+
 desktop-defaults (1.4.28) unstable; urgency=low
 
   * changed the settings handling for xfce in preseed-user-home
