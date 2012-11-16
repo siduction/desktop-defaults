@@ -1,3 +1,9 @@
+desktop-defaults (1.4.30) unstable; urgency=low
+
+  * lxde changes by coruja
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 16 Nov 2012 23:26:04 +0100
+
 desktop-defaults (1.4.29) unstable; urgency=low
 
   * fixed wallpaper handling for xfce-
