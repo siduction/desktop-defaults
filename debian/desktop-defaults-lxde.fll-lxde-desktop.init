@@ -119,33 +119,31 @@ set_default_slim_theme()
 	###
 	# create slim theme (as a workaround)
 	###
-	themedir="/usr/share/slim/themes/${LXDE_SLIM_THEME}"
+	themedir="/usr/share/slim/themes/siduction"
 	if ! [ -d ${themedir} ]; then
 		mkdir ${themedir}
 	fi
 	cd ${themedir}
-	if [ -d "../debian-spacefun" ]; then
-		cp ../debian-spacefun/slim.theme .
-		cp ../debian-spacefun/panel.png .
+	if [ -d "../debian-joy" ]; then
+		cp ../debian-joy/slim.theme .
+		cp ../debian-joy/panel.png .
 	fi
-	bkgpath="${FLL_WALLPAPER:0:22}"
-	bkgfile="${FLL_WALLPAPER:22}"
-	bkglogin="${bkgpath}login-${bkgfile}.png"
-	cp ${bkglogin} background.png
+	slim_bkg="${FLL_WALLPAPER}.png"
+	cp ${slim_bkg} background.png
 	
 	###
 	# setup slim theme
 	###
-	if [ -n "${LXDE_SLIM_THEME}" ]; then
+#	if [ -n "${LXDE_SLIM_THEME}" ]; then
 #		sed -i	-e "s/\(current_theme\).*/\1\t${LXDE_SLIM_THEME}/g" \
 #					/etc/slim.conf
 #		if grep -q "^current_theme" /etc/slim.conf ; then
 #			sed -i "s/current_theme/#current_theme/g" /etc/slim.conf
 #       fi
 		themeold="$(fgrep "current_theme" /etc/slim.conf)"
-		themenew="current_theme\t${LXDE_SLIM_THEME}"
+		themenew="current_theme\tsiduction"
 		sed -i "s@${themeold}@${themenew}@" /etc/slim.conf
-	fi
+#	fi
 }
 
 do_start()
