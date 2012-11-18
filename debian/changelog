@@ -1,3 +1,9 @@
+desktop-defaults (1.4.32) unstable; urgency=low
+
+  * fixed the initialisation of xfce splash
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 18 Nov 2012 14:23:03 +0100
+
 desktop-defaults (1.4.31) unstable; urgency=low
 
   * fixed a typo for the xfce splash.

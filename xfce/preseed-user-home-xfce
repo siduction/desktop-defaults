@@ -178,9 +178,9 @@ fi
 ###
 FLL_CONF_PRESEED="${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml"
 if [ "${XFCE_SPLASH_THEME}" ]; then
-	mkdir -p "${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml"
+	#mkdir -p "${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml"
 
-	if [ ! -f "${FLL_CONF_PRESEED}" ]; then
+	#if [ ! -f "${FLL_CONF_PRESEED}" ]; then
 	        cat > "${FLL_CONF_PRESEED}" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
  
@@ -195,7 +195,7 @@ if [ "${XFCE_SPLASH_THEME}" ]; then
   </property>
 </channel>
 EOF
-	fi
+	#fi
 fi
 
 ###
