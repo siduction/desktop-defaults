@@ -1,3 +1,9 @@
+desktop-defaults (1.4.31) unstable; urgency=low
+
+  * fixed a typo for the xfce splash.
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sun, 18 Nov 2012 11:45:07 +0100
+
 desktop-defaults (1.4.30) unstable; urgency=low
 
   * lxde changes by coruja
