@@ -1,3 +1,4 @@
 common/preseed-user-home-common             usr/share/desktop-defaults-common/
 common/fll*                                 usr/share/desktop-defaults-common/
 common/10-live-cd.pkla                      /etc/polkit-1/localauthority/10-vendor.d/
+common/52detect-resolution                  /etc/X11/Xsession.d/

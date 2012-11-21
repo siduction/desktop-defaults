@@ -1,3 +1,10 @@
+desktop-defaults (1.4.33) UNRELEASED; urgency=low
+
+  * code to detect display resolution and to use it for pick/setup
+    wallpaper according to it
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Wed, 21 Nov 2012 16:53:09 +0200
+
 desktop-defaults (1.4.32) unstable; urgency=low
 
   * fixed the initialisation of xfce splash
