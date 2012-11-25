@@ -89,6 +89,17 @@ if [ "${FLL_WALLPAPER}" ] &&  [ ! -f "${HOME}/.kde/share/config/plasma-desktop-a
 fi
 
 ###
+# set kickoff menu  provided by our system-settings-kde package
+###
+if [ ! -f "${HOME}/.kde/share/config/kickoffrc" ]; then \
+		 cp /usr/share/siduction-settings-kde/kde4/default/share/config/kickoffrc \
+		 "${HOME}/.kde/share/config/kickoffrc"
+		cp /usr/share/siduction-settings-kde/kde4/default/share/config/kglobalshortcutsrc \
+		 "${HOME}/.kde/share/config/kglobalshortcutsrc"
+
+fi
+
+###
 # hack in kdeglobals, kde4 seems to ignore it in our system-settings-kde package
 # - currently sets desktop colors, icon sizes
 ###
