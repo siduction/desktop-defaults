@@ -1,8 +1,15 @@
-desktop-defaults (1.4.34) UNRELEASED; urgency=low
+desktop-defaults (1.4.34) unstable; urgency=low
 
+  [ Ovidiu Angelescu ]
   * code to enable kickoff menu in KDE
 
- -- Ovidiu Angelescu <convbsd@siduction.net>  Sun, 25 Nov 2012 15:49:09 +0200
+  [ Alf Gaida ]
+  * removed kelmo as Original-Maintainer as we dont follow aptosid
+    anymore
+  * removed useless source.linitian-overrides
+  * rebuild closes #985
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 27 Nov 2012 01:10:31 +0100
 
 desktop-defaults (1.4.33) unstable; urgency=low
 
