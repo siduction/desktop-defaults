@@ -1,3 +1,10 @@
+desktop-defaults (1.4.37) UNRELEASED; urgency=low
+
+  * razor background for lightdm part 1
+  * refs #1011
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 04 Dec 2012 01:53:10 +0100
+
 desktop-defaults (1.4.36) unstable; urgency=low
 
   * fixed a typo  in xfce/preseed-user-home

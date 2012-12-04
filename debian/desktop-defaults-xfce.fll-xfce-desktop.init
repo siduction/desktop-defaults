@@ -19,8 +19,8 @@
 # Copyright: (C) 2008-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 # License:   GPLv2
 #
-# F.U.L.L.S.T.O.R.Y Project Homepage:
-# http://developer.berlios.de/projects/fullstory
+# siduction development::
+# http://chili.siduction.org
 ###
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
@@ -84,7 +84,7 @@ set_lightdm_background()
 ###
 # Edit lightdm-gtk-greeter.conf with desired wallpaper
 ###
-if [ -e "/etc/lightdm" ]; then		
+if [ -e "/etc/lightdm" ]; then
 	bkgini=`fgrep "background=" /etc/lightdm/lightdm-gtk-greeter.conf`
 	lightdm_bkg="background=${FLL_WALLPAPER}.png"
 		if [ "${bkgini}" ] ; then
@@ -96,7 +96,7 @@ fi
 }
 
 set_default_gdm3_theme()
-{   
+{
 ###
 # Set desired wallpaper as background for gdm
 ###

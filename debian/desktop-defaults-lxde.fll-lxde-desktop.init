@@ -19,8 +19,8 @@
 # Copyright: (C) 2008-2011 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 # License:   GPLv2
 #
-# F.U.L.L.S.T.O.R.Y Project Homepage:
-# http://developer.berlios.de/projects/fullstory
+# siduction development::
+# http://chili.siduction.org
 ###
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
@@ -130,7 +130,7 @@ set_default_slim_theme()
 	fi
 	slim_bkg="${FLL_WALLPAPER}.png"
 	cp ${slim_bkg} background.png
-	
+
 	###
 	# setup slim theme
 	###
@@ -149,7 +149,7 @@ set_default_slim_theme()
 do_start()
 {
 	set_lxde_background
-	
+
 	set_openbox_theme
 
     if [ -x "/usr/sbin/lightdm" ]; then
@@ -164,7 +164,7 @@ do_start()
 	if [ -x '/usr/bin/lxterminal' ]; then
 		update-alternatives --set x-terminal-emulator '/usr/bin/lxterminal' >/dev/null
 	fi
-	
+
 	su "${FLL_LIVE_USER}" -c /usr/share/desktop-defaults-lxde/preseed-user-home-lxde
 }
 

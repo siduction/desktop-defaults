@@ -1,4 +1,4 @@
- #!/bin/sh
+#!/bin/bash
 
 ### BEGIN INIT INFO
 # Provides:          fll-rqt-desktop
@@ -9,7 +9,7 @@
 # Default-Stop:
 # Short-Description: prepare live user for rqt desktop
 # Description:       The purpose of this script is to preseed the live users
-#                    settings for the razorqt desktop.
+#                    settings for the rqt desktop.
 ### END INIT INFO
 
 ###
@@ -22,7 +22,7 @@
 
 # License:   GPLv2
 #
-# siduction development::
+ # siduction development::
 # http://chili.siduction.org
 ###
 
@@ -72,9 +72,8 @@ fi
 for param in $(cat /proc/cmdline); do
 	case "${param}" in
 		flldebug=*)
-			if [ "${param#flldebug=}" = "${NAME#fll-}" ] || [
-"${param#flldebug=}" = "all" ]; then
-                    		fll_redirect
+			if [ "${param#flldebug=}" = "${NAME#fll-}" ] || [ "${param#flldebug=}" = "all" ]; then
+				fll_redirect
 			fi
 			;;
 		nointro)
@@ -83,92 +82,39 @@ for param in $(cat /proc/cmdline); do
 	esac
 done
 
-#lightdm background
 set_lightdm_background()
 {
 ###
 # Edit lightdm-gtk-greeter.conf with desired wallpaper
 ###
+if [ -e "/etc/lightdm" ]; then
 bkgini=`fgrep "background=" /etc/lightdm/lightdm-gtk-greeter.conf`
 lightdm_bkg="background=${FLL_WALLPAPER}.png"
 if [ "${bkgini}" ] ; then
         sed -i "s@${bkgini}@${lightdm_bkg}@" /etc/lightdm/lightdm-gtk-greeter.conf
+		fi
+else
+	echo "No lightdm installed"
 fi
 }
 
-set_default_gdm_theme()
-{
-	umask 0022
-
-	###
-	# setup GDM theme
-	###
-	if [ -n "${LXDE_GDM_THEME}" ] && [ -n "${LXDE_GDM_THEME_COLOR}" ]; then
-		if ! grep -q "^GraphicalTheme=" /etc/gdm/gdm.conf && ! grep -q
-"^GraphicalThemedColor=" /etc/gdm/gdm.conf ; then
-			sed -i	-e
-"s/\[greeter\]/\[greeter\]\nGraphicalTheme=${LXDE_GDM_THEME}\nGraphicalThemedColor=${
-LXDE_GDM_THEME_COLOR}/" \
-				/etc/gdm/gdm.conf
-		else
-			sed -i	-e "s/\(GraphicalTheme=\).*/\1${LXDE_GDM_THEME}/g" \
-				-e
-"s/\(GraphicalThemedColor=\).*/\1${LXDE_GDM_THEME_COLOR}/" \
-					/etc/gdm/gdm.conf
-		fi
-		if grep -q "^GraphicalThemes=" /etc/gdm/gdm.conf ; then
-			sed -i "s/GraphicalThemes=/#GraphicalThemes=/g"
-/etc/gdm/gdm.conf
-	        fi
-		if grep -q "^GraphicalThemeRand=" /etc/gdm/gdm.conf ; then
-			sed -i "s/GraphicalThemeRand=/#GraphicalThemeRand=/g"
-/etc/gdm/gdm.conf
-	        fi
-	fi
-}
-
-set_default_slim_theme()
-{
-	umask 0022
-
-	###
-	# setup slim theme
-	###
-	if [ -n "${LXDE_SLIM_THEME}" ]; then
-			sed -i	-e "s/\(current_theme\).*/\1\t${LXDE_SLIM_THEME}/g" \
-					/etc/slim.conf
-		if grep -q "^current_theme" /etc/slim.conf ; then
-			sed -i "s/current_theme/#current_theme/g" /etc/slim.conf
-	        fi
-	fi
-}
 
 do_start()
 {
-	set_razorqt_background
-
-        if [ -x "/usr/sbin/lightdm" ]; then
-                set_lightdm_background
-        fi
-
-	if [ -x "/usr/sbin/gdm" ]; then
-		set_default_gdm_theme
-	fi
+	set_lightdm_background
 
 	# set x-terminal to xterm
 	if [ -x '/usr/bin/xterm' ]; then
-		update-alternatives --set x-terminal-emulator '/usr/bin/xterm'
->/dev/null
+		update-alternatives --set x-terminal-emulator '/usr/bin/xterm' >/dev/null
 	fi
 
-	su "${FLL_LIVE_USER}" -c
-/usr/share/desktop-defaults-rqt/preseed-user-home-rqt
+	su "${FLL_LIVE_USER}" -c /usr/share/desktop-defaults-rqt/preseed-user-home-rqt
 }
 
 case "${1}" in
 	start)
 		log_daemon_msg "${NAME}"
-		log_action_begin_msg " preparing ${FLL_LIVE_USER} for razorqt"
+		log_action_begin_msg " preparing ${FLL_LIVE_USER} for rqt"
 		do_start
 		log_end_msg 0
 		;;
