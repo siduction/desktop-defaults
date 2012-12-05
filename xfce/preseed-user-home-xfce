@@ -123,7 +123,6 @@ XFCE_COLOURS="808080"
 mkdir -p "${HOME}/.config/xfce4/panel/"
 if [ -d /usr/share/siduction-settings-xfce ]; then
 	cp -r /usr/share/siduction-settings-xfce/xfce4 ${HOME}/.config
-	cp /usr/share/siduction-settings-xfce/wbar/.wbar ${HOME}/
 	sed -i -e s/FLL_LIVE_USER/${FLL_LIVE_USER}/ ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 fi
 

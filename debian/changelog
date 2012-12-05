@@ -1,4 +1,10 @@
-desktop-defaults (1.4.37) UNRELEASED; urgency=low
+desktop-defaults (1.4.38) unstable; urgency=low
+
+  * removed copy of .wbar to users home in preseed-user-home
+
+ -- siduction builders <packaging@siduction.org>  Wed, 05 Dec 2012 12:53:26 +0100
+
+desktop-defaults (1.4.37) unstable; urgency=low
 
   * razor background for lightdm part 1
   * refs #1011
