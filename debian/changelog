@@ -1,3 +1,10 @@
+desktop-defaults (1.4.39) unstable; urgency=low
+
+  * removed background settings for rqt
+  * refs #1011
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 07 Dec 2012 23:00:21 +0100
+
 desktop-defaults (1.4.38) unstable; urgency=low
 
   * removed copy of .wbar to users home in preseed-user-home
