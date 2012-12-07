@@ -82,27 +82,8 @@ for param in $(cat /proc/cmdline); do
 	esac
 done
 
-set_lightdm_background()
-{
-###
-# Edit lightdm-gtk-greeter.conf with desired wallpaper
-###
-if [ -e "/etc/lightdm" ]; then
-bkgini=`fgrep "background=" /etc/lightdm/lightdm-gtk-greeter.conf`
-lightdm_bkg="background=${FLL_WALLPAPER}.png"
-if [ "${bkgini}" ] ; then
-        sed -i "s@${bkgini}@${lightdm_bkg}@" /etc/lightdm/lightdm-gtk-greeter.conf
-		fi
-else
-	echo "No lightdm installed"
-fi
-}
-
-
 do_start()
 {
-	set_lightdm_background
-
 	# set x-terminal to xterm
 	if [ -x '/usr/bin/xterm' ]; then
 		update-alternatives --set x-terminal-emulator '/usr/bin/xterm' >/dev/null
