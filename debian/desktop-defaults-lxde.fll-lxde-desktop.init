@@ -129,7 +129,7 @@ set_default_slim_theme()
 		cp ../debian-joy/panel.png .
 	fi
 	slim_bkg="${FLL_WALLPAPER}.png"
-	cp ${slim_bkg} background.png
+	ln -s ${slim_bkg} background.png
 
 	###
 	# setup slim theme

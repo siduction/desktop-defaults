@@ -1,3 +1,10 @@
+desktop-defaults (1.4.41) UNRELEASED; urgency=low
+
+  * changed desktop-defaults-lxde.fll-lxde-desktop.init to use for slim as background.png
+    autodetected FLL_WALLPAPER resolution
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Fri, 14 Dec 2012 04:39:21 +0200
+
 desktop-defaults (1.4.40) UNRELEASED; urgency=low
 
   * changed 52detect-resolution to work also for kde
