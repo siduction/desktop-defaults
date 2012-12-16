@@ -1,3 +1,9 @@
+desktop-defaults (1.4.42) UNRELEASED; urgency=low
+
+  * added BACKGROUND_RENDERING_OPTION to gnome config file /etc/default/fll-gnome-desktop
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Sun, 16 Dec 2012 17:16:21 +0200
+
 desktop-defaults (1.4.41) UNRELEASED; urgency=low
 
   * changed desktop-defaults-lxde.fll-lxde-desktop.init to use for slim as background.png
