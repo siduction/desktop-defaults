@@ -1,3 +1,10 @@
+desktop-defaults (1.4.44) UNRELEASED; urgency=low
+
+  * moved siduction wallpapers code from /etc/init.d/fll-gnome-desktop to 
+    desktop-defaults-gnome postinst
+
+ -- Ovidiu Angelescu <convbsd@siduction.net>  Mon, 31 Dec 2012 13:48:31 +0200
+
 desktop-defaults (1.4.43) UNRELEASED; urgency=low
 
   * added siduction wallpapers to gnome wallpaper list

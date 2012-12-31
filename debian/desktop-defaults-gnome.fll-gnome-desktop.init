@@ -110,34 +110,9 @@ change_gnome_session()
 	umount /etc/glib-2.0/schemas
 } 
 
-wallpaper_add()
-{
-	#add siduction wallpaper to gnome wallpaper list (XReVan86's idea/code/suggestion)
-	cat << EOF > "/usr/share/gnome-background-properties/siduction.xml"
-<?xml version="1.0"?>
-<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
-<wallpapers>
-
-EOF
-	ls "/usr/share/wallpapers/" | grep "^siduction" | grep ".png$" | while read "Wallpaper"; do
-	cat << EOF >> "/usr/share/gnome-background-properties/siduction.xml"
-<wallpaper deleted="false">
-    <name>${Wallpaper}</name>
-    <filename>/usr/share/wallpapers/${Wallpaper}</filename>
-    <options>stretched</options>
-    <shade_type>solid</shade_type>
-    <pcolor>#000000</pcolor>
-    <scolor>#000000</scolor>
-  </wallpaper>
-EOF
-	done
-	echo "</wallpapers>" >> "/usr/share/gnome-background-properties/siduction.xml"
-}
-
 do_start()
 {
 	setup_gdm3_background
-	wallpaper_add
 
 	if [ -n ${GNOME_SESSION_TYPE} ] ; then
 		change_gnome_session
