@@ -9,6 +9,9 @@ fi
 case "$1" in
 	configure)
 		sed -i "s@Identity=unix-user:.*@Identity=unix-user:${FLL_LIVE_USER}@" /etc/polkit-1/localauthority/10-vendor.d/10-live-cd.pkla
+		if [ -f "/etc/X11/Xsession.d/52detect-resolution" ]; then
+			rm /etc/X11/Xsession.d/52detect-resolution
+		fi
 	;;
 	*)
 		echo "postinst called with unknown argument \`$1'" >&2
@@ -17,3 +20,4 @@ case "$1" in
 esac
 
 #DEBHELPER#
+
