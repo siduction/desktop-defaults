@@ -1,11 +1,15 @@
-desktop-defaults (1.4.45) UNRELEASED; urgency=low
+desktop-defaults (1.4.45) unstable; urgency=low
 
+  [ Ovidiu Angelescu ]
   * removed gdm3 wallpaper code from /etc/init.d/fll-gnome-desktop for
     using debian way to add gdm3 wallpaper in siduction-settings-gnome
   * removed /etc/X11/Xsession.d/52detect-resolution file since we'll use
     siduction-dynamic-dms package instead
 
- -- Ovidiu Angelescu <convbsd@siduction.net>  Tue, 26 Jan 2013 01:30:19 +0200
+  [ Alf Gaida ]
+  * rebuild closes #1093
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 26 Feb 2013 01:08:41 +0100
 
 desktop-defaults (1.4.44) unstable; urgency=low
 
