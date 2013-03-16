@@ -19,28 +19,21 @@ case "$1" in
 		sed -i "s@session-name=.*@session-name='${GNOME_SESSION_TYPE}'@" /usr/share/glib-2.0/schemas/live.org.gnome.desktop.session.gschema.override
 # we rebuild schema
 		glib-compile-schemas /usr/share/glib-2.0/schemas
-#add siduction wallpaper to gnome wallpaper list (XReVan86's idea/code/suggestion)
-	cat << EOF > "/usr/share/gnome-background-properties/siduction.xml"
+#add siduction wallpaper to gnome wallpaper list (XReVan86's suggestion)
+	cat > "/usr/share/gnome-background-properties/siduction.xml" << EOF
 <?xml version="1.0"?>
 <!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
 <wallpapers>
-
-EOF
-#	ls "/usr/share/wallpapers/" | grep "^siduction" | grep ".png$" | while read "Wallpaper"; do
-for Wallpaper in ${FLL_WALLPAPER}.png ${FLL_WALLPAPER}-medium.png ${FLL_WALLPAPER}-wide.png ${FLL_WALLPAPER}-really-wide.png; do
-	cat << EOF >> "/usr/share/gnome-background-properties/siduction.xml"
-<wallpaper deleted="false">
-    <name>${Wallpaper}</name>
-    <filename>${Wallpaper}</filename>
+  <wallpaper deleted="false">
+    <name>Siduction Default</name>
+    <filename>${FLL_WALLPAPER}.png</filename>
     <options>stretched</options>
     <shade_type>solid</shade_type>
     <pcolor>#000000</pcolor>
     <scolor>#000000</scolor>
   </wallpaper>
+</wallpapers>
 EOF
-	done
-	echo "</wallpapers>" >> "/usr/share/gnome-background-properties/siduction.xml"
-
 	fi
 	;;
 	*)
