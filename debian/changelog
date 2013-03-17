@@ -1,9 +1,13 @@
-desktop-defaults (1.4.46) UNRELEASED; urgency=low
+desktop-defaults (1.4.46) unstable; urgency=low
 
+  [ Ovidiu Angelescu ]
   * changed gnome postinst to add only ${FLL_WALLPAPER} 
     to gnome wallpaper list
 
- -- Ovidiu Angelescu <convbsd@siduction.net>  Sat, 16 March 2013 20:08:41 +0200
+  [ Alf Gaida ]
+  * rerbuild closes #1116 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 17 Mar 2013 02:42:36 +0100
 
 desktop-defaults (1.4.45) unstable; urgency=low
 
