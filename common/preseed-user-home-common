@@ -110,60 +110,6 @@ if [ ! -f "${GNUPG_CONF}" ]; then
 fi
 
 ###
-## create ~/Desktop if not present
-####
-if [ ! -d "${HOME}/Desktop" ]; then
-	mkdir -p "${HOME}/Desktop"
-fi
-
-###
-## put a manual icon on the desktop
-####
-#
-if [ ! -f "${HOME}/Desktop/bluewater-manual.desktop" ] && \
-	[ -f /usr/share/applications/bluewater-manual/bluewater-manual.desktop ]; then
-		ln -s /usr/share/applications/bluewater-manual/bluewater-manual.desktop \
-			"${HOME}/Desktop/bluewater-manual.desktop"
-fi
-
-###
-## put an eduversum (seminarix appstarter) icon on the desktop
-####
-#if [ -f /usr/share/applications/eduversum.desktop ]; then
-#	[ ! -f "${HOME}/Desktop/eduversum.desktop" ] && \
-#		ln -s /usr/share/applications/eduversum.desktop \
-#			"${HOME}/Desktop/eduversum.desktop"
-#fi
-
-###
-## put a siduction-png-video icon on the desktop
-###
-#if [ -f /usr/share/seminarix-samples/video/siduction-png-video.desktop ]; then
-#	[ ! -f "${HOME}/Desktop/siduction-png-video.desktop" ] && \
-#		ln -s /usr/share/seminarix-samples/video/siduction-png-video.desktop \
-#			"${HOME}/Desktop/siduction-png-video.desktop"
-#fi
-
-###
-## put a siduction-irc icon on the desktop
-####
-if [ ! -f "${HOME}/Desktop/siduction-irc.desktop" ] && \
-
-	[ -f /usr/share/applications/siduction/siduction-irc.desktop ]; then
-	ln -s /usr/share/applications/siduction/siduction-irc.desktop "${HOME}/Desktop/siduction-irc.desktop"
-fi
-
-###
-## put a sidu-installer-irc icon on the desktop
-####
-
-
-if [ ! -f "${HOME}/Desktop/sidu-installer.desktop" ] && \
-	[ -f /usr/share/applications/siduction/sidu-installer.desktop ]; then
-	ln -s /usr/share/applications/siduction/sidu-installer.desktop "${HOME}/Desktop/sidu-installer.desktop"
-fi
-
-###
 # create .fluxbox, emulate a small amount of startflubox(1)
 ###
 mkdir -p ${HOME}/.fluxbox
@@ -186,6 +132,7 @@ if [ ! -f "${HOME}/.fluxbox/menu" ]; then
 [end]
 EOF
 fi
+
 
 ###
 # If it is gnome flavour 
