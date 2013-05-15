@@ -85,7 +85,7 @@ set_lxde_background()
 # Edit pcmanfm.conf with desired wallpaper
 ###
 bkgini=`fgrep "wallpaper=" /etc/xdg/pcmanfm/LXDE/pcmanfm.conf`
-lxde_bkg="wallpaper=${FLL_WALLPAPER}.png"
+lxde_bkg="wallpaper=${FLL_WALLPAPER}.jpg"
 if [ "${bkgini}" ] ; then
 	sed -i "s@${bkgini}@${lxde_bkg}@" /etc/xdg/pcmanfm/LXDE/pcmanfm.conf
 fi
@@ -106,7 +106,7 @@ set_lightdm_background()
 # Edit lightdm-gtk-greeter.conf with desired wallpaper
 ###
 bkgini=`fgrep "background=" /etc/lightdm/lightdm-gtk-greeter.conf`
-lightdm_bkg="background=${FLL_WALLPAPER}.png"
+lightdm_bkg="background=${FLL_WALLPAPER}.jpg"
 if [ "${bkgini}" ] ; then
         sed -i "s@${bkgini}@${lightdm_bkg}@" /etc/lightdm/lightdm-gtk-greeter.conf
 fi
@@ -128,8 +128,8 @@ set_default_slim_theme()
 		cp ../debian-joy/slim.theme .
 		cp ../debian-joy/panel.png .
 	fi
-	slim_bkg="${FLL_WALLPAPER}.png"
-	ln -s ${slim_bkg} background.png
+	slim_bkg="${FLL_WALLPAPER}.jpg"
+	ln -s ${slim_bkg} background.jpg
 
 	###
 	# setup slim theme
