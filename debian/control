@@ -100,26 +100,6 @@ Description: user presets specific to the noX environment
  This is a FULLSTORY live-only package and must not be installed to an
  ordinary system.
 
-Package: desktop-defaults-rqt
-Architecture: all
-Depends: ${misc:Depends},
- distro-defaults,
- fll-live-initscripts,
- desktop-defaults-common,
- siduction-settings-rqt,
-Description: user presets specific to the Razor-qt desktop environment
- This package provides required infrastructure to tweak the Razor-qt desktop
- of the F.U.L.L.S.T.O.R.Y. live Linux media.
-  - set up artwork theme integration for Razor-qt (lightdm, splash, desktop,)
-  - keyboard layouts
-  - disable tips on startup
-  - setup trash can
-  - autostart release notes
-  - populate live-only XDG desktop icons
- .
- This is a FULLSTORY live-only package and must not be installed to an
- ordinary system.
-
 Package: desktop-defaults-xfce
 Architecture: all
 Depends: ${misc:Depends},
