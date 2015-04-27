@@ -1,3 +1,9 @@
+desktop-defaults (1.5.2) unstable; urgency=medium
+
+  * remove rqt 
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 27 Apr 2015 19:55:50 +0200
+
 desktop-defaults (1.5.1) unstable; urgency=low
 
   * lxde desktop init background.png -> background.jpg  
