@@ -1,3 +1,10 @@
+desktop-defaults (1.5.3) unstable; urgency=medium
+
+  * new Standards 3.9.6
+  * years changed in copyright
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 27 Apr 2015 20:03:25 +0200
+
 desktop-defaults (1.5.2) unstable; urgency=medium
 
   * remove rqt 
