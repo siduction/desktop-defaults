@@ -6,9 +6,9 @@ Uploaders: Alf Gaida <agaida@siduction.org>,
            Ferdinand Thommes <devil@siduction.org>,
            Ovidiu Angelescu <convbsd@siduction.net> 
 Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.3
-Vcs-Git: git://git.siduction.org:packages/siduction-repository/desktop-defaults.git
-Vcs-Browser: http://git.siduction.org/?p=packages/siduction-repository/desktop-defaults.git;a=summary
+Standards-Version: 3.9.6
+Vcs-Git: git://git.siduction.org/base/desktop-defaults.git
+Vcs-Browser: http://git.siduction.org/summary/base!desktop-defaults.git
 
 Package: desktop-defaults-common
 Architecture: all
