@@ -1,3 +1,9 @@
+desktop-defaults (1.5.5) unstable; urgency=medium
+
+  * remove fll-adduser from required starts in inits 
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 22 Jan 2016 22:06:03 +0100
+
 desktop-defaults (1.5.4) unstable; urgency=medium
 
   * remove rqt frome sources completely	 
