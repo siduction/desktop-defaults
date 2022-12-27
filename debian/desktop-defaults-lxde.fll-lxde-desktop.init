@@ -20,7 +20,7 @@
 # License:   GPLv2
 #
 # siduction development::
-# http://chili.siduction.org
+# https://github.com/siduction/
 ###
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin

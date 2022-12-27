@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: desktop-defaults
-Source: http://chili.siduction.org/projects/siduction/wiki/Desktop-defaults
+Source: https://github.com/siduction/desktop-defaults
 
 
 Files: *
